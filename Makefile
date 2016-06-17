@@ -49,7 +49,7 @@ default:
 	@echo 
 	@echo "Useful targets:"
 	@echo "  txt: The Text version of the draft"
-	@echo "  commit: Creates README.md, commits (ci) and pushes the changes to git" 
+	@echo "  commit: Commits (ci) and pushes the changes to git" 
 	@echo "  tag: Lists current tags, gets  anew one, commits and pushed to git"
 	@echo "  diff: Unsurprisingly, the diff..."
 	@echo
@@ -82,11 +82,6 @@ diff:
 
 
 commit: $(draft).txt README.md
-	@echo "Making README.md and committing and pushing to github. Run 'make tag' to add and push a tag."
-	@echo '**Important:** Read CONTRIBUTING.md before submitting feedback or contributing' > README.md
-	@echo \`\`\` >> README.md
-	@cat $(draft).txt >> README.md
-	@echo \`\`\` >> README.md
 	read -p "Commit message: " msg; \
 	git commit -a -m "$$msg";
 	@git push
