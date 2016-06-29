@@ -5,10 +5,10 @@
 Network Working Group                                           T. Lemon
 Internet-Draft                                             Nominum, Inc.
 Intended status: Informational                                  R. Droms
-Expires: December 22, 2016                                   Cisco, Inc.
+Expires: December 31, 2016                                   Cisco, Inc.
                                                                W. Kumari
                                                                   Google
-                                                           June 20, 2016
+                                                           June 29, 2016
 
 
                   Special-Use Names Problem Statement
@@ -38,7 +38,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on December 22, 2016.
+   This Internet-Draft will expire on December 31, 2016.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 1]
+Lemon, et al.           Expires December 31, 2016               [Page 1]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 2]
+Lemon, et al.           Expires December 31, 2016               [Page 2]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -165,7 +165,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 3]
+Lemon, et al.           Expires December 31, 2016               [Page 3]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -221,7 +221,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 4]
+Lemon, et al.           Expires December 31, 2016               [Page 4]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -277,7 +277,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 5]
+Lemon, et al.           Expires December 31, 2016               [Page 5]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -333,7 +333,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 6]
+Lemon, et al.           Expires December 31, 2016               [Page 6]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -389,7 +389,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 7]
+Lemon, et al.           Expires December 31, 2016               [Page 7]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -445,7 +445,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 8]
+Lemon, et al.           Expires December 31, 2016               [Page 8]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -501,7 +501,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016               [Page 9]
+Lemon, et al.           Expires December 31, 2016               [Page 9]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -557,7 +557,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016              [Page 10]
+Lemon, et al.           Expires December 31, 2016              [Page 10]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -613,7 +613,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016              [Page 11]
+Lemon, et al.           Expires December 31, 2016              [Page 11]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -669,7 +669,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016              [Page 12]
+Lemon, et al.           Expires December 31, 2016              [Page 12]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -725,7 +725,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016              [Page 13]
+Lemon, et al.           Expires December 31, 2016              [Page 13]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -781,7 +781,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
 
-Lemon, et al.           Expires December 22, 2016              [Page 14]
+Lemon, et al.           Expires December 31, 2016              [Page 14]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
@@ -837,4 +837,4 @@ Authors' Addresses
 
 
 
-Lemon, et al.           Expires December 22, 2016              [Page 15]
+Lemon, et al.           Expires December 31, 2016              [Page 15]
