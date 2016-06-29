@@ -62,26 +62,38 @@
     <abstract>
       <t>The Special-Use Domain Names registration policy in RFC 6761 has been
       shown through experience to present unanticipated challenges. This memo
-      explores current IETF and non-IETF publications relating on special-use
-      domain names, briefly describes the history of domain names, and
-      enumerates some problems that have come up in connection with the
-      Special-Use Domain Names allocation process specifically as it related
-      to top-level domains.</t>
+      presents a list, intended to be comprehensive, of the problems that have
+      been identified.   In addition it reviews the history of Domain Names
+      and summarizes current IETF and non-IETF publications relating on special-use
+      domain names.</t>
     </abstract>
   </front>
 
   <middle>
     <section title="Introduction">
+    
+      <t>One of the key services required to use the Internet is name resolution.
+      Name resolution is the process of translating a human-readable symbolic
+      name into some object or set of objects that the name references, perhaps
+      most typically one or more IP addresses.  These names are often referred
+      to as domain names, although in this document they will be referred to
+      as internet names to avoid confusion between the names and a particular
+      protocol for resolving these names, the <xref target="RFC1034">Domain
+      Name System</xref>.</t>
+    
       <t>At the time of this writing, the IETF has recently been asked to
-      allocate several new special-use top-level names. In evaluating the
-      process for additional special-use-top-level names as documented in
+      allocate several new special-use top-level internet names. In evaluating the
+      process for additional special-use-top-level internet names as documented in
       <xref target="RFC6761">Special-Use Domain Names</xref>, the IETF
       encountered several different sorts of issues. Because of this, the IETF
       has decided to investigate the problem and decide if and how the RFC
       6761 process can be improved, or whether it should be deprecated.</t>
 
-      <t>In order to investigate this question, this document attempts first
-      to document existing practice, then to briefly review the history of
+      <t>This document presents a list, believed to be complete, of the
+      problems associated with the allocation of special-use names.
+      In support of the particular set of problems described here,
+      the document also includes documentation of existing practice as
+      it relates to the use of internet names, as well as a brief history of
       domain names, and finally to describe the set of problems that exist as
       reported by various IETF participants with experience in the various
       aspects of the problem.</t>
@@ -104,6 +116,90 @@
         </list></t>
     </section>
 
+    <section title="Problems associated with Special-Use Internet Names">
+      <t>This section presents a list of problems that have been identified
+      with respect to the allocation of special-use names.   Solutions to
+      these problems are out of scope.   Because of that, problems with
+      solutions to these problems are also out of scope, and will be covered
+      in a separate document.</t>
+      
+      <t>No assertion
+      is made that any of these problems is more or less important than any
+      other. The point of this is simply to enumerate and briefly describe
+      the problems that have been raised during the discussion of the
+      special-use name problem.   The degree of detail is intended to be
+      sufficient that that participants in the discussion can agree that the
+      problems they've raised have been adequately described, and no more.</t>
+      
+      <t>In addition, no assertion is made that all of these problems must be
+      addressed; while each problem has one or more solutions, the solutions
+      may in some cases be mutually contradictory, or may come with costs that
+      do not justify the benefit that would be obtained from solving them.</t>
+      
+      <t><list style="symbols">
+        <t>IETF and ICANN independently have remit to assign names out
+        of the same namespace; a formal coordination process does not exist.</t>
+
+        <t>Although IETF and ICANN nominally have control of the namespace,
+        neither organization can enforce that control over any third party
+        who wants to just start using a subset of the namespace.</t>
+
+        <t>The namespace is useful for identifying things outside of the
+        scope of the Domain Name System.</t>
+
+        <t>The IETF process for assigning names to things outside of the
+          DNS is tortuous</t>
+
+        <t>There is strong resistance within the IETF to assigning names
+        to things outside of the DNS, for a variety of reasons:
+        <list style="symbols">
+          <t>Requires a mechanism for identifying which of a set of
+          resolution processes is required in order to resolve a
+          particular name.</t>
+
+          <t>Assertion of authority: there is a sense that the namespace
+          is "owned" by the IETF or by ICANN, and so if a name is allocated
+          outside of that process, the person or entity that allocated that
+          name should suffer some consequence that would, presumably, deter
+          future circumvention of the official process.</t>
+
+          <t>More than one protocol is bad, in the sense that a single
+          protocol is less complicated to implement and deploy.</t>
+
+          <t>If there is an IETF process through which a name
+          can be allocated at zero cost other than time, this process will
+          be used to circumvent the ICANN gTLD process.</t>
+
+          <t>Some names that might be allocated would be sufficiently generic
+          that other legitimate uses of those names would overlap with a
+          proposed use, so that assigning the name would preclude some future,
+          better use of it.</t>
+          
+          <t>If the IETF allocates a name that some third party or parties 
+          believes belongs to them in some way, the IETF could become embroiled
+          in an expensive dispute with those parties.</t></list></t>
+          
+        <t>In cases where assignments have been made, technical mistakes have
+        been made due either to insufficiently well-defined process or to a
+        failure to follow the process that was defined.</t>
+        
+        <t>In cases where names have been marked as unsafe to allocate, the
+        actual uses of those names that led to the potential for conflict have
+        not been documented.</t>
+        
+        <t>No process exists for checking documents to make sure they don't
+        accidentally assign names (e.g. RFC 7788).</t>
+
+        <t>Use of the registry is inconsistent--some SUTLIN RFCs specify registry
+        entries; some don't; some specify delegation, some don't.</t></list></t>
+        
+      <t>The problems we have stated here represent the current understanding of
+      the authors of the document as to the complete set of problems that have been
+      identified during discussion by the working group on this topic.   The
+      remainder of this document provides additional context that will be needed
+      for reasoning about these problems.</t>
+    </section>
+    
     <section title="Existing Practice Regarding SUINs">
       <t>There are three primary and numerous secondary documents to consider
       when thinking about the Special-Use Internet Names process.</t>
@@ -160,8 +256,8 @@
           <t>To boil this down even further, we can take the following advice
           from this document: <list style="symbols">
               <t>Domain names with unambiguous global meaning are preferable
-              to domain names with local meaning which will be ambiguous, but
-              nevertheless both globally-meaningful and locally-special names
+              to domain names with local meaning which will be ambiguous. 
+              Nevertheless both globally-meaningful and locally-special names
               are in use and must be supported.</t>
 
               <t>At the time of the writing of this document the IAB was of
@@ -173,7 +269,7 @@
         <section title="Special-Use Domain Names">
           <t>The second important document is <xref target="RFC6761">
           Special-Use Domain Names</xref>. RFC6761 represents the current IETF
-          consensus on designating and recording SUTLINs. The IETF has
+          consensus on designating and recording SUINs. The IETF has
           experienced problems with the designation process described in
           RFC6761; these concerns motivate this document. Again, familiarity
           with RFC6761 is a prerequisite for having an informed opinion on the
@@ -192,7 +288,8 @@
               functionality.</t>
             </list></t>
 
-          <t>This sentence implies that the designation be subject to the same
+          <t>This sentence implies that any designation of a special-use name
+          is subject to the same
           open review and consensus process as used to produce and publish all
           other IETF specifications.</t>
 
@@ -207,7 +304,7 @@
           had been previously used or defined to have special uses before the
           publication of RFC6761.</t>
 
-          <t>There are at least three important points to think of with
+          <t>There are at least several important points to think of with
           respect to the RFC6761: <list style="symbols">
               <t>A special-use name may be a name that should be resolved
               using the DNS protocol with no special handling. An example of
@@ -224,12 +321,12 @@
               <t>The current IETF consensus (from a process perspective, not
               necessarily from the perspective of what would be consensus if
               the IETF were to attempt to produce a new consensus document) is
-              that both of these applications for special-use names are valid.
+              that these purposes for special-use names are valid.
               [TODO: "Both" implies that there are only two applications; the
               above bullet points outline 3...]</t>
             </list></t>
 
-          <t>It should be noted also that RFC6761 does not limit special-use
+          <t>RFC6761 does not limit special-use
           names to TLDs. However, at present, all special-use names registered
           in the <xref target="SDO-IANA-SUDR"> IANA Special-Use Domain Names
           registry</xref> are either intended to be resolved using the DNS
@@ -237,11 +334,11 @@
           there is no protocol switch required by RFC6761 for names other than
           at the top level of the naming hierarchy.</t>
 
-          <t>However, the obvious corollary to this is that at present,
+          <t>This does mean, however, that at present,
           RFC6761 requires the use of a special label, '.LOCAL', to indicate
           to stub resolvers that mDNS<xref target="RFC6762"/> be used to
-          resolve names under that label. [TODO: Not sure why this is
-          considered a corollary?]</t>
+          resolve names under that label. <!--- [TODO: Not sure why this is
+          considered a corollary?  OK?  TL]--> </t>
         </section>
 
         <section title="MoU Concerning the Technical Work of the IANA">
@@ -261,8 +358,7 @@
               this Section 4.</t>
             </list></t>
 
-          <t>To understand the context of Section 4 of the document, it should
-          be noted that the above text is an addendum to the following text:
+          <t>The above text is an addendum to the following:
           <list style="empty">
               <t>Two particular assigned spaces present policy issues in
               addition to the technical considerations specified by the IETF:
@@ -271,9 +367,9 @@
               MOU.</t>
             </list></t>
 
-          <t>The point here is that, in general, the assignment of names in
-          the DNS root zone, and the management of the DNS namespace
-          generally, is a function that is performed by ICANN. However, the
+          <t>In general, then, the assignment of names in
+          the DNS root zone, and the management of the DNS namespace, is a
+          function that is performed by ICANN. However, the
           MoU specifically exempts domain names assigned for technical use,
           and uses the example of 'IN-ADDR.ARPA' and 'IP6.ARPA' to illustrate.
           Both of these names are in the RFC 6761 registry.</t>
@@ -296,7 +392,10 @@
           individual submission, was published in July of 2001. This version
           contains substantially the same text in section 3, and was discussed
           in the DNSEXT working group at IETF 51 in August of 2001<xref
-          target="IETF-PRO-51"/>.</t>
+          target="IETF-PRO-51"/>.   The first version of this document
+          designated '.LOCAL.ARPA' as the special-use name.   This idea was
+          strongly opposed by DNSEXT working group participants, and as a
+          result the author eventually switched to using '.LOCAL'.</t>
 
           <t>The history of RFC 6762 is documented in substantial detail in
           Appendix H; some notable milestones include the initial proposal to
@@ -345,7 +444,7 @@
 
           <t>This use case is distinct from the use-case for SUTLINs like
           '.local' and '.onion' in that the names are resolved using the DNS
-          protocol, but shares the problem that such names cannot be assumed
+          protocol.  But it shares the problem that such names cannot be assumed
           either to be unique or to be functional in all contexts for all
           internet-connected hosts.</t>
         </section>
@@ -378,27 +477,11 @@
           no documented use. This attempt failed, for better or for worse.</t>
         </section>
       </section>
-
-      <section title="Observations based on reading these documents">
-        <t>Readers of this memo are strongly encouraged to familiarize
-        themselves with the documents referenced above and to draw their own
-        conclusions. However, for the sake of beginning the discussion, some
-        observations are presented here.</t>
-
-        <t>Neither RFC 6761 nor RFC 7686 require any kind of delegation for
-        '.onion' or '.local'. At least in the case of '.onion', it might be
-        better if there were a delegation in order to limit the scope of
-        leakage of '.onion' queries made to resolvers that do not know how to
-        resolve '.onion' names. However, the DNS protocol does not currently
-        provide a mechanism for signaling that a particular name is not
-        intended to be resolved using the DNS protocol, and it might be better
-        to address that problem before defining a delegation for '.onion'.</t>
-      </section>
     </section>
 
     <section title="History">
       <t>Newcomers to the problem of resolving domain names may be under the
-      mistaken impression that the DNS sprang, like the greek legend of
+      mistaken impression that the DNS sprang, as in the Greek legend of
       Athena, directly from Paul Mockapetris' forehead. This is not the case.
       At the time of the writing of the IAB technical document, memories would
       have been fresh of the evolutionary process that led to the DNS'
@@ -434,225 +517,6 @@
       writing of this memo.</t>
     </section>
 
-    <section title="Problems with Special-Use TLDs and Their Allocation">
-      <t>RFC 6761 serves two purposes. First, it enumerates a set of domain
-      names that require special treatment either by stub resolvers or by
-      authority and caching name servers. Second, it establishes a registry
-      for future such names, and in section 5 it describes considerations for
-      deciding when such names should be allocated. This has been a success in
-      the sense that this registry now exists and has been used, but the
-      stated considerations don't work for all use cases, and there are
-      questions about whether this is even the right approach. This section
-      attempts to enumerate these problems in no deliberate order.</t>
-
-      <section title="Purity of Domain Name Architecture Problem">
-        <t>There is some question as to whether special-use TLDs may violate
-        the Domain Name System Architecture. Much discussion has centered
-        around three aspects of this question. There is, of course, no
-        document titled "The Domain Name System Architecture," so we have to
-        rely on the various documents referenced earlier to consider this
-        question. RFC2826 seems to speak most directly to it.</t>
-
-        <section title="Are Domain Names DNS Names?">
-          <t>The first of the three aspects of the purity question is whether
-          domain names are specific to the DNS protocol. RFC2826 appears to
-          state unequivocally that they are not. However, many people have
-          expressed the opinion that they are. This is a question that may
-          need to be explored further through the IETF process.</t>
-
-          <t>At present, there are three obvious exceptions to the use of the
-          DNS protocol to resolve domain names: '.onion', '.local' and any
-          name that appears in /etc/hosts or the equivalent. If indeed DNS is
-          the only protocol to be used for resolving domain names, these use
-          cases would have to be deprecated.</t>
-        </section>
-
-        <section title="Does Every Domain Name Have The Same Meaning Everywhere?">
-          <t>The second aspect of the purity question is the question of
-          whether at any particular time, every domain name refers to the same
-          entity regardless of where the query comes from.</t>
-
-          <t>It has been stated by various participants in this discussion
-          that, in fact, they do. RFC2862 seems to make a very strong case
-          that to the extent possible they should be, but does not go so far
-          as to insist that in all cases they must be. '.onion' actually
-          should exhibit this property. However, '.local' does not.</t>
-
-          <t>There are other examples of domain names that cannot be assumed
-          to have the same meaning everywhere. For example, it is not
-          unreasonable for a site that uses RFC1918 addresses to populate the
-          DNS reverse lookup tree for their copy of the address space.
-          Fortunately, names of this sort are rarely seen by users who do not
-          understand their limited scope of applicability, making this
-          exception a violation in fact but not in spirit of this
-          principle.</t>
-
-          <t>There is the additional case of names that refer to different IP
-          addresses depending on the location of the host that originates the
-          query. Although at first glance this appears to be an example of the
-          problem, it actually is not, because the entity to which the name
-          refers is the same entity, cached in different locations.</t>
-
-          <t>Something similar can be said about domain names that refer to
-          objects that may be harmful to devices that access them. A caching
-          resolver may refuse to answer queries for such names, or may return
-          answers that differ from the answer that the name server
-          authoritative for that name is returning. Again, although this seems
-          like an exception, it probably is not, because in this case the user
-          who is attempting to share a reference to the entity is either
-          malicious or has been duped, and in either case a failure to
-          successfully share the entity is, presumably, an intended outcome
-          from the perspective of the recipient of the reference.</t>
-
-          <t>If it were to be determined that the principle expressed in RFC
-          2862 that domain names should always refer to the same object is too
-          weak, this would necessitate changing the operational model of
-          Multicast DNS, and would render the use of names derived from
-          non-unique IP addresses at least in principle out of bounds.</t>
-        </section>
-
-        <section title="Protocol Switch Problem">
-          <t>The third of the three aspects of the purity question is the
-          problem that if we do not resolve all domains using the same
-          protocol, there has to be a mechanism for determining which protocol
-          to use to resolve any particular name. If the names that must be
-          resolved using different protocols all exist directly under the root
-          of the namespace, this determination is relatively simple, but
-          clearly using the DNS protocol for all queries would be simpler.</t>
-
-          <t>An additional consideration about this aspect of the question is
-          whether future resolver implementations should be required to engage
-          in any behavior to determine whether a particular TLD for which they
-          have no special information is a SUTLIN or a normal TLD. Also, since
-          there can be privacy implications to special-use TLD queries, does
-          it make sense to require that all resolvers take some action to test
-          the special-use-ness of each TLD for which they are asked to resolve
-          queries before sending the complete query out over the wire using
-          the DNS Protocol.</t>
-        </section>
-      </section>
-
-      <section title="Land Rush Problem">
-        <t>The land rush problem refers to the concern that has been expressed
-        that if the IETF is seen to be able to allocate TLDs outside of the
-        ICANN process, persons and entities who might otherwise apply to ICANN
-        for the use of a particular TLD might instead apply to the IETF. The
-        concern is that this could overwhelm the IESG's ability to process
-        these, particularly since one option for SUTLIN allocation is "IESG
-        Approval."</t>
-
-        <t>It is therefore important to clarify what sorts of use cases make
-        sense for both the "Standards Action" and "IESG Approval." It seems
-        clear that if there are good use cases for SUTLINs, they would be in
-        the production of standards that the IETF considers important, not for
-        the purpose of assigning domains for normal delegation in the DNS.</t>
-
-        <t>It is not the case that all special-use TLDs can be expected to be
-        non-DNS names; for example, the Homenet Working Group is likely to
-        propose the use of a special-use TLD for use on the homenet in cases
-        where the homenet does not have its own globally unique name
-        allocated. This would nevertheless be resolved in the same way as an
-        RFC1918 reverse query, by sending a query to the local resolver using
-        the DNS protocol.</t>
-      </section>
-
-      <section title="IESG Getting Sued Problem">
-        <t>An additional serious problem in allocating SUTLINs is that it
-        exposes the IETF to the risk of lawsuits from interested parties.
-        While this is obviously a real risk, it is not special to the SUTLIN
-        problem--the IETF is always potentially at risk of being sued.
-        However, ICANN has developed a process for evaluating the issues that
-        might arise with respect to the allocation of a TLD. The IETF could,
-        in principle, take advantage of this evaluation process through the
-        agency of the IANA, which at present is a function managed by
-        ICANN.</t>
-      </section>
-
-      <section title="Warranted Allocation Problem">
-        <t>The issue here is similar to the Land Rush problem: the IETF is
-        being asked to evaluate whether a particular protocol use of a SUTLIN
-        justifies the permanent sacrifice of that name in the registry, and
-        the appearance of that name in the name service protocol switches of
-        various stub resolver implementations.</t>
-
-        <t>Several things could be considered here. One is that there exist
-        processes for other registries where names are temporarily reserved;
-        if the protocol for which they were reserved turns out to be <xref
-        target="RFC5218">a success</xref>, then the reservation can be made
-        permanent. If not, it's deleted from the registry.</t>
-
-        <t>A corrollary to this is that if a protocol is not a success, it
-        likely will not be implemented in the protocol switches of mainstream
-        host operating systems. This mitigates this aspect of the damage that
-        would be caused by a mistake here.</t>
-
-        <t>The final point to be made about this concern is that it is not at
-        all unique to SUTLINs. The IETF frequently produces protocols that do
-        not turn out to be successes by the criteria set forth in RFC5218.
-        Each of these protocol efforts began with the IETF chartering process,
-        the working group consensus process, and the IETF and IESG review
-        processes. These processes do not prevent unsuccessful protocols from
-        being produced, but they do very much limit the rate at which they are
-        produced, and, it is to be hoped, improve the ratio of successes to
-        failures. There is no reason to think that this particular IANA
-        registry is special in this regard, nor to treat it specially simply
-        because we are aware of this problem.</t>
-      </section>
-
-      <section title="Experimental Squatting Problem">
-        <t>One of the problems with SUTLINs is that various protocol
-        development efforts find it convenient to use SUTLINs as a name
-        service protocol switch precisely because such switches exist in most
-        popular operating systems. So a project will allocate a name without
-        going through the RFC6761 process, and then later on will want that
-        allocation to be made permanent. Several organizations that have
-        actually done this have indicated that they looked for a process they
-        could use to get a name, found RFC6761, realized it wouldn't work for
-        them, found nothing else, and then just unilaterally allocated the
-        name.</t>
-
-        <t>Precisely because of the principle stated in RFC 2826, that names
-        that do not consistently refer to the same object create problems for
-        end users, this creates pressure once use of the protocol becomes
-        somewhat widespread, yet not widespread enough or strategic enough to
-        justify allocation by the IETF, for the organization that squatted on
-        the name to try to get the IETF to formalize the allocation.</t>
-
-        <t>Solutions have been proposed for this problem. There already exists
-        a TLD, '.test', under which such an allocation could in principle be
-        made, but no RFC exists recommending this practice. Furthermore,
-        RFC6761 recommends resolving .test using the DNS, so this isn't
-        exactly the right thing for a name service protocol switch.</t>
-
-        <t>A draft exists to allocate a '.alt' TLD to address this need. The
-        draft as currently written attempts to solve the whole SUTLIN problem,
-        but fails to do so. This draft could easily be restricted to simply
-        defining a SUTLIN under which new non-DNS resolution strategies could
-        be tested, and this would likely resolve the bulk of the experimental
-        squatting problems that might come up in the future. [TODO:
-        Revise]</t>
-      </section>
-
-      <section title="Insecure Delegation Problem">
-        <t>At present RFC6761 doesn't give specific advice about what
-        delegation, if any, should appear for newly registered SUTLINs. It may
-        be worthwhile to make a default recommendation for this. This may tie
-        in with the idea that SUTLINs should have some signal in the DNS that
-        tells the resolver not to try to use DNS to resolve names under that
-        TLD, even if they don't have an alternative protocol to try.</t>
-      </section>
-
-      <section title="The Who's In Charge of the Root Problem">
-        <t>The last but not least problem is that RFC6761 assumes that the
-        IETF has change control over the set of names that appear in the root
-        zone. The sense in which the IETF is in a position to allocate names
-        in the root zone is complicated. If the outcome of this process is
-        that the IETF continues to make allocations of domain names,
-        particularly in the root zone, it is likely that it will be necessary
-        to establish some clarity about the basis on which this is done.</t>
-      </section>
-    </section>
-
     <section title="Contributors">
       <t>This document came about as a result of conversations that occurred
       the weekend before IETF 95 in the lobby. Stuart Cheshire, Mark Andrews,
@@ -684,8 +548,6 @@
 
       <?rfc include="reference.RFC.4193" ?>
 
-      <?rfc include="reference.RFC.5218" ?>
-
       <?rfc include="reference.RFC.6303" ?>
 
       <?rfc include="reference.RFC.6598" ?>
@@ -695,8 +557,6 @@
       <?rfc include="reference.RFC.6761" ?>
 
       <?rfc include="reference.RFC.6762" ?>
-
-      <?rfc include="reference.RFC.6763" ?>
 
       <?rfc include="reference.RFC.7050" ?>
 
