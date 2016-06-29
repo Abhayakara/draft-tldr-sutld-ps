@@ -6,7 +6,7 @@
 <rfc category="info" docName="draft-tldr-sutld-ps-01" ipr="trust200902"
      obsoletes="" updates="">
   <front>
-    <title abbrev="Special-use Names Problem">Special Use Names Problem
+    <title abbrev="Special-Use Names Problem">Special-Use Names Problem
     Statement</title>
 
     <author fullname="Ted Lemon" initials="T" surname="Lemon">
@@ -74,7 +74,7 @@
     
       <t>One of the key services required to use the Internet is name resolution.
       Name resolution is the process of translating a human-readable symbolic
-      name into some object or set of objects that the name references, perhaps
+      name into some object or set of objects to which the name refers, perhaps
       most typically one or more IP addresses.  These names are often referred
       to as domain names, although in this document they will be referred to
       as internet names to avoid confusion between the names and a particular
@@ -136,7 +136,7 @@
       may in some cases be mutually contradictory, or may come with costs that
       do not justify the benefit that would be obtained from solving them.</t>
       
-      <t><list style="symbols">
+      <t>This is the list of problems:<list style="symbols">
         <t>IETF and ICANN independently have remit to assign names out
         of the same namespace; a formal coordination process does not exist.</t>
 
@@ -191,7 +191,10 @@
         accidentally assign names (e.g. RFC 7788).</t>
 
         <t>Use of the registry is inconsistent--some SUTLIN RFCs specify registry
-        entries; some don't; some specify delegation, some don't.</t></list></t>
+        entries; some don't; some specify delegation, some don't.</t>
+        
+        <t>There exists no safe, non-process-violating mechanism for ad-hoc
+        allocation of special-use names.</t></list></t>
         
       <t>The problems we have stated here represent the current understanding of
       the authors of the document as to the complete set of problems that have been
@@ -299,10 +302,14 @@
           that defines the ways in which special handling is to be applied to
           the name.</t>
 
-          <t>RFC6761 provided the explicit designation and inclusion in the
-          Special-Use Names registry for '.local' and for a set of names that
-          had been previously used or defined to have special uses before the
-          publication of RFC6761.</t>
+          <t>RFC6761 provided the process whereby <xref target="RFC6762">
+          Multicast DNS</xref>designated ".local" as a special-use name and
+          included it in the Special-Use Names registry.   It itself also
+          enumerated a set of names that
+          had been previously used or defined to have special uses prior to
+          the publication of RFC6761.   Since there had been no registry for
+          these names prior to the publication of RFC 6761, the documents
+          defining these names could not have added them to the registry.</t>
 
           <t>There are at least several important points to think of with
           respect to the RFC6761: <list style="symbols">
@@ -310,11 +317,15 @@
               using the DNS protocol with no special handling. An example of
               this is .ARPA.</t>
 
-              <t>A special-use name may be a name that should be resolved
-              using the DNS protocol, but requires special handling in the
-              resolver.</t>
+              <t>A special-use name may be a name that is resolved
+              using the DNS protocol, requires no special handling in the
+              stub resolver, but requires special handling in the
+              recursive resolver.  An example of this would be
+              "10.in-addr.arpa."</t>
 
-              <t>A special-use name may be a TLD like '.local' which acts as a
+              <t>A special-use name may be name that requires special handling
+              in the stub resolver.  An example would be a special-use top-level
+              name like '.local' which acts as a
               signal to indicate that the local stub resolver should use a
               non-DNS protocol for name resolution.</t>
 
@@ -331,11 +342,12 @@
           in the <xref target="SDO-IANA-SUDR"> IANA Special-Use Domain Names
           registry</xref> are either intended to be resolved using the DNS
           protocol, or are top-level domains, or both. That is, at present
-          there is no protocol switch required by RFC6761 for names other than
+          there exist no special-use names which require special handling by
+          stub resolvers and which are not
           at the top level of the naming hierarchy.</t>
 
           <t>This does mean, however, that at present,
-          RFC6761 requires the use of a special label, '.LOCAL', to indicate
+          RFC6762 requires the use of a special label, '.LOCAL', to indicate
           to stub resolvers that mDNS<xref target="RFC6762"/> be used to
           resolve names under that label. <!--- [TODO: Not sure why this is
           considered a corollary?  OK?  TL]--> </t>
@@ -474,8 +486,29 @@
           Reserved Top Level Domains</xref> is an example of a document that
           attempted to reserve several TLDs identified by ICANN as
           particularly at risk for collision as special-use domain names with
-          no documented use. This attempt failed, for better or for worse.</t>
+          no documented use. This attempt failed.</t>
+
+          <t>Although this document failed to gain consensus to publish, the
+          need it was intended to fill still exists.   Unfortunately, although
+          a fair amount is known about the use of these names, no document
+          exists that documents how they are used, and why it would be a problem
+          to allocate them.   Additionally, to the extent that the uses being
+          made of these names are valid, no document exists indicating when
+          it might make sense to use them, and when it would not make sense
+          to use them (the simplest version of this document would of course
+          say "never use them."   If that were the IETF consensus, that would
+          be a good reason not to bother to publish the document.</t>
         </section>
+      </section>
+      <section title="Summary">
+        <t>The assignment of internet names is not under the sole control of any
+        one organization.   ICANN has authority in many cases, and could be
+        considered in some sense the default.   IETF has authority in other cases,
+        but only with respect to protocol development.   And neither of these
+        authorities can in any practical sense exclude the practice of ad-hoc
+        allocation of names, which can be done by any entity that has control over
+        one or more name servers or resolvers, in the context of any hosts and
+        services that that entity operates.</t>
       </section>
     </section>
 
@@ -492,7 +525,8 @@
       authority, the Network Information Center, and distributed to all hosts
       on the internet using the <xref target="RFC0959">File Transfer Protocol
       (FTP)</xref>. The inefficiency of this process is cited as a reason for
-      the development of <xref target="RFC1034">the DNS</xref> in 1983.</t>
+      the development of <xref target="RFC0882">the DNS</xref>
+      <xref target="RFC0883"/> in 1983.</t>
 
       <t>However, the transition from HOSTS.TXT to the DNS was not smooth. For
       example, <xref target="CORP-SUN-NIS">Sun Microsystems's Network
@@ -500,9 +534,15 @@
       active competitor to the DNS, although it failed to provide a complete
       solution to the global naming problem.</t>
 
+      <t>Another example was NetBIOS Name Service, also known as WINS
+      <xref target="RFC1002"/>.   This protocol was used mostly by Microsoft
+      Windows machines, but also by open source BSD and Linux operating
+      systems to do name resolution using Microsoft's own name resolution
+      protocol.</t>
+      
       <t>Most modern operating systems can still use the '/etc/hosts' file for
       name resolution. Many still have a name service switch that can be
-      configured on the host to resolve some domains using NIS. Most have the
+      configured on the host to resolve some domains using NIS or WINS. Most have the
       capability to resolve names using mDNS by recognizing the special
       meaning of the '.local' SUTLIN.</t>
 
@@ -534,7 +574,13 @@
 
   <back>
     <references title="Informative References">
+      <?rfc include="reference.RFC.0882" ?>
+
+      <?rfc include="reference.RFC.0883" ?>
+
       <?rfc include="reference.RFC.0959" ?>
+
+      <?rfc include="reference.RFC.1002" ?>
 
       <?rfc include="reference.RFC.1034" ?>
 
