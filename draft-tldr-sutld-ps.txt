@@ -95,15 +95,15 @@ Table of Contents
    readable symbolic name into some object or set of objects to which
    the name refers, perhaps most typically one or more IP addresses.
    These names are often referred to as domain names, although in this
-   document they will be referred to as internet names to avoid
+   document they will be referred to as Internet names to avoid
    confusion between the names and a particular protocol for resolving
    these names, the Domain Name System [RFC1034].  An excellent
    presentation on this topic can be found in Domain Names
    [I-D.lewis-domain-names].
 
    At the time of this writing, the IETF has recently been asked to
-   allocate several new special-use top-level internet names.  In
-   evaluating the process for additional special-use-top-level internet
+   allocate several new special-use top-level Internet names.  In
+   evaluating the process for additional special-use-top-level Internet
    names as documented in Special-Use Domain Names [RFC6761], the IETF
    encountered several different sorts of issues.  Because of this, the
 
@@ -121,7 +121,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
    problems associated with the allocation of special-use names.  In
    support of the particular set of problems described here, the
    document also includes documentation of existing practice as it
-   relates to the use of internet names, as well as a brief history of
+   relates to the use of Internet names, as well as a brief history of
    domain names, and finally to describe the set of problems that exist
    as reported by various IETF participants with experience in the
    various aspects of the problem.
@@ -182,7 +182,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
    This is the list of problems:
 
    o  IETF and ICANN independently have remit to assign names out of the
-      namespace that internet names represent; a formal coordination
+      namespace that Internet names represent; a formal coordination
       process does not exist.
 
    o  Although IETF and ICANN nominally have authority over this
@@ -205,10 +205,10 @@ Internet-Draft          Special-Use Names Problem              June 2016
          outcome is refusal
 
    o  There is demand for more than one name resolution protocol for
-      internet names, but internet names contain no metadata to indicate
+      Internet names, but Internet names contain no metadata to indicate
       which protocol to use to resolve them.
 
-   o  The practice of using the rightmost label in an internet name as a
+   o  The practice of using the rightmost label in an Internet name as a
       means for distinguishing between protocols, or for providing DNS
       resolution in local contexts (e.g., ".corp", cannot be assumed to
       be broadly implemented either in stub resolvers or recursive
@@ -359,7 +359,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
       problem can also occur simply because a single user copies a name
       from one context in which it has one meaning, into a different
       context in which it has a different meaning-- for example copying
-      a '.onion' internet name out of a TOR browser, where it has
+      a '.onion' Internet name out of a TOR browser, where it has
       meaning, and pasting this name into an ssh client that doesn't
       support connecting over TOR.  [TODO: Consider "labels" instead of
       "symbols".]
@@ -459,7 +459,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
    The term "stub resolver" in this case does not mean "DNS protocol
    stub resolver."  The stub resolver is the entity within a particular
-   software stack that takes a question about an internet name and
+   software stack that takes a question about an Internet name and
    answers it.  One way a stub resolver can answer such a question is
    using the DNS protocol, but it is in the stub resolver, as we are
    using the term here, that the decision as to whether to use a
@@ -594,7 +594,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
    This use case is distinct from the use-case for SUTLINs like '.local'
    and '.onion' in that the names are resolved using the DNS protocol.
    But it shares the problem that such names cannot be assumed either to
-   be unique or to be functional in all contexts for all internet-
+   be unique or to be functional in all contexts for all Internet-
    connected hosts.
 
 4.2.4.  Name Collision in the DNS
@@ -646,7 +646,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 4.3.  Summary
 
-   The assignment of internet names is not under the sole control of any
+   The assignment of Internet names is not under the sole control of any
    one organization.  ICANN has authority in many cases, and could be
    considered in some sense the default.  IETF has authority in other
    cases, but only with respect to protocol development.  And neither of
@@ -675,7 +675,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
    authority, the Network Information Center, and distributed to all
-   hosts on the internet using the File Transfer Protocol (FTP)
+   hosts on the Internet using the File Transfer Protocol (FTP)
    [RFC0959].  The inefficiency of this process is cited as a reason for
    the development of the DNS [RFC0882] [RFC0883] in 1983.
 
@@ -708,20 +708,20 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
    This history is being presented because discussions about special-use
    names in the IETF often come down to the question of why users of new
-   name resolution protocols choose to use internet names, rather than
+   name resolution protocols choose to use Internet names, rather than
    using some other naming concept that doesn't overlap with the
    namespace that, in modern times is, by default, resolved using the
    DNS.
 
    The answer is that as a consequence of this long history of resolving
-   internet names, internet names appear in a large variety of contexts
+   Internet names, Internet names appear in a large variety of contexts
    in user interfaces applications programming interfaces.  Any name
-   that appears in such a context is an internet name.  What this means
-   is that internet names have a highly privileged status in deployed
+   that appears in such a context is an Internet name.  What this means
+   is that Internet names have a highly privileged status in deployed
    software.  Proposals to change that will be almost possible to get
    adopted in a useful or consistent way.  And since in most operating
    systems, mechanisms already exist for implementing special handling
-   for some internet names, from a practical perspective the only way to
+   for some Internet names, from a practical perspective the only way to
 
 
 
@@ -731,7 +731,7 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
 
    achieve the goals of any new name resolution protocol is through the
-   use of special-use internet names.
+   use of special-use Internet names.
 
 6.  Contributors
 
@@ -758,8 +758,8 @@ Internet-Draft          Special-Use Names Problem              June 2016
               specification", RFC 883, DOI 10.17487/RFC0883, November
               1983, <http://www.rfc-editor.org/info/rfc883>.
 
-   [RFC0959]  Postel, J. and J. Reynolds, "File Transfer Protocol",
-              STD 9, RFC 959, DOI 10.17487/RFC0959, October 1985,
+   [RFC0959]  Postel, J. and J. Reynolds, "File Transfer Protocol", STD
+              9, RFC 959, DOI 10.17487/RFC0959, October 1985,
               <http://www.rfc-editor.org/info/rfc959>.
 
    [RFC1002]  NetBIOS Working Group in the Defense Advanced Research
@@ -797,16 +797,16 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
    [RFC2860]  Carpenter, B., Baker, F., and M. Roberts, "Memorandum of
               Understanding Concerning the Technical Work of the
-              Internet Assigned Numbers Authority", RFC 2860,
-              DOI 10.17487/RFC2860, June 2000,
+              Internet Assigned Numbers Authority", RFC 2860, DOI
+              10.17487/RFC2860, June 2000,
               <http://www.rfc-editor.org/info/rfc2860>.
 
    [RFC4193]  Hinden, R. and B. Haberman, "Unique Local IPv6 Unicast
               Addresses", RFC 4193, DOI 10.17487/RFC4193, October 2005,
               <http://www.rfc-editor.org/info/rfc4193>.
 
-   [RFC6303]  Andrews, M., "Locally Served DNS Zones", BCP 163,
-              RFC 6303, DOI 10.17487/RFC6303, July 2011,
+   [RFC6303]  Andrews, M., "Locally Served DNS Zones", BCP 163, RFC
+              6303, DOI 10.17487/RFC6303, July 2011,
               <http://www.rfc-editor.org/info/rfc6303>.
 
    [RFC6598]  Weil, J., Kuarsingh, V., Donley, C., Liljenstolpe, C., and
@@ -815,8 +815,8 @@ Internet-Draft          Special-Use Names Problem              June 2016
               2012, <http://www.rfc-editor.org/info/rfc6598>.
 
    [RFC6760]  Cheshire, S. and M. Krochmal, "Requirements for a Protocol
-              to Replace the AppleTalk Name Binding Protocol (NBP)",
-              RFC 6760, DOI 10.17487/RFC6760, February 2013,
+              to Replace the AppleTalk Name Binding Protocol (NBP)", RFC
+              6760, DOI 10.17487/RFC6760, February 2013,
               <http://www.rfc-editor.org/info/rfc6760>.
 
    [RFC6761]  Cheshire, S. and M. Krochmal, "Special-Use Domain Names",
@@ -828,8 +828,8 @@ Internet-Draft          Special-Use Names Problem              June 2016
               <http://www.rfc-editor.org/info/rfc6762>.
 
    [RFC7050]  Savolainen, T., Korhonen, J., and D. Wing, "Discovery of
-              the IPv6 Prefix Used for IPv6 Address Synthesis",
-              RFC 7050, DOI 10.17487/RFC7050, November 2013,
+              the IPv6 Prefix Used for IPv6 Address Synthesis", RFC
+              7050, DOI 10.17487/RFC7050, November 2013,
               <http://www.rfc-editor.org/info/rfc7050>.
 
 
