@@ -164,19 +164,24 @@
 	  ICANN or IETF process, but expected outcome is
 	  refusal</t></list></t>
 
-        <t>The namespace is useful for identifying things outside of the
-        scope of the Domain Name System.</t>
+        <t>There is demand for more than one name resolution protocol
+        for internet names, but internet names contain no metadata to
+        indicate which protocol to use to resolve them.</t>
 
-	<t>The practice of using top-level internet names as a means
-	for distinguishing between protocols, or for providing DNS
-	resolution in local contexts (e.g., ".corp", cannot be
-	assumed to be broadly implemented either in stub resolvers
-	or recursive resolvers.  Consequently, any such use results
-	in queries for those names being sent to authoritative
+	<t>The practice of using the rightmost label in an internet
+	name as a means for distinguishing between protocols, or for
+	providing DNS resolution in local contexts (e.g., ".corp",
+	cannot be assumed to be broadly implemented either in stub
+	resolvers or recursive resolvers.  Consequently, any such use
+	results in queries for those names being sent to authoritative
 	servers.</t>
 
-        <t>The IETF process for assigning names to things outside of the
-        DNS is tortuous</t>
+	<t>The RFC6761 process is sufficiently uncertain that some
+	protocol developers have assumed they could not get a name
+	assigned; the process of assigning the first new name
+	following RFC 6761 took more than ten years from beginning to
+	end: longer by a factor of ten than any other part of the
+	protocol development process.</t>
 
         <t>There is strong resistance within the IETF to assigning names
         to things outside of the DNS, for a variety of reasons:
@@ -186,7 +191,7 @@
           particular name.</t>
 
           <t>Assertion of authority: there is a sense that the namespace
-          is "owned" by the IETF or by ICANN, and so if a name is allocated
+          is "owned" by the IETF or by ICANN, and so, if a name is allocated
           outside of that process, the person or entity that allocated that
           name should suffer some consequence that would, presumably, deter
           future circumvention of the official process.</t>
@@ -378,10 +383,10 @@
               above bullet points outline 3...]</t>
             </list></t>
 
-	  <t>To be clear, the term "stub resolver" above does not mean
+	  <t>The term "stub resolver" in this case does not mean
 	  "DNS protocol stub resolver."   The stub resolver is the entity within
 	  a particular software stack that takes a question about an internet
-	  name and answers is.   One way a stub resolver can answer such a question
+	  name and answers it.   One way a stub resolver can answer such a question
 	  is using the DNS protocol, but it is in the stub resolver, as we are
 	  using the term here, that the decision as to whether to use a protocol,
 	  and if so which protocol, or whether to use a local database of some sort,
@@ -604,7 +609,7 @@
       using it for experimental purposes, which persists even at the time of
       writing of this memo.</t>
 
-      <t>The reason for presenting this history is that discussions about
+      <t>This history is being presented because discussions about
       special-use names in the IETF often come down to the question of
       why users of new name resolution protocols choose to use internet
       names, rather than using some other naming concept that doesn't
