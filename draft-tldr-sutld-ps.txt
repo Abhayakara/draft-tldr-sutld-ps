@@ -208,12 +208,12 @@ Internet-Draft          Special-Use Names Problem              June 2016
       internet names, but internet names contain no metadata to indicate
       which protocol to use to resolve them.
 
-   o  The practice of using the rightmost label in an internet name as a
-      means for distinguishing between protocols, or for providing DNS
-      resolution in local contexts (e.g., ".corp", cannot be assumed to
-      be broadly implemented either in stub resolvers or recursive
-      resolvers.  Consequently, any such use results in queries for
-      those names being sent to authoritative servers.
+   o  When a top-level name is used as a means either of marking the
+      rest of the name for resolution using a protocol other than DNS,
+      or is used for resolution of names with no global meaning, not all
+      software that processes such names will understand the names'
+      special meanings.  Consequently, any such use results in queries
+      for those names being sent to authoritative servers.
 
    o  The RFC6761 process is sufficiently uncertain that some protocol
       developers have assumed they could not get a name assigned; the
@@ -228,6 +228,9 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
       more than ten years from beginning to end: longer by a factor of
       ten than any other part of the protocol development process.
+      Other uses of the process have proceeded more smoothly, but there
+      is a reasonably justified perception that using this process is
+      likely to be slow and difficult, with an uncertain outcome.
 
    o  There is strong resistance within the IETF to assigning names to
       things outside of the DNS, for a variety of reasons:
@@ -264,16 +267,13 @@ Internet-Draft          Special-Use Names Problem              June 2016
          believes belongs to them in some way, the IETF could become
          embroiled in an expensive dispute with those parties.
 
-   o  In cases where assignments have been made, technical mistakes have
-      been made due either to insufficiently well-defined process or to
-      a failure to follow the process that was defined.
+   o  In cases where the IETF has made assignments through the RFC 6761
+      process, technical mistakes have been made due either to
+      insufficiently well-defined process or to a failure to follow the
+      process that was defined in RFC 6761.
 
-   o  There exists no process whereby names that have been determined to
-      be unsafe for allocation, and any known uses for those names, can
-      be documented in the RFC6761 registry.  Consequently, efforts by
-      ICANN to document such issues are not reflected in the IETF
-      registry.
-
+   o  In principal, the RFC 6761 process could be used to document the
+      existence of domain names that are not safe to allocate, and
 
 
 
@@ -281,6 +281,10 @@ Lemon, et al.           Expires December 31, 2016               [Page 5]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
+
+      provide information on how those names are used in practice.
+      However, attempts to use RFC6761 to accomplish this
+      [I-D.chapin-additional-reserved-tlds] have not been successful.
 
    o  No process exists for checking documents to make sure they don't
       accidentally assign names (e.g.  RFC 7788).
@@ -325,10 +329,6 @@ Internet-Draft          Special-Use Names Problem              June 2016
 
    This document should be considered required reading for IETF
    participants who wish to express an informed opinion on the topic of
-   SUINs.  The main points that appear relevant to the specal use names
-   problem are:
-
-   o  The Internet requires a globally unique namespace
 
 
 
@@ -337,6 +337,11 @@ Lemon, et al.           Expires December 31, 2016               [Page 6]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
+
+   SUINs.  The main points that appear relevant to the specal use names
+   problem are:
+
+   o  The Internet requires a globally unique namespace
 
    o  Private networks may operate private namespaces, but still require
       that names in the public namespace be globally unique.
@@ -381,11 +386,6 @@ Internet-Draft          Special-Use Names Problem              June 2016
    The second important document is Special-Use Domain Names [RFC6761].
    RFC6761 represents the current IETF consensus on designating and
    recording SUINs.  The IETF has experienced problems with the
-   designation process described in RFC6761; these concerns motivate
-   this document.  Again, familiarity with RFC6761 is a prerequisite for
-   having an informed opinion on the topic of SUINs.
-
-
 
 
 
@@ -393,6 +393,10 @@ Lemon, et al.           Expires December 31, 2016               [Page 7]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
+
+   designation process described in RFC6761; these concerns motivate
+   this document.  Again, familiarity with RFC6761 is a prerequisite for
+   having an informed opinion on the topic of SUINs.
 
    RFC 6761 defines two aspects of SUINs: designating a domain name to
    have a special purpose and registering that special use in the
@@ -438,10 +442,6 @@ Internet-Draft          Special-Use Names Problem              June 2016
    o  A special-use name may be name that requires special handling in
       the stub resolver.  An example would be a special-use top-level
       name like '.local' which acts as a signal to indicate that the
-      local stub resolver should use a non-DNS protocol for name
-      resolution.
-
-
 
 
 
@@ -449,6 +449,9 @@ Lemon, et al.           Expires December 31, 2016               [Page 8]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
+
+      local stub resolver should use a non-DNS protocol for name
+      resolution.
 
    o  The current IETF consensus (from a process perspective, not
       necessarily from the perspective of what would be consensus if the
@@ -495,9 +498,6 @@ Internet-Draft          Special-Use Names Problem              June 2016
       issues, and shall remain subject to the provisions of this
       Section 4.
 
-   The above text is an addendum to the following:
-
-
 
 
 
@@ -505,6 +505,8 @@ Lemon, et al.           Expires December 31, 2016               [Page 9]
 
 Internet-Draft          Special-Use Names Problem              June 2016
 
+
+   The above text is an addendum to the following:
 
       Two particular assigned spaces present policy issues in addition
       to the technical considerations specified by the IETF: the
@@ -552,8 +554,6 @@ Internet-Draft          Special-Use Names Problem              June 2016
    The point of mentioning these dates is so that discussions involving
    the time when the '.LOCAL' domain was first deployed, and the context
    in which it was deployed, may be properly informed.
-
-
 
 
 

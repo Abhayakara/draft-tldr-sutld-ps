@@ -168,20 +168,23 @@
         for internet names, but internet names contain no metadata to
         indicate which protocol to use to resolve them.</t>
 
-	<t>The practice of using the rightmost label in an internet
-	name as a means for distinguishing between protocols, or for
-	providing DNS resolution in local contexts (e.g., ".corp",
-	cannot be assumed to be broadly implemented either in stub
-	resolvers or recursive resolvers.  Consequently, any such use
-	results in queries for those names being sent to authoritative
-	servers.</t>
+	<t>When a top-level name is used as a means either of marking
+	the rest of the name for resolution using a protocol other
+	than DNS, or is used for resolution of names with no global
+	meaning, not all software that processes such names will
+	understand the names' special meanings.  Consequently, any
+	such use results in queries for those names being sent to
+	authoritative servers.</t>
 
 	<t>The RFC6761 process is sufficiently uncertain that some
 	protocol developers have assumed they could not get a name
 	assigned; the process of assigning the first new name
 	following RFC 6761 took more than ten years from beginning to
 	end: longer by a factor of ten than any other part of the
-	protocol development process.</t>
+	protocol development process.  Other uses of the process have
+	proceeded more smoothly, but there is a reasonably justified
+	perception that using this process is likely to be slow and
+	difficult, with an uncertain outcome.</t>
 
         <t>There is strong resistance within the IETF to assigning names
         to things outside of the DNS, for a variety of reasons:
@@ -218,15 +221,16 @@
           believes belongs to them in some way, the IETF could become embroiled
           in an expensive dispute with those parties.</t></list></t>
           
-        <t>In cases where assignments have been made, technical mistakes have
-        been made due either to insufficiently well-defined process or to a
-        failure to follow the process that was defined.</t>
-        
-	<t>There exists no process whereby names that have been
-	determined to be unsafe for allocation, and any known uses for
-	those names, can be documented in the RFC6761 registry.  Consequently,
-	efforts by ICANN to document such issues are not reflected in
-	the IETF registry.</t>
+	<t>In cases where the IETF has made assignments through the RFC 6761
+        process, technical mistakes have been made due either to
+	insufficiently well-defined process or to a failure to follow the
+	process that was defined in RFC 6761.</t>
+
+	<t>In principal, the RFC 6761 process could be used to document the
+	existence of domain names that are not safe to allocate, and provide
+	information on how those names are used in practice.   However,
+	<xref target="I-D.chapin-additional-reserved-tlds">attempts
+	to use RFC6761 to accomplish this</xref> have not been successful.</t>
         
         <t>No process exists for checking documents to make sure they don't
         accidentally assign names (e.g. RFC 7788).</t>
