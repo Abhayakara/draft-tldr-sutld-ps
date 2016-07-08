@@ -3,7 +3,7 @@
 <?rfc toc="yes"?>
 <?rfc compact="yes" ?>
 <?rfc symrefs="yes"?>
-<rfc category="info" docName="draft-tldr-sutld-ps-01" ipr="trust200902"
+<rfc category="info" docName="draft-tldr-sutld-ps-02" ipr="trust200902"
      obsoletes="" updates="">
   <front>
     <title abbrev="Special-Use Names Problem">Special-Use Names Problem
@@ -57,7 +57,7 @@
       </address>
     </author>
 
-    <date day="29" month="June" year="2016"/>
+    <date day="8" month="July" year="2016"/>
 
     <abstract>
       <t>The Special-Use Domain Names registration policy in RFC 6761 has been
@@ -77,14 +77,14 @@
       name into some object or set of objects to which the name refers, perhaps
       most typically one or more IP addresses.  These names are often referred
       to as domain names, although in this document they will be referred to
-      as internet names to avoid confusion between the names and a particular
+      as Internet Names to avoid confusion between the names and a particular
       protocol for resolving these names, the <xref target="RFC1034">Domain
       Name System</xref>.   An excellent presentation on this topic can be
       found in <xref target="I-D.lewis-domain-names">Domain Names</xref>.</t>
     
       <t>At the time of this writing, the IETF has recently been asked to
-      allocate several new special-use top-level internet names. In evaluating the
-      process for additional special-use-top-level internet names as documented in
+      allocate several new special-use top-level Internet Names. In evaluating the
+      process for additional special-use-top-level Internet Names as documented in
       <xref target="RFC6761">Special-Use Domain Names</xref>, the IETF
       encountered several different sorts of issues. Because of this, the IETF
       has decided to investigate the problem and decide if and how the RFC
@@ -94,7 +94,7 @@
       problems associated with the allocation of special-use names.
       In support of the particular set of problems described here,
       the document also includes documentation of existing practice as
-      it relates to the use of internet names, as well as a brief history of
+      it relates to the use of Internet Names, as well as a brief history of
       domain names, and finally to describe the set of problems that exist as
       reported by various IETF participants with experience in the various
       aspects of the problem.</t>
@@ -146,7 +146,7 @@
       
       <t>This is the list of problems:<list style="symbols">
         <t>IETF and ICANN independently have remit to assign names out
-        of the namespace that internet names represent; a formal
+        of the namespace that Internet Names represent; a formal
         coordination process does not exist.</t>
 
         <t>Although IETF and ICANN nominally have authority over this
@@ -165,11 +165,11 @@
 	  refusal</t></list></t>
 
         <t>There is demand for more than one name resolution protocol
-        for internet names, but internet names contain no metadata to
+        for Internet Names, but Internet Names contain no metadata to
         indicate which protocol to use to resolve them.</t>
 
 	<t>When a top-level name is used as a means either of marking
-	the rest of the name for resolution using a protocol other
+	the rest of an Internet Name for resolution using a protocol other
 	than DNS, or is used for resolution of names with no global
 	meaning, not all software that processes such names will
 	understand the names' special meanings.  Consequently, any
@@ -300,7 +300,7 @@
               communication. This same problem can also occur simply because a
               single user copies a name from one context in which it has one
               meaning, into a different context in which it has a different
-              meaning&mdash; for example copying a '.onion' internet name out
+              meaning&mdash; for example copying a '.onion' Internet Name out
               of a TOR browser, where it has meaning, and pasting this name
               into an ssh client that doesn't support connecting over TOR.
               [TODO: Consider "labels" instead of "symbols".]</t>
@@ -389,7 +389,7 @@
 
 	  <t>The term "stub resolver" in this case does not mean
 	  "DNS protocol stub resolver."   The stub resolver is the entity within
-	  a particular software stack that takes a question about an internet
+	  a particular software stack that takes a question about an Internet
 	  name and answers it.   One way a stub resolver can answer such a question
 	  is using the DNS protocol, but it is in the stub resolver, as we are
 	  using the term here, that the decision as to whether to use a protocol,
@@ -517,7 +517,7 @@
           '.local' and '.onion' in that the names are resolved using the DNS
           protocol.  But it shares the problem that such names cannot be assumed
           either to be unique or to be functional in all contexts for all
-          internet-connected hosts.</t>
+          Internet-connected hosts.</t>
         </section>
 
         <section title="Name Collision in the DNS">
@@ -558,7 +558,7 @@
         </section>
       </section>
       <section title="Summary">
-        <t>The assignment of internet names is not under the sole control of any
+        <t>The assignment of Internet Names is not under the sole control of any
         one organization.   ICANN has authority in many cases, and could be
         considered in some sense the default.   IETF has authority in other cases,
         but only with respect to protocol development.   And neither of these
@@ -580,7 +580,7 @@
       <t>In fact, in the early days of the Internet, hostnames were resolved
       using a text file, HOSTS.TXT, which was maintained by a central
       authority, the Network Information Center, and distributed to all hosts
-      on the internet using the <xref target="RFC0959">File Transfer Protocol
+      on the Internet using the <xref target="RFC0959">File Transfer Protocol
       (FTP)</xref>. The inefficiency of this process is cited as a reason for
       the development of <xref target="RFC0882">the DNS</xref>
       <xref target="RFC0883"/> in 1983.</t>
@@ -615,23 +615,23 @@
 
       <t>This history is being presented because discussions about
       special-use names in the IETF often come down to the question of
-      why users of new name resolution protocols choose to use internet
+      why users of new name resolution protocols choose to use Internet
       names, rather than using some other naming concept that doesn't
       overlap with the namespace that, in modern times is, by default,
       resolved using the DNS.</t>
 
       <t>The answer is that as a consequence of this long history of
-      resolving internet names, internet names appear in a large
+      resolving Internet Names, Internet Names appear in a large
       variety of contexts in user interfaces applications programming
       interfaces.   Any name that appears in such a context is an
-      internet name.   What this means is that internet names have
+      Internet Name.   What this means is that Internet Names have
       a highly privileged status in deployed software.  Proposals
       to change that will be almost possible to get adopted in a
       useful or consistent way.  And since in most operating systems,
       mechanisms already exist for implementing special handling
-      for some internet names, from a practical perspective the
+      for some Internet Names, from a practical perspective the
       only way to achieve the goals of any new name resolution protocol
-      is through the use of special-use internet names.</t>
+      is through the use of special-use Internet Names.</t>
     </section>
 
     <section title="Contributors">
@@ -641,10 +641,15 @@
       insightful observations or patiently answered questions. This should not
       be taken as an indication that any of these folks actually agree with
       what the document says, but their generosity with time and thought are
-      appreciated in any case. Ralph started out as an innocent bystander, but
+      appreciated in any case.</t>
+      <t>Ralph started out as an innocent bystander, but
       discussion with him was the key motivating factor in the writing of this
       document, and he agreed to co-author it without too much arm-twisting.
-      And this document owes a great deal to Ed Lewis' excellent work on <xref
+      Warren spent a lot of time working with me on this document after it
+      was first published, and joined as an author in order to make sure that
+      the work got finished; without him the -01 and -02 versions might not
+      have happened.</t>
+      <t>And this document owes a great deal to Ed Lewis' excellent work on <xref
       target="I-D.lewis-domain-names">what a "domain name" is</xref>.</t>
     </section>
   </middle>
