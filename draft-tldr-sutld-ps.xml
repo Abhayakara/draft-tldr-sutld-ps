@@ -3,7 +3,7 @@
 <?rfc toc="yes"?>
 <?rfc compact="yes" ?>
 <?rfc symrefs="yes"?>
-<rfc category="info" docName="draft-tldr-sutld-ps-03" ipr="trust200902"
+<rfc category="info" docName="draft-tldr-sutld-ps-04" ipr="trust200902"
      obsoletes="" updates="">
   <front>
     <title abbrev="Special-Use Names Problem">Special-Use Names Problem
@@ -57,7 +57,7 @@
       </address>
     </author>
 
-    <date day="11" month="September" year="2016"/>
+    <date day="16" month="September" year="2016"/>
 
     <abstract>
       <t>The Special-Use Domain Names registration policy in RFC 6761 has been
@@ -66,6 +66,10 @@
       been identified. In addition it reviews the history of Domain Names and
       summarizes current IETF publications and some publications from other
       standards organizations relating to special-use domain names.</t>
+
+      <t>[ Ed note: John Levine suggested we use 'Domain Names' instead of
+      'Internet Names'; this is the only change between -03 and -04. Please
+      let us know which term you prefer. ]</t>
     </abstract>
   </front>
 
@@ -75,16 +79,16 @@
       resolution. Name resolution is the process of translating a
       human-readable symbolic name into some object or set of objects to which
       the name refers, most typically one or more IP addresses. These names
-      are often referred to as domain names, although in this document they
-      will be referred to as Internet Names to avoid confusion between the
-      names and a particular protocol for resolving these names, the <xref
+      are often referred to as domain names. When reading this document, care
+      must be taken to not assume that the term Domain Name implies the
+      particular protocol for resolving these names, the <xref
       target="RFC1034">Domain Name System</xref>. An excellent presentation on
       this topic can be found in <xref target="I-D.lewis-domain-names">Domain
       Names</xref>.</t>
 
       <t>At the time of this writing, the IETF has recently been asked to
-      allocate several new special-use top-level Internet Names. In evaluating
-      the process for additional special-use top-level Internet Names as
+      allocate several new special-use top-level Domain Names. In evaluating
+      the process for additional special-use top-level Domain Names as
       documented in <xref target="RFC6761">Special-Use Domain Names</xref>,
       the IETF encountered several different sorts of issues. Because of this,
       the IETF has decided to investigate the problem and decide if and how
@@ -95,8 +99,8 @@
       problems associated with the allocation of special-use names. In support
       of the particular set of problems described here, the document also
       includes documentation of existing practice as it relates to the use of
-      Internet Names, as well as a brief history of domain names, and finally
-      to describe the set of problems that exist as reported by various IETF
+      Domain Names, as well as a brief history of domain names, and finally to
+      describe the set of problems that exist as reported by various IETF
       participants with experience in the various aspects of the problem.</t>
     </section>
 
@@ -104,18 +108,11 @@
       <t>For the sake of brevity this document uses a number of abbreviations.
       These are expanded here: <list style="hanging">
           <t hangText="Domain Name">A name which serves as input to a host's
-          ordinary name resolution process, for example 'EXAMPLE.ORG'. We are
-          avoiding the use of this term because it tends to imply that the
-          resolution protocol that will be used is the domain name system.
-          However, the actual meaning of this term is identical to the meaning
-          of the term 'Internet Name'.</t>
-
-          <t hangText="Internet Name">A name which serves as input to a host's
           ordinary name resolution process, for example 'EXAMPLE.ORG'.</t>
 
-          <t hangText="SUIN">Special Use Internet Name</t>
+          <t hangText="SUDN">Special Use Domain Name</t>
 
-          <t hangText="SUTLIN">Special-Use Top-Level Internet Name</t>
+          <t hangText="SUTLDN">Special-Use Top-Level Domain Name</t>
 
           <t hangText="IANA">Internet Assigned Numbers Authority</t>
 
@@ -145,7 +142,7 @@
 
       <t>This is the list of problems:<list style="symbols">
           <t>IETF and ICANN independently have remit to assign names out of
-          the namespace that Internet Names represent; a formal coordination
+          the namespace that Domain Names represent; a formal coordination
           process does not exist.</t>
 
           <t>Although IETF and ICANN nominally have authority over this
@@ -168,11 +165,11 @@
             </list></t>
 
           <t>There is demand for more than one name resolution protocol for
-          Internet Names, but Internet Names contain no metadata to indicate
-          which protocol to use to resolve them.</t>
+          Domain Names, but Domain Names contain no metadata to indicate which
+          protocol to use to resolve them.</t>
 
           <t>When a top-level name is used as a means either of marking the
-          rest of an Internet Name for resolution using a protocol other than
+          rest of a Domain Name for resolution using a protocol other than
           DNS, or is used for resolution of names with no global meaning, not
           all software that processes such names will understand the names'
           special meanings. Consequently, any such use results in queries for
@@ -260,7 +257,7 @@
 
     <section title="Existing Practice Regarding SUINs">
       <t>There are three primary and numerous secondary documents to consider
-      when thinking about the Special-Use Internet Names process.</t>
+      when thinking about the Special-Use Domain Names process.</t>
 
       <section title="Primary SUIN Documents">
         <t>The primary documents are considered primary because they directly
@@ -271,14 +268,14 @@
         <section title="IAB Technical Comment on the Unique DNS Root">
           <t><xref target="RFC2826">This document</xref> is not an IETF
           consensus document, and appears to have been written to address a
-          different problem than the SUIN problem. However, it speaks directly
+          different problem than the SUDN problem. However, it speaks directly
           to several of the key issues that must be considered, and of course
           coming as it does from the IAB, it is rightly given with a great
           deal of authority despite not being an IETF consensus document.</t>
 
           <t>This document should be considered required reading for IETF
           participants who wish to express an informed opinion on the topic of
-          SUINs. The main points that appear relevant to the specal use names
+          SUDNs. The main points that appear relevant to the specal use names
           problem are: <list style="symbols">
               <t>The Internet requires a globally unique namespace</t>
 
@@ -305,10 +302,10 @@
               communication. This same problem can also occur simply because a
               single user copies a name from one context in which it has one
               meaning, into a different context in which it has a different
-              meaning&mdash; for example copying a '.onion' Internet Name out
-              of a TOR browser, where it has meaning, and pasting this name
-              into an ssh client that doesn't support connecting over TOR.
-              [TODO: Consider "labels" instead of "symbols".]</t>
+              meaning&mdash; for example copying a '.onion' Domain Name out of
+              a TOR browser, where it has meaning, and pasting this name into
+              an ssh client that doesn't support connecting over TOR. [TODO:
+              Consider "labels" instead of "symbols".]</t>
             </list></t>
 
           <t>To boil this down even further, we can take the following advice
@@ -327,13 +324,13 @@
         <section title="Special-Use Domain Names">
           <t>The second important document is <xref target="RFC6761">
           Special-Use Domain Names</xref>. RFC6761 represents the current IETF
-          consensus on designating and recording SUINs. The IETF has
+          consensus on designating and recording SUDNs. The IETF has
           experienced problems with the designation process described in
           RFC6761; these concerns motivate this document. Again, familiarity
           with RFC6761 is a prerequisite for having an informed opinion on the
-          topic of SUINs.</t>
+          topic of SUDNs.</t>
 
-          <t>RFC 6761 defines two aspects of SUINs: designating a domain name
+          <t>RFC 6761 defines two aspects of SUDNs: designating a domain name
           to have a special purpose and registering that special use in the
           Special-Use Domain Names registry. The designation process is
           defined in a single sentence (RFC6761, section 4):</t>
@@ -392,12 +389,12 @@
 
           <t>The term "stub resolver" in this case does not mean "DNS protocol
           stub resolver." The stub resolver is the entity within a particular
-          software stack that takes a question about an Internet name and
-          answers it. One way a stub resolver can answer such a question is
-          using the DNS protocol, but it is in the stub resolver, as we are
-          using the term here, that the decision as to whether to use a
-          protocol, and if so which protocol, or whether to use a local
-          database of some sort, is made.</t>
+          software stack that takes a question about a Domain name and answers
+          it. One way a stub resolver can answer such a question is using the
+          DNS protocol, but it is in the stub resolver, as we are using the
+          term here, that the decision as to whether to use a protocol, and if
+          so which protocol, or whether to use a local database of some sort,
+          is made.</t>
 
           <t>RFC6761 does not limit special-use names to TLDs. However, at
           present, all special-use names registered in the <xref
@@ -420,7 +417,7 @@
           target="RFC2860"/> between the IETF and ICANN (Internet Corporation
           for Assigned Names and Numbers) which discusses how names and
           numbers will be managed through the IANA (Internet Assigned Numbers
-          Authority). This document is important to the discussion of SUINs
+          Authority). This document is important to the discussion of SUDNs
           because, while it delegates authority for managing the Domain Name
           System Namespace generally to ICANN, it reserves to the IETF the
           authority that RFC 6761 formalizes: <list style="empty">
@@ -460,7 +457,7 @@
 
         <section title="Multicast DNS">
           <t>Multicast DNS <xref target="RFC6762"/> defines the Multicast DNS
-          protocol, which uses the '.LOCAL' SUTLIN. Section 3 describes the
+          protocol, which uses the '.LOCAL' SUTLDN. Section 3 describes the
           semantics of "multicast DNS names." It is of considerable historical
           importance to note that the -00 version of this document, an
           individual submission, was published in July of 2001. This version
@@ -487,7 +484,7 @@
         <section title="The .onion Special-Use TLD">
           <t><xref target="RFC7686">The .onion Special Use TLD</xref> is
           important because it is the most recent IETF action on the topic of
-          SUTLINs; although it does not set new policy, the mere fact of its
+          SUTLDNs; although it does not set new policy, the mere fact of its
           publication is worth thinking about.</t>
 
           <t>Two important points to consider about this document are that:
@@ -499,7 +496,7 @@
               RFC 6761 process, and <xref target="SDO-CABF-INT"> because a
               deadline had been set by the CA/Browser Forum</xref> after which
               all .onion PKI certificates would expire and no new certificates
-              would be issued, unless the .onion SUTLIN were to be recognized
+              would be issued, unless the .onion SUTLDN were to be recognized
               by the IETF.</t>
             </list></t>
         </section>
@@ -516,7 +513,7 @@
           target="RFC6598">IANA-Reserved IPv4 Prefix for Shared Address
           Space</xref>.</t>
 
-          <t>This use case is distinct from the use-case for SUTLINs like
+          <t>This use case is distinct from the use-case for SUTLDNs like
           '.local' and '.onion' in that the names are resolved using the DNS
           protocol. But it shares the problem that such names cannot be
           assumed either to be unique or to be functional in all contexts for
@@ -604,7 +601,7 @@
       name resolution. Many still have a name service switch that can be
       configured on the host to resolve some domains using NIS or WINS. Most
       have the capability to resolve names using mDNS by recognizing the
-      special meaning of the '.local' SUTLIN.</t>
+      special meaning of the '.local' SUTLDN.</t>
 
       <t>The Sun Microsystems model of having private domains within a
       corporate site, while supporting the global domain name system for
@@ -618,21 +615,20 @@
 
       <t>This history is being presented because discussions about special-use
       names in the IETF often come down to the question of why users of new
-      name resolution protocols choose to use Internet names, rather than
-      using some other naming concept that doesn't overlap with the namespace
-      that, in modern times is, by default, resolved using the DNS.</t>
+      name resolution protocols choose to use Domain names, rather than using
+      some other naming concept that doesn't overlap with the namespace that,
+      in modern times is, by default, resolved using the DNS.</t>
 
       <t>The answer is that as a consequence of this long history of resolving
-      Internet Names, Internet Names appear in a large variety of contexts in
-      user interfaces applications programming interfaces. Any name that
-      appears in such a context is an Internet Name. What this means is that
-      Internet Names have a highly privileged status in deployed software.
-      Proposals to change that will be almost possible to get adopted in a
-      useful or consistent way. And since in most operating systems,
-      mechanisms already exist for implementing special handling for some
-      Internet Names, from a practical perspective the only way to achieve the
-      goals of any new name resolution protocol is through the use of
-      special-use Internet Names.</t>
+      Domain Names, Domain Names appear in a large variety of contexts in user
+      interfaces applications programming interfaces. Any name that appears in
+      such a context is a Domain Name. What this means is that Domain Names
+      have a highly privileged status in deployed software. Proposals to
+      change that will be almost possible to get adopted in a useful or
+      consistent way. And since in most operating systems, mechanisms already
+      exist for implementing special handling for some Domain Names, from a
+      practical perspective the only way to achieve the goals of any new name
+      resolution protocol is through the use of special-use Domain Names.</t>
     </section>
 
     <section title="Contributors">
@@ -740,7 +736,7 @@
 
       <reference anchor="CORP-SUN-NIS">
         <front>
-          <title>System and Network Administration</title>
+          <title>Large System and Network Administration</title>
 
           <author>
             <organization>Sun Microsystems</organization>
@@ -763,5 +759,32 @@
         </front>
       </reference>
     </references>
+
+    <section title="Change Log.">
+      <t>-03 to -04:<list style="symbols">
+          <t>Replaced 'Internet Names' with 'Domain Names' - suggestion by
+          John Levine.</t>
+        </list></t>
+
+      <t>-02 to -03:<list style="symbols">
+          <t>Readability fixes, small grammar updates.</t>
+        </list></t>
+
+      <t>-01 to -02:<list style="symbols">
+          <t>Cleaned up the abstract.</t>
+
+          <t>Fixed the case of Internet</t>
+
+          <t>Reference to Ed Lewis' "domain names"</t>
+
+          <t>Fleshed out the problems, primarily the coordination, collisions
+          ones.</t>
+        </list></t>
+
+      <t>-00 to -01:<list style="symbols">
+          <t>Large refactoring, basically a rewrite. Incorporated comments,
+          removed a bunch of unneeded text, etc. </t>
+        </list></t>
+    </section>
   </back>
 </rfc>
