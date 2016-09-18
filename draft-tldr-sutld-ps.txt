@@ -5,7 +5,7 @@
 Network Working Group                                           T. Lemon
 Internet-Draft                                             Nominum, Inc.
 Intended status: Informational                                  R. Droms
-Expires: March 20, 2017                                      Cisco, Inc.
+Expires: March 20, 2017
                                                                W. Kumari
                                                                   Google
                                                       September 16, 2016
@@ -938,9 +938,9 @@ Authors' Addresses
 
 
    Ralph Droms
-   Cisco, Inc.
 
    Email: rdroms.ietf@gmail.com
+
 
 
 
