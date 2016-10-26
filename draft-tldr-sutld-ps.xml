@@ -290,7 +290,7 @@
 
           <t>This document should be considered required reading for IETF
           participants who wish to express an informed opinion on the topic of
-          SUDNs. The main points that appear relevant to the specal use names
+          SUDNs. The main points that appear relevant to the special use names
           problem are: <list style="symbols">
               <t>The Internet requires a globally unique namespace</t>
 
@@ -388,7 +388,7 @@
               but requires special handling in the recursive resolver. An
               example of this would be "10.in-addr.arpa."</t>
 
-              <t>A special-use name may be name that requires special handling
+              <t>A special-use name may be a name that requires special handling
               in the stub resolver. An example would be a special-use
               top-level name like '.local' which acts as a signal to indicate
               that the local stub resolver should use a non-DNS protocol for
