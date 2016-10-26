@@ -156,7 +156,7 @@
           third party who wants to just start using a subset of the namespace.</t>
 
 	  <t>Organizations do in fact sometimes commandeer subsets of the
-	  namespace.  Reasons for doing this may include: <list style="symbols">
+	  namespace.  Reasons a third party may do this include: <list style="symbols">
               <t>Unaware that a process exists for allocating such names</t>
 
               <t>Intended use is covered by gTLD allocation, but no gTLD
