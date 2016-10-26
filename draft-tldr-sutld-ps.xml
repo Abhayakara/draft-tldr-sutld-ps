@@ -3,7 +3,7 @@
 <?rfc toc="yes"?>
 <?rfc compact="yes" ?>
 <?rfc symrefs="yes"?>
-<rfc category="info" docName="draft-tldr-sutld-ps-04" ipr="trust200902"
+<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-00" ipr="trust200902"
      obsoletes="" updates="">
   <front>
     <title abbrev="Special-Use Names Problem">Special-Use Names Problem
@@ -57,7 +57,7 @@
       </address>
     </author>
 
-    <date day="16" month="September" year="2016"/>
+    <date day="25" month="October" year="2016"/>
 
     <abstract>
       <t>The Special-Use Domain Names registration policy in RFC 6761 has been
@@ -66,10 +66,6 @@
       been identified. In addition it reviews the history of Domain Names and
       summarizes current IETF publications and some publications from other
       standards organizations relating to special-use domain names.</t>
-
-      <t>[ Ed note: John Levine suggested we use 'Domain Names' instead of
-      'Internet Names'; this is the only change between -03 and -04. Please
-      let us know which term you prefer. ]</t>
     </abstract>
   </front>
 
@@ -103,7 +99,7 @@
       describe the set of problems that exist as reported by various IETF
       participants with experience in the various aspects of the problem.</t>
     </section>
-
+    
     <section title="Terminology">
       <t>For the sake of brevity this document uses a number of abbreviations.
       These are expanded here: <list style="hanging">
@@ -121,34 +117,46 @@
         </list></t>
     </section>
 
-    <section title="Problems associated with Special-Use Internet Names">
+    <section title="Problems associated with Special-Use Domain Names">
       <t>This section presents a list of problems that have been identified
       with respect to the allocation of special-use names. Solutions to these
       problems are out of scope. Because of that, problems with solutions to
       these problems are also out of scope, and will be covered in a separate
       document.</t>
 
-      <t>No assertion is made that any of these problems is more or less
-      important than any other. The point of this is simply to enumerate and
-      briefly describe the problems that have been raised during discussions
-      of the special-use name problem. The degree of detail is intended to be
-      sufficient that that participants in the discussion can agree that the
-      problems they've raised have been adequately described, and no more.</t>
+      <t>No assertion is made that any of these problems is more or less important than any
+      other. The point of this is simply to enumerate and briefly describe the problems that
+      have been raised during discussions of the special-use name problem. The degree of detail
+      is intended to be sufficient that that participants in the discussion can agree that the
+      problems they've raised have been adequately described, and no more.  These problems
+      should not appear to every reader to all be problems: we intend to cover any problem that
+      any participant considers a problem, not just those problems that everyone agrees are
+      problems.</t>
 
-      <t>In addition, no assertion is made that all of these problems must be
-      addressed; while each problem has one or more solutions, the solutions
-      may in some cases be mutually contradictory, or may come with costs that
-      do not justify the benefit that would be obtained from solving them.</t>
+      <t>In addition, no assertion is made that all of these problems must be addressed, or
+      that, if we think they should be addressed, the IETF is the organization with competence
+      to address them.  While each problem has one or more solutions, the solutions may in some
+      cases be mutually contradictory, or may come with costs that do not justify the benefit
+      that would be obtained from solving them.</t>
 
-      <t>This is the list of problems:<list style="symbols">
-          <t>IETF and ICANN independently have remit to assign names out of
+      <t>This is the list of problems: <list style="symbols">
+	  <t>IETF and ICANN independently have remit to assign names out of
           the namespace that Domain Names represent; a formal coordination
           process does not exist.</t>
 
+	  <t>The term "technical use" in the MoU is considered by some to be
+	  too inclusive.</t>
+	  
+	  <t>The IETF and ICANN claim authority over the domain name namespace.
+	  Not all developers of protocols on the internet agree that this authority
+	  resides with the IETF and ICANN.</t>
+
           <t>Although IETF and ICANN nominally have authority over this
           namespace, neither organization can enforce that authority over any
-          third party who wants to just start using a subset of the namespace.
-          Reasons for doing this may include: <list style="symbols">
+          third party who wants to just start using a subset of the namespace.</t>
+
+	  <t>Organizations do in fact sometimes commandeer subsets of the
+	  namespace.  Reasons for doing this may include: <list style="symbols">
               <t>Unaware that a process exists for allocating such names</t>
 
               <t>Intended use is covered by gTLD allocation, but no gTLD
@@ -173,7 +181,9 @@
           DNS, or is used for resolution of names with no global meaning, not
           all software that processes such names will understand the names'
           special meanings. Consequently, any such use results in queries for
-          those names being sent to authoritative servers.</t>
+          those names being sent to authoritative servers.   This constitutes
+	  an operational problem for operators of root zone authoritative name
+	  servers.</t>
 
           <t>The RFC6761 process is sufficiently uncertain that some protocol
           developers have assumed they could not get a name assigned; the
@@ -232,10 +242,15 @@
           target="I-D.chapin-additional-reserved-tlds">attempts to use RFC6761
           to accomplish this</xref> have not been successful.</t>
 
+	  <t>No mechanism exists for adding a name to the registry without
+	  claiming that the IETF is responsible for that name, nor is it possible
+	  to state a precedence for the name, e.g. "if ICANN delegates this name,
+	  ICANN's delegation takes precedence."</t>
+
           <t>No process exists for checking documents to make sure they don't
           accidentally assign names (e.g. RFC 7788).</t>
 
-          <t>Use of the registry is inconsistent--some SUTLIN RFCs specify
+          <t>Use of the registry is inconsistent--some SUTLDN RFCs specify
           registry entries; some don't; some specify delegation, some
           don't.</t>
 
@@ -255,11 +270,11 @@
       will be needed for reasoning about these problems.</t>
     </section>
 
-    <section title="Existing Practice Regarding SUINs">
+    <section title="Existing Practice Regarding SUDNs">
       <t>There are three primary and numerous secondary documents to consider
       when thinking about the Special-Use Domain Names process.</t>
 
-      <section title="Primary SUIN Documents">
+      <section title="Primary SUDN Documents">
         <t>The primary documents are considered primary because they directly
         address the IETF's past thoughts on this topic in a general way, and
         also because they describe what the IETF does in practice. Only one of
@@ -451,7 +466,7 @@
         </section>
       </section>
 
-      <section title="Secondary documents relating to the SUTLIN question">
+      <section title="Secondary documents relating to the SUTLDN question">
         <t>In addition to these documents, there are several others with which
         participants in this discussion should be familiar.</t>
 
@@ -603,15 +618,14 @@
       have the capability to resolve names using mDNS by recognizing the
       special meaning of the '.local' SUTLDN.</t>
 
-      <t>The Sun Microsystems model of having private domains within a
-      corporate site, while supporting the global domain name system for
-      off-site persisted even after the NIS protocol fell into disuse.
-      Microsoft used to recommend that site administrators allocate a
-      "private" top-level domain for internal use, and this practice was very
-      much a part of the zeitgeist at the time. This attitude is the root of
-      the widespread practice of simply picking an unused top-level domain and
-      using it for experimental purposes, which persists even at the time of
-      writing of this memo.</t>
+      <t>The Sun Microsystems model of having private domains within a corporate site, while
+      supporting the global domain name system for off-site persisted even after the NIS
+      protocol fell into disuse.  Microsoft used to recommend that site administrators allocate
+      a "private" top-level domain for internal use, and this practice was very much a part of
+      the zeitgeist at the time (see section 5.1 of <xref target="SDO-ICANN-COLL"/> and Appendix
+      G of <xref target="RFC6762"/>). This attitude is at the root of the widespread practice of
+      simply picking an unused top-level domain and using it for experimental purposes, which
+      persists even at the time of writing of this memo.</t>
 
       <t>This history is being presented because discussions about special-use
       names in the IETF often come down to the question of why users of new
@@ -619,16 +633,13 @@
       some other naming concept that doesn't overlap with the namespace that,
       in modern times is, by default, resolved using the DNS.</t>
 
-      <t>The answer is that as a consequence of this long history of resolving
-      Domain Names, Domain Names appear in a large variety of contexts in user
-      interfaces applications programming interfaces. Any name that appears in
-      such a context is a Domain Name. What this means is that Domain Names
-      have a highly privileged status in deployed software. Proposals to
-      change that will be almost possible to get adopted in a useful or
-      consistent way. And since in most operating systems, mechanisms already
-      exist for implementing special handling for some Domain Names, from a
-      practical perspective the only way to achieve the goals of any new name
-      resolution protocol is through the use of special-use Domain Names.</t>
+      <t>The answer is that as a consequence of this long history of resolving Domain Names
+      using a wide variety of name resolution systems, Domain Names are required in a large
+      variety of contexts in user interfaces and applications programming interfaces. Any name
+      that appears in such a context is a Domain Name.  So developers of new name resolution
+      systems that must work in existing contexts actually have no choice: they must use a
+      special-use Domain Name to segregate a portion of the namespace for use with their
+      system.</t>
     </section>
 
     <section title="Contributors">
