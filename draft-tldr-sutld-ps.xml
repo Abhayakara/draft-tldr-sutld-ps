@@ -181,7 +181,9 @@
           not all software that processes such names will understand the special use of that
           name.  Consequently, any such use will result in queries for that name being sent to
           authoritative servers.  This constitutes an operational problem for operators of root
-          zone authoritative name servers.</t>
+          zone authoritative name servers.   It can also create privacy issues for end users
+	  when names intended to be resolved using a privacy-enhanced name resolution protocol
+	  leak into DNS queries that provide no privacy protection.</t>
 
           <t>The RFC6761 process is sufficiently uncertain that some protocol developers have
           assumed they could not get a name assigned; the process of assigning the first new
@@ -425,7 +427,7 @@
 
           <t>One point to take from this is that there is already a requirement in RFC6762 that
           when stub resolvers encounter the special label, '.LOCAL' at the top level of a domain
-          name, they can only use the mDNS protocol be used for resolving that domain name.</t>
+          name, they can only use the mDNS protocol for resolving that domain name.</t>
         </section>
 
         <section title="MoU Concerning the Technical Work of the IANA">
