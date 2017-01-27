@@ -130,12 +130,6 @@
       problems are out of scope for this document, and will be discussed in
       separate documents.</t>
 
-      <t><list hangIndent="10" style="empty">
-          <t>DISCUSSION: I didn't understand the original text at the end of
-          this paragraph; hope the simplification captures the original
-          intent.</t>
-        </list></t>
-
       <t>No assertion is made that any of these problems is more or less
       important than any other. The point of this is simply to enumerate and
       briefly describe the problems that have been raised during discussions
@@ -259,10 +253,7 @@
               <t>The semantics associated with a particular name at the time
               of its assignment might conflict with other possible semantics
               and preclude assignment of the name to a better use in the
-              future. <list hangIndent="10" style="empty">
-                  <t>DISCUSSION: The original text wasn't clear to me; I hope
-                  this new text correctly clarifies the original intent.</t>
-                </list></t>
+              future. </t>
 
               <t>If the IETF assigns a name that some third party or parties
               believes belongs to them in some way, the IETF could become

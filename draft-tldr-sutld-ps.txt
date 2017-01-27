@@ -69,23 +69,23 @@ Table of Contents
    1.  Introduction  . . . . . . . . . . . . . . . . . . . . . . . .   2
    2.  Terminology . . . . . . . . . . . . . . . . . . . . . . . . .   3
    3.  Problems associated with Special-Use Domain Names . . . . . .   3
-   4.  Existing Practice Regarding SUDNs . . . . . . . . . . . . . .   8
-     4.1.  Primary SUDN Documents  . . . . . . . . . . . . . . . . .   8
+   4.  Existing Practice Regarding SUDNs . . . . . . . . . . . . . .   7
+     4.1.  Primary SUDN Documents  . . . . . . . . . . . . . . . . .   7
        4.1.1.  IAB Technical Comment on the Unique DNS Root  . . . .   8
        4.1.2.  Special-Use Domain Names  . . . . . . . . . . . . . .   9
-       4.1.3.  MoU Concerning the Technical Work of the IANA . . . .  11
+       4.1.3.  MoU Concerning the Technical Work of the IANA . . . .  10
      4.2.  Secondary documents relating to the SUTLDN question . . .  11
-       4.2.1.  Multicast DNS . . . . . . . . . . . . . . . . . . . .  12
+       4.2.1.  Multicast DNS . . . . . . . . . . . . . . . . . . . .  11
        4.2.2.  The .onion Special-Use TLD  . . . . . . . . . . . . .  12
-       4.2.3.  Locally Served DNS Zones  . . . . . . . . . . . . . .  13
+       4.2.3.  Locally Served DNS Zones  . . . . . . . . . . . . . .  12
        4.2.4.  Name Collision in the DNS . . . . . . . . . . . . . .  13
        4.2.5.  SSAC Advisory on the Stability of the Domain
                Namespace . . . . . . . . . . . . . . . . . . . . . .  13
        4.2.6.  Discovery of the IPv6 Prefix Used for IPv6 Address
                Synthesis . . . . . . . . . . . . . . . . . . . . . .  13
-       4.2.7.  Additional Reserved Top Level Domains . . . . . . . .  14
+       4.2.7.  Additional Reserved Top Level Domains . . . . . . . .  13
      4.3.  Summary . . . . . . . . . . . . . . . . . . . . . . . . .  14
-   5.  History . . . . . . . . . . . . . . . . . . . . . . . . . . .  15
+   5.  History . . . . . . . . . . . . . . . . . . . . . . . . . . .  14
    6.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  16
    7.  Informative References  . . . . . . . . . . . . . . . . . . .  16
    Appendix A.  Change Log.  . . . . . . . . . . . . . . . . . . . .  19
@@ -156,12 +156,12 @@ Internet-Draft          Special-Use Names Problem           January 2017
    these problems are out of scope for this document, and will be
    discussed in separate documents.
 
-      DISCUSSION: I didn't understand the original text at the end of
-      this paragraph; hope the simplification captures the original
-      intent.
-
    No assertion is made that any of these problems is more or less
    important than any other.  The point of this is simply to enumerate
+   and briefly describe the problems that have been raised during
+   discussions of the special-use name problem.  The degree of detail is
+   intended to be sufficient that that participants in the discussion
+   can agree that the problems they've raised have been adequately
 
 
 
@@ -170,10 +170,6 @@ Lemon, et al.             Expires July 31, 2017                 [Page 3]
 Internet-Draft          Special-Use Names Problem           January 2017
 
 
-   and briefly describe the problems that have been raised during
-   discussions of the special-use name problem.  The degree of detail is
-   intended to be sufficient that that participants in the discussion
-   can agree that the problems they've raised have been adequately
    described, and no more.  These problems should not appear to every
    reader to all be problems: we intend to cover any problem that any
    participant considers a problem, not just those problems that
@@ -217,7 +213,11 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
    o  Although IETF and ICANN nominally have authority over this
       namespace, neither organization can enforce that authority over
+      any third party who wants to just start using a subset of the
+      namespace.
 
+   o  Organizations do in fact sometimes commandeer subsets of the
+      namespace.  Reasons a third party might do this include:
 
 
 
@@ -225,12 +225,6 @@ Lemon, et al.             Expires July 31, 2017                 [Page 4]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
-
-      any third party who wants to just start using a subset of the
-      namespace.
-
-   o  Organizations do in fact sometimes commandeer subsets of the
-      namespace.  Reasons a third party might do this include:
 
       *  Unaware that a process exists for assigning such names
 
@@ -273,7 +267,13 @@ Internet-Draft          Special-Use Names Problem           January 2017
       Names to resolution systems outside of the DNS, for a variety of
       reasons:
 
+      *  Requires a mechanism for identifying which of a set of
+         resolution processes is required in order to resolve a
+         particular name.
 
+      *  Assertion of authority: there is a sense that the Domain
+         Namespace is "owned" by the IETF or by ICANN, and so, if a name
+         is claimed outside of that process, the person or entity that
 
 
 
@@ -282,13 +282,6 @@ Lemon, et al.             Expires July 31, 2017                 [Page 5]
 Internet-Draft          Special-Use Names Problem           January 2017
 
 
-      *  Requires a mechanism for identifying which of a set of
-         resolution processes is required in order to resolve a
-         particular name.
-
-      *  Assertion of authority: there is a sense that the Domain
-         Namespace is "owned" by the IETF or by ICANN, and so, if a name
-         is claimed outside of that process, the person or entity that
          claimed that name should suffer some consequence that would,
          presumably, deter future circumvention of the official process.
 
@@ -309,9 +302,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
          its assignment might conflict with other possible semantics and
          preclude assignment of the name to a better use in the future.
 
-            DISCUSSION: The original text wasn't clear to me; I hope
-            this new text correctly clarifies the original intent.
-
       *  If the IETF assigns a name that some third party or parties
          believes belongs to them in some way, the IETF could become
          embroiled in an expensive dispute with those parties.
@@ -330,14 +320,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    o  In principle, the RFC 6761 process could be used to document the
       existence of Domain Names that are not safe to assign, and provide
       information on how those names are used in practice.  However,
-
-
-
-Lemon, et al.             Expires July 31, 2017                 [Page 6]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
       attempts to use RFC6761 to accomplish this
       [I-D.chapin-additional-reserved-tlds] have not been successful.
       One side effect of this is that any mitigation effect on the root
@@ -348,6 +330,14 @@ Internet-Draft          Special-Use Names Problem           January 2017
       The status of these names need to be clarified and recorded to
       avoid future disputes about their use. [ Ed note: We note that
       DNSOP has previously discussed some of these in draft-chapin-
+
+
+
+Lemon, et al.             Expires July 31, 2017                 [Page 6]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
+
       additional-reserved-tlds-02, and decided not to adopt the draft -
       https://www.ietf.org/mail-archive/web/dnsop/current/msg14887.html
       .  The authors are not recommending that DNSOP revisit this,
@@ -382,18 +372,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    this topic.  The remainder of this document provides additional
    context that will be needed for reasoning about these problems.
 
-
-
-
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                 [Page 7]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
 4.  Existing Practice Regarding SUDNs
 
    There are three primary and numerous secondary documents to consider
@@ -405,6 +383,16 @@ Internet-Draft          Special-Use Names Problem           January 2017
    address the IETF's past thoughts on this topic in a general way, and
    also because they describe what the IETF does in practice.  Only one
    of these documents is an IETF consensus document.
+
+
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                 [Page 7]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
 4.1.1.  IAB Technical Comment on the Unique DNS Root
 
@@ -443,13 +431,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
       user's intended communication will not be able to be understood by
       the recipients of the communication.
 
-
-
-Lemon, et al.             Expires July 31, 2017                 [Page 8]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    o  This same problem can also occur simply because a single user
       copies a name from one context in which it has one meaning, into a
       different context in which it has a different meaning-- for
@@ -459,6 +440,15 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
    To boil this down even further, we can take the following advice from
    this document:
+
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                 [Page 8]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
    o  Domain Names with unambiguous global meaning are preferable to
       Domain Names with local meaning which will be ambiguous.
@@ -498,14 +488,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    defines the ways in which special handling is to be applied to the
    name.
 
-
-
-
-Lemon, et al.             Expires July 31, 2017                 [Page 9]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    RFC6761 provided the process whereby Multicast DNS [RFC6762]
    designated ".local" as a SUDN and included it in the Special-Use
    Domain Names registry.  It itself also enumerated a set of names that
@@ -516,6 +498,13 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
    There are at least several important points to think of with respect
    to the RFC6761:
+
+
+
+Lemon, et al.             Expires July 31, 2017                 [Page 9]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
    o  A special-use name may be a name that should be resolved using the
       DNS protocol with no special handling.  An example of this is 'IN-
@@ -554,14 +543,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    special handling by stub resolvers and which are not at the top level
    of the naming hierarchy.
 
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 10]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    One point to take from this is that there is already a requirement in
    RFC6762 that when stub resolvers encounter the special label,
    '.LOCAL' at the top level of a domain name, they can only use the
@@ -573,6 +554,14 @@ Internet-Draft          Special-Use Names Problem           January 2017
    and ICANN (Internet Corporation for Assigned Names and Numbers) which
    discusses how names and numbers will be managed through the IANA
    (Internet Assigned Numbers Authority).  This document is important to
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 10]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
+
    the discussion of SUDNs because, while it delegates authority for
    managing the Domain Name System Namespace generally to ICANN, it
    reserves to the IETF the authority that RFC 6761 formalizes:
@@ -607,17 +596,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    In addition to these documents, there are several others with which
    participants in this discussion should be familiar.
 
-
-
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 11]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
 4.2.1.  Multicast DNS
 
    Multicast DNS [RFC6762] defines the Multicast DNS protocol, which
@@ -631,6 +609,14 @@ Internet-Draft          Special-Use Names Problem           January 2017
    special-use name.  This idea was strongly opposed by DNSEXT working
    group participants, and as a result the author eventually switched to
    using '.LOCAL'.
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 11]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
    The history of RFC 6762 is documented in substantial detail in
    Appendix H; some notable milestones include the initial proposal to
@@ -662,18 +648,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
       expire and no new certificates would be issued, unless the .onion
       SUTLDN were to be recognized by the IETF.
 
-
-
-
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 12]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
 4.2.3.  Locally Served DNS Zones
 
    Locally Served DNS Zones [RFC6303] describes a particular use case
@@ -692,6 +666,13 @@ Internet-Draft          Special-Use Names Problem           January 2017
    context).  But it shares the problem that such names cannot be
    assumed either to be unique or to be functional in all contexts for
    all Internet-connected hosts.
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 12]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
 4.2.4.  Name Collision in the DNS
 
@@ -722,14 +703,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    that there was little controversy or delay in approving the new use,
    it did not work correctly: the name 'ipv4only.arpa' was never added
    to the special-use Domain Names registry.  This appears to have
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 13]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    happened because the IAB was able to simply add the name to the .ARPA
    zone, which the IAB administers.  This is an illustration of one of
    the problems that we have with the 6761 process: it is apparently
@@ -748,6 +721,15 @@ Internet-Draft          Special-Use Names Problem           January 2017
    amount is known about the use of these names, no document exists that
    documents how they are used, and why it would be a problem to
    delegate them.  Additionally, to the extent that the uses being made
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 13]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
+
    of these names are valid, no document exists indicating when it might
    make sense to use them, and when it would not make sense to use them.
 
@@ -777,15 +759,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    by any entity that has control over one or more name servers or
    resolvers, in the context of any hosts and services that that entity
    operates.  It can also be done by authors of software who decide that
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 14]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    a special-use name is the right way to indicate the use of an
    alternate resolution mechanism.
 
@@ -804,6 +777,14 @@ Internet-Draft          Special-Use Names Problem           January 2017
    hosts on the Internet using the File Transfer Protocol (FTP)
    [RFC0959].  The inefficiency of this process is cited as a reason for
    the development of the DNS [RFC0882] [RFC0883] in 1983.
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 14]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
    However, the transition from HOSTS.TXT to the DNS was not smooth.
    For example, Sun Microsystems's Network Information System
@@ -833,15 +814,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    level domain and using it for experimental purposes, which persists
    even at the time of writing of this memo.
 
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 15]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    This history is being presented because discussions about special-use
    names in the IETF often come down to the question of why users of new
    name resolution protocols choose to use Domain Names, rather than
@@ -857,6 +829,18 @@ Internet-Draft          Special-Use Names Problem           January 2017
    resolution systems that must work in existing contexts actually have
    no choice: they must use a special-use Domain Name to segregate a
    portion of the namespace for use with their system.
+
+
+
+
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 15]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
 6.  Contributors
 
@@ -891,13 +875,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
               specification", RFC 883, DOI 10.17487/RFC0883, November
               1983, <http://www.rfc-editor.org/info/rfc883>.
 
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 16]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    [RFC0959]  Postel, J. and J. Reynolds, "File Transfer Protocol", STD
               9, RFC 959, DOI 10.17487/RFC0959, October 1985,
               <http://www.rfc-editor.org/info/rfc959>.
@@ -912,6 +889,14 @@ Internet-Draft          Special-Use Names Problem           January 2017
    [RFC1034]  Mockapetris, P., "Domain names - concepts and facilities",
               STD 13, RFC 1034, DOI 10.17487/RFC1034, November 1987,
               <http://www.rfc-editor.org/info/rfc1034>.
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 16]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
    [RFC1035]  Mockapetris, P., "Domain names - implementation and
               specification", STD 13, RFC 1035, DOI 10.17487/RFC1035,
@@ -945,15 +930,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
               Space", BCP 153, RFC 6598, DOI 10.17487/RFC6598, April
               2012, <http://www.rfc-editor.org/info/rfc6598>.
 
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 17]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    [RFC6760]  Cheshire, S. and M. Krochmal, "Requirements for a Protocol
               to Replace the AppleTalk Name Binding Protocol (NBP)", RFC
               6760, DOI 10.17487/RFC6760, February 2013,
@@ -966,6 +942,17 @@ Internet-Draft          Special-Use Names Problem           January 2017
    [RFC6762]  Cheshire, S. and M. Krochmal, "Multicast DNS", RFC 6762,
               DOI 10.17487/RFC6762, February 2013,
               <http://www.rfc-editor.org/info/rfc6762>.
+
+
+
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 17]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
    [RFC7050]  Savolainen, T., Korhonen, J., and D. Wing, "Discovery of
               the IPv6 Prefix Used for IPv6 Address Synthesis", RFC
@@ -1000,16 +987,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
               <https://www.icann.org/en/system/files/files/name-
               collision-02aug13-en.pdf>.
 
-
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 18]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    [SDO-ICANN-SAC090]
               ICANN Security and Stability Advisory Committee, "SSAC
               Advisory on the Stability of the Domain Namespace",
@@ -1022,6 +999,16 @@ Internet-Draft          Special-Use Names Problem           January 2017
               Names registry", October 2015,
               <http://www.iana.org/assignments/special-use-domain-names/
               special-use-domain-names.xhtml>.
+
+
+
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 18]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
    [SDO-ICANN-DAG]
               Internet Assigned Numbers Authority, "Special-Use Domain
@@ -1059,13 +1046,6 @@ Appendix A.  Change Log.
 
    -04 to ietf-00
 
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 19]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
       Document adopted by WG.
 
       Significant changes from CfA integrated, please refer to diff.
@@ -1078,6 +1058,13 @@ Internet-Draft          Special-Use Names Problem           January 2017
    -02 to -03:
 
    o  Readability fixes, small grammar updates.
+
+
+
+Lemon, et al.             Expires July 31, 2017                [Page 19]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
    -01 to -02:
 
@@ -1112,16 +1099,6 @@ Authors' Addresses
    Email: rdroms.ietf@gmail.com
 
 
-
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 20]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
-
    Warren Kumari
    Google
    1600 Amphitheatre Parkway
@@ -1140,37 +1117,4 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 21]
+Lemon, et al.             Expires July 31, 2017                [Page 20]
