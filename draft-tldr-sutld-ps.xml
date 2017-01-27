@@ -110,7 +110,7 @@
           <t hangText="Domain Name">A name which serves as input to a name
           resolution process, for example 'EXAMPLE.ORG'.</t>
 
-          <t hangText="Domain Namespace">The space of all possible Domain
+          <t hangText="Domain Namespace">The set of all possible Domain
           Names.</t>
 
           <t hangText="SUDN">Special Use Domain Name</t>
@@ -160,23 +160,28 @@
 
               <t>Assigned by ICANN to the public DNS root</t>
 
-              <t>Commandeered for unauthorized use by other organizations</t>
+              <t>ICANN Reserved Names; names that may not be applied for as a
+              TLD (see <xref target="SDO-ICANN-DAG"/>Section 2.2.1.2.1,
+              Reserved Names )</t>
+
+              <t>Commandeered for use by other organizations</t>
 
               <t>Not a member of any other category</t>
-            </list> Both ICANN and the IETF have the authority and formal
-          processes to assign names from the pool of unused names, but no
-          formal coordination process exists. The lack of coordination
-          complicates the management of the root of the Domain Namespace and
-          <xref target="SDO-ICANN-SAC090">may lead to conflicts in name
-          assignments </xref>.</t>
+            </list> </t>
+
+          <t>Both ICANN and the IETF have the authority and formal processes
+          to assign names from the pool of unused names, but no formal
+          coordination process exists. The lack of coordination complicates
+          the management of the root of the Domain Namespace and <xref
+          target="SDO-ICANN-SAC090">may lead to conflicts in name assignments
+          </xref>.</t>
 
           <t>The term "technical use" in <xref target="RFC2860">RFC
           2860</xref> is considered by some to be too inclusive.</t>
 
-          <t>The IETF and ICANN together have administrative authority over
-          the Domain Namespace. Not all developers of protocols on the
-          internet agree that this authority should reside with the IETF and
-          ICANN.</t>
+          <t>The IETF and ICANN each have administrative authority over the
+          Domain Namespace. Not all developers of protocols on the internet
+          agree that this authority should reside with the IETF and ICANN.</t>
 
           <t>Although IETF and ICANN nominally have authority over this
           namespace, neither organization can enforce that authority over any
@@ -211,8 +216,9 @@
           resolution software will use the Domain Name System for resolution
           of names not known to have a special use. Consequently, any such use
           will result in queries for special-use names being sent to Domain
-          Name System authoritative servers, which constitutes an operational
-          problem for operators of root zone authoritative name servers.</t>
+          Name System authoritative servers. These queries may constitute an
+          operational problem for operators of root zone authoritative name
+          servers.</t>
 
           <t>The RFC6761 process is sufficiently uncertain that some protocol
           developers have assumed they could not get a name assigned; the
@@ -282,6 +288,17 @@
           of this is that any mitigation effect on the root name servers has
           been missed.</t>
 
+          <t>There are several Domain Name TLDs that have been commandeered
+          without due process for a variety of purposes <xref
+          target="SDO-ICANN-COLL"/>. The status of these names need to be
+          clarified and recorded to avoid future disputes about their use. [
+          Ed note: We note that DNSOP has previously discussed some of these
+          in draft-chapin-additional-reserved-tlds-02, and decided not to
+          adopt the draft -
+          https://www.ietf.org/mail-archive/web/dnsop/current/msg14887.html .
+          The authors are not recommending that DNSOP revisit this, rather
+          that is needs to be addressed in some venue. ]</t>
+
           <t>No mechanism exists for adding a name to the registry without
           claiming that the IETF is responsible for that name, nor is it
           possible to state a precedence for the name, e.g. "if ICANN
@@ -305,11 +322,6 @@
           which special uses are registered. This creates a great deal of
           confusion because some readers take "Domain Name" to imply the use
           of the DNS protocol.</t>
-
-          <t>There are several Domain Name TLDs that have been commandeered
-          without due process for a variety of purposes <xref
-          target="SDO-ICANN-COLL"/>. The status of these names need to be
-          clarified and recorded to avoid future disputes about their use.</t>
         </list></t>
 
       <t>The problems we have stated here represent the current understanding
@@ -852,6 +864,19 @@
         </front>
       </reference>
 
+      <reference anchor="SDO-ICANN-DAG"
+                 target="https://newgtlds.icann.org/en/applicants/agb/guidebook-full-04jun12-en.pdf">
+        <front>
+          <title>Special-Use Domain Names registry</title>
+
+          <author>
+            <organization>Internet Assigned Numbers Authority</organization>
+          </author>
+
+          <date day="27" month="October" year="2015"/>
+        </front>
+      </reference>
+
       <reference anchor="CORP-SUN-NIS">
         <front>
           <title>Large System and Network Administration</title>
@@ -879,6 +904,30 @@
     </references>
 
     <section title="Change Log.">
+      <t>-00 to -01:<list>
+          <t>Improved the terminology.</t>
+
+          <t>Included reference to SAC090.</t>
+
+          <t>Added ICANN Reserved Names (e.g .icann, .iesg, .arin) to types of
+          names.</t>
+
+          <t>Improved background.</t>
+
+          <t>Noted that semantics may differ between resolution contexts.</t>
+
+          <t>Pointer to .home / .corp / .mail, other "toxic" names</t>
+
+          <t>Readability fixes.</t>
+        </list></t>
+
+      <t>-04 to ietf-00<list>
+          <t>Document adopted by WG.</t>
+
+          <t>Significant changes from CfA integrated, please refer to
+          diff.</t>
+        </list></t>
+
       <t>-03 to -04:<list style="symbols">
           <t>Replaced 'Internet Names' with 'Domain Names' - suggestion by
           John Levine.</t>
