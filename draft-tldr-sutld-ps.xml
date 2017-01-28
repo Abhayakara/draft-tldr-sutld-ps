@@ -644,7 +644,7 @@
 
           <t>RFC 7788 <xref target="RFC7788"/> defines the Domain Name TLD
           ".home" for use as the default name for name resolution relative to
-          a home network context. Although, as define in RFC 7788, ".home" is
+          a home network context. Although, as defined in RFC 7788, ".home" is
           a special-use Domain Name, RFC 7788 did not follow the process in
           RFC 6761 and request the addition of ".home" to the IANA Special-Use
           Domain Name registry. Additionally, ".home" is an example of an
