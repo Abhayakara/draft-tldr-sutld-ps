@@ -127,8 +127,9 @@
     <section title="Problems associated with Special-Use Domain Names">
       <t>This section presents a list of problems that have been identified
       with respect to the assignment of special-use names. Solutions to these
-      problems are out of scope for this document, and will be discussed in
-      separate documents.</t>
+      problems are out of scope for this document. Because of that, problems
+      with solutions to these problems are also out of scope for this
+      document, and will be covered in a separate document.</t>
 
       <t>No assertion is made that any of these problems is more or less
       important than any other. The point of this is simply to enumerate and
@@ -161,7 +162,7 @@
               <t>Commandeered for use by other organizations</t>
 
               <t>Not a member of any other category</t>
-            </list> </t>
+            </list></t>
 
           <t>Both ICANN and the IETF have the authority and formal processes
           to assign names from the pool of unused names, but no formal
@@ -250,10 +251,8 @@
               assigned at zero cost other than time, this process will be used
               as an alternative to purchasing the name through ICANN.</t>
 
-              <t>The semantics associated with a particular name at the time
-              of its assignment might conflict with other possible semantics
-              and preclude assignment of the name to a better use in the
-              future. </t>
+              <t>A name might be assigned for a particular purpose when a more
+              general use of the name would be more useful.</t>
 
               <t>If the IETF assigns a name that some third party or parties
               believes belongs to them in some way, the IETF could become

@@ -153,15 +153,15 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
    This section presents a list of problems that have been identified
    with respect to the assignment of special-use names.  Solutions to
-   these problems are out of scope for this document, and will be
-   discussed in separate documents.
+   these problems are out of scope for this document.  Because of that,
+   problems with solutions to these problems are also out of scope for
+   this document, and will be covered in a separate document.
 
    No assertion is made that any of these problems is more or less
    important than any other.  The point of this is simply to enumerate
    and briefly describe the problems that have been raised during
    discussions of the special-use name problem.  The degree of detail is
    intended to be sufficient that that participants in the discussion
-   can agree that the problems they've raised have been adequately
 
 
 
@@ -170,6 +170,7 @@ Lemon, et al.             Expires July 31, 2017                 [Page 3]
 Internet-Draft          Special-Use Names Problem           January 2017
 
 
+   can agree that the problems they've raised have been adequately
    described, and no more.  These problems should not appear to every
    reader to all be problems: we intend to cover any problem that any
    participant considers a problem, not just those problems that
@@ -216,8 +217,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
       any third party who wants to just start using a subset of the
       namespace.
 
-   o  Organizations do in fact sometimes commandeer subsets of the
-      namespace.  Reasons a third party might do this include:
+
 
 
 
@@ -225,6 +225,9 @@ Lemon, et al.             Expires July 31, 2017                 [Page 4]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
+
+   o  Organizations do in fact sometimes commandeer subsets of the
+      namespace.  Reasons a third party might do this include:
 
       *  Unaware that a process exists for assigning such names
 
@@ -271,9 +274,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
          resolution processes is required in order to resolve a
          particular name.
 
-      *  Assertion of authority: there is a sense that the Domain
-         Namespace is "owned" by the IETF or by ICANN, and so, if a name
-         is claimed outside of that process, the person or entity that
 
 
 
@@ -282,6 +282,9 @@ Lemon, et al.             Expires July 31, 2017                 [Page 5]
 Internet-Draft          Special-Use Names Problem           January 2017
 
 
+      *  Assertion of authority: there is a sense that the Domain
+         Namespace is "owned" by the IETF or by ICANN, and so, if a name
+         is claimed outside of that process, the person or entity that
          claimed that name should suffer some consequence that would,
          presumably, deter future circumvention of the official process.
 
@@ -298,9 +301,8 @@ Internet-Draft          Special-Use Names Problem           January 2017
          assigned at zero cost other than time, this process will be
          used as an alternative to purchasing the name through ICANN.
 
-      *  The semantics associated with a particular name at the time of
-         its assignment might conflict with other possible semantics and
-         preclude assignment of the name to a better use in the future.
+      *  A name might be assigned for a particular purpose when a more
+         general use of the name would be more useful.
 
       *  If the IETF assigns a name that some third party or parties
          believes belongs to them in some way, the IETF could become
@@ -328,8 +330,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    o  There are several Domain Name TLDs that have been commandeered
       without due process for a variety of purposes [SDO-ICANN-COLL].
       The status of these names need to be clarified and recorded to
-      avoid future disputes about their use. [ Ed note: We note that
-      DNSOP has previously discussed some of these in draft-chapin-
 
 
 
@@ -338,6 +338,8 @@ Lemon, et al.             Expires July 31, 2017                 [Page 6]
 Internet-Draft          Special-Use Names Problem           January 2017
 
 
+      avoid future disputes about their use. [ Ed note: We note that
+      DNSOP has previously discussed some of these in draft-chapin-
       additional-reserved-tlds-02, and decided not to adopt the draft -
       https://www.ietf.org/mail-archive/web/dnsop/current/msg14887.html
       .  The authors are not recommending that DNSOP revisit this,
@@ -383,8 +385,6 @@ Internet-Draft          Special-Use Names Problem           January 2017
    address the IETF's past thoughts on this topic in a general way, and
    also because they describe what the IETF does in practice.  Only one
    of these documents is an IETF consensus document.
-
-
 
 
 
@@ -735,7 +735,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
    RFC 7788 [RFC7788] defines the Domain Name TLD ".home" for use as the
    default name for name resolution relative to a home network context.
-   Although, as define in RFC 7788, ".home" is a special-use Domain
+   Although, as defined in RFC 7788, ".home" is a special-use Domain
    Name, RFC 7788 did not follow the process in RFC 6761 and request the
    addition of ".home" to the IANA Special-Use Domain Name registry.
    Additionally, ".home" is an example of an attempt to reuse a Domain
