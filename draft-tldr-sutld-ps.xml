@@ -5,7 +5,7 @@
 <?rfc symrefs="yes" ?>
 <?rfc comments="yes" ?>
 <?rfc inline="yes" ?>
-<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-01" ipr="trust200902"
+<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-02" ipr="trust200902"
      obsoletes="" updates="">
   <front>
     <title abbrev="Special-Use Names Problem">Special-Use Names Problem
@@ -59,7 +59,7 @@
       </address>
     </author>
 
-    <date day="27" month="January" year="2017"/>
+    <date day="30" month="January" year="2017"/>
 
     <abstract>
       <t>The Special-Use Domain Names IANA registry policy defined in RFC 6761
@@ -894,6 +894,10 @@
     </references>
 
     <section title="Change Log.">
+      <t>-01 to -02:<list>
+          <t>Language cleanup from Ted.</t>
+        </list></t>
+
       <t>-00 to -01:<list>
           <t>Improved the terminology.</t>
 

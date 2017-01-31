@@ -5,14 +5,14 @@
 Network Working Group                                           T. Lemon
 Internet-Draft                                             Nominum, Inc.
 Intended status: Informational                                  R. Droms
-Expires: July 31, 2017
+Expires: August 3, 2017
                                                                W. Kumari
                                                                   Google
-                                                        January 27, 2017
+                                                        January 30, 2017
 
 
                   Special-Use Names Problem Statement
-                      draft-ietf-dnsop-sutld-ps-01
+                      draft-ietf-dnsop-sutld-ps-02
 
 Abstract
 
@@ -39,7 +39,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on July 31, 2017.
+   This Internet-Draft will expire on August 3, 2017.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 1]
+Lemon, et al.            Expires August 3, 2017                 [Page 1]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 2]
+Lemon, et al.            Expires August 3, 2017                 [Page 2]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -165,7 +165,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 3]
+Lemon, et al.            Expires August 3, 2017                 [Page 3]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -221,7 +221,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 4]
+Lemon, et al.            Expires August 3, 2017                 [Page 4]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -277,7 +277,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 5]
+Lemon, et al.            Expires August 3, 2017                 [Page 5]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -333,7 +333,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 6]
+Lemon, et al.            Expires August 3, 2017                 [Page 6]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -389,7 +389,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 7]
+Lemon, et al.            Expires August 3, 2017                 [Page 7]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -445,7 +445,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 8]
+Lemon, et al.            Expires August 3, 2017                 [Page 8]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -501,7 +501,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                 [Page 9]
+Lemon, et al.            Expires August 3, 2017                 [Page 9]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -557,7 +557,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 10]
+Lemon, et al.            Expires August 3, 2017                [Page 10]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -613,7 +613,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 11]
+Lemon, et al.            Expires August 3, 2017                [Page 11]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -669,7 +669,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 12]
+Lemon, et al.            Expires August 3, 2017                [Page 12]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -725,7 +725,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 13]
+Lemon, et al.            Expires August 3, 2017                [Page 13]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -781,7 +781,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 14]
+Lemon, et al.            Expires August 3, 2017                [Page 14]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -837,7 +837,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 15]
+Lemon, et al.            Expires August 3, 2017                [Page 15]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -893,7 +893,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 16]
+Lemon, et al.            Expires August 3, 2017                [Page 16]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -949,7 +949,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 17]
+Lemon, et al.            Expires August 3, 2017                [Page 17]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -1005,7 +1005,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 
 
-Lemon, et al.             Expires July 31, 2017                [Page 18]
+Lemon, et al.            Expires August 3, 2017                [Page 18]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
@@ -1026,6 +1026,10 @@ Internet-Draft          Special-Use Names Problem           January 2017
               <http://www.ietf.org/proceedings/51/51-45.htm#TopOfPage>.
 
 Appendix A.  Change Log.
+
+   -01 to -02:
+
+      Language cleanup from Ted.
 
    -00 to -01:
 
@@ -1055,16 +1059,16 @@ Appendix A.  Change Log.
    o  Replaced 'Internet Names' with 'Domain Names' - suggestion by John
       Levine.
 
-   -02 to -03:
-
-   o  Readability fixes, small grammar updates.
 
 
-
-Lemon, et al.             Expires July 31, 2017                [Page 19]
+Lemon, et al.            Expires August 3, 2017                [Page 19]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
+
+   -02 to -03:
+
+   o  Readability fixes, small grammar updates.
 
    -01 to -02:
 
@@ -1113,8 +1117,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-Lemon, et al.             Expires July 31, 2017                [Page 20]
+Lemon, et al.            Expires August 3, 2017                [Page 20]
