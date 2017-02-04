@@ -212,7 +212,9 @@
           will result in queries for special-use names being sent to Domain
           Name System authoritative servers. These queries may constitute an
           operational problem for operators of root zone authoritative name
-          servers.</t>
+          servers.  These queries also may inadvertently reveal private
+	  information through the contents of the query, which
+	  is a privacy consideration.</t>
 
           <t>The RFC6761 process is sufficiently uncertain that some protocol
           developers have assumed they could not get a name assigned; the
@@ -274,8 +276,8 @@
           information on how those names are used in practice. However, <xref
           target="I-D.chapin-additional-reserved-tlds">attempts to use RFC6761
           to accomplish this</xref> have not been successful. One side effect
-          of this is that any mitigation effect on the root name servers has
-          been missed.</t>
+          of this is that any mitigation effect on the root name
+	  servers or on privacy considerations has been missed.</t>
 
           <t>There are several Domain Name TLDs that have been commandeered
           without due process for a variety of purposes <xref
