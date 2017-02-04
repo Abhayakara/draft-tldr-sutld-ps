@@ -21,8 +21,8 @@ Abstract
    challenges.  This memo presents a list, intended to be comprehensive,
    of the problems that have been identified.  In addition it reviews
    the history of Domain Names and summarizes current IETF publications
-   and some publications from other standards organizations relating to
-   special-use Domain Names.
+   and some publications from other organizations relating to special-
+   use Domain Names.
 
 Status of This Memo
 
@@ -105,7 +105,7 @@ Table of Contents
 
    Special-Use Domain Names [RFC6761] created an IANA registry for
    special-use Domain Names [SDO-IANA-SUDR], defined policies for adding
-   to the registry, and made some suggestions about how that policy
+   to the registry, and made some suggestions about how those policies
 
 
 
@@ -124,12 +124,11 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
    This document presents a list, believed to be complete, of the
    problems associated with the assignment of special-use names.  In
-   support of the particular set of problems described here, the
-   document also includes documentation of existing practice as it
-   relates to the use of Domain Names, as well as a brief history of
-   Domain Names, and finally to describe the set of problems that exist
-   as reported by various IETF participants with experience in the
-   various aspects of the problem.
+   support of its analysis of the particular set of issues described
+   here, the document also includes descriptions of existing practice as
+   it relates to the use of domain names, a brief history of domain
+   names, and some observations by various IETF participants who have
+   experience with various aspects of the current situation.
 
 2.  Terminology
 
@@ -162,6 +161,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
    and briefly describe the problems that have been raised during
    discussions of the special-use name problem.  The degree of detail is
    intended to be sufficient that that participants in the discussion
+   can agree that the problems they've raised have been adequately
 
 
 
@@ -170,7 +170,6 @@ Lemon, et al.            Expires August 3, 2017                 [Page 3]
 Internet-Draft          Special-Use Names Problem           January 2017
 
 
-   can agree that the problems they've raised have been adequately
    described, and no more.  These problems should not appear to every
    reader to all be problems: we intend to cover any problem that any
    participant considers a problem, not just those problems that
@@ -192,8 +191,8 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
       *  Assigned by ICANN to the public DNS root
 
-      *  ICANN Reserved Names; names that may not be applied for as a
-         TLD (see [SDO-ICANN-DAG]Section 2.2.1.2.1, Reserved Names )
+      *  ICANN Reserved Names; names that may not be applied for as TLDs
+         (see [SDO-ICANN-DAG]Section 2.2.1.2.1, Reserved Names )
 
       *  Commandeered for use by other organizations
 
@@ -217,7 +216,8 @@ Internet-Draft          Special-Use Names Problem           January 2017
       any third party who wants to just start using a subset of the
       namespace.
 
-
+   o  Organizations do in fact sometimes commandeer subsets of the
+      namespace.  Reasons a third party might do this include:
 
 
 
@@ -225,9 +225,6 @@ Lemon, et al.            Expires August 3, 2017                 [Page 4]
 
 Internet-Draft          Special-Use Names Problem           January 2017
 
-
-   o  Organizations do in fact sometimes commandeer subsets of the
-      namespace.  Reasons a third party might do this include:
 
       *  Unaware that a process exists for assigning such names
 
@@ -274,6 +271,9 @@ Internet-Draft          Special-Use Names Problem           January 2017
          resolution processes is required in order to resolve a
          particular name.
 
+      *  Assertion of authority: there is a sense that the Domain
+         Namespace is "owned" by the IETF or by ICANN, and so, if a name
+         is claimed outside of that process, the person or entity that
 
 
 
@@ -282,9 +282,6 @@ Lemon, et al.            Expires August 3, 2017                 [Page 5]
 Internet-Draft          Special-Use Names Problem           January 2017
 
 
-      *  Assertion of authority: there is a sense that the Domain
-         Namespace is "owned" by the IETF or by ICANN, and so, if a name
-         is claimed outside of that process, the person or entity that
          claimed that name should suffer some consequence that would,
          presumably, deter future circumvention of the official process.
 
@@ -330,6 +327,9 @@ Internet-Draft          Special-Use Names Problem           January 2017
    o  There are several Domain Name TLDs that have been commandeered
       without due process for a variety of purposes [SDO-ICANN-COLL].
       The status of these names need to be clarified and recorded to
+      avoid future disputes about their use. [ Ed note: We note that
+      DNSOP has previously discussed some of these in draft-chapin-
+      additional-reserved-tlds-02, and decided not to adopt the draft -
 
 
 
@@ -338,9 +338,6 @@ Lemon, et al.            Expires August 3, 2017                 [Page 6]
 Internet-Draft          Special-Use Names Problem           January 2017
 
 
-      avoid future disputes about their use. [ Ed note: We note that
-      DNSOP has previously discussed some of these in draft-chapin-
-      additional-reserved-tlds-02, and decided not to adopt the draft -
       https://www.ietf.org/mail-archive/web/dnsop/current/msg14887.html
       .  The authors are not recommending that DNSOP revisit this,
       rather that is needs to be addressed in some venue. ]
@@ -385,6 +382,9 @@ Internet-Draft          Special-Use Names Problem           January 2017
    address the IETF's past thoughts on this topic in a general way, and
    also because they describe what the IETF does in practice.  Only one
    of these documents is an IETF consensus document.
+
+
+
 
 
 
@@ -434,9 +434,9 @@ Internet-Draft          Special-Use Names Problem           January 2017
    o  This same problem can also occur simply because a single user
       copies a name from one context in which it has one meaning, into a
       different context in which it has a different meaning-- for
-      example copying a '.onion' Domain Name out of a TOR browser, where
+      example copying a '.onion' Domain Name out of a Tor browser, where
       it has meaning, and pasting this name into an ssh client that
-      doesn't support connecting over TOR.
+      doesn't support connecting over Tor.
 
    To boil this down even further, we can take the following advice from
    this document:
@@ -642,7 +642,7 @@ Internet-Draft          Special-Use Names Problem           January 2017
    o  The IETF gained consensus to publish it
 
    o  The situation was somewhat forced, both by the fact of its
-      unilateral use by the TOR project without following the RFC 6761
+      unilateral use by The Tor Project without following the RFC 6761
       process, and because a deadline had been set by the CA/Browser
       Forum [SDO-CABF-INT] after which all .onion PKI certificates would
       expire and no new certificates would be issued, unless the .onion
@@ -1027,6 +1027,23 @@ Internet-Draft          Special-Use Names Problem           January 2017
 
 Appendix A.  Change Log.
 
+   -02 to -03.0 (in Github):
+
+      Address some of the simpler issues, including:
+
+      Issue # 13: Spelling of Tor -- Jeremy Rand
+      (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/13)
+
+      Issue #16: Match number of "policies" and "that policy" -- Suzanne
+      (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/16)
+
+      Issue #17: Clarify sentence beginning with "In support of the
+      particular set of problems described here...." -- Suzanne.
+      (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/14)
+
+      Issue #23: Match number of "names" and "a TLD" -- Suzanne.
+      (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/23)
+
    -01 to -02:
 
       Language cleanup from Ted.
@@ -1041,6 +1058,13 @@ Appendix A.  Change Log.
       names.
 
       Improved background.
+
+
+
+Lemon, et al.            Expires August 3, 2017                [Page 19]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
 
       Noted that semantics may differ between resolution contexts.
 
@@ -1058,13 +1082,6 @@ Appendix A.  Change Log.
 
    o  Replaced 'Internet Names' with 'Domain Names' - suggestion by John
       Levine.
-
-
-
-Lemon, et al.            Expires August 3, 2017                [Page 19]
-
-Internet-Draft          Special-Use Names Problem           January 2017
-
 
    -02 to -03:
 
@@ -1098,6 +1115,13 @@ Authors' Addresses
    Email: ted.lemon@nominum.com
 
 
+
+
+Lemon, et al.            Expires August 3, 2017                [Page 20]
+
+Internet-Draft          Special-Use Names Problem           January 2017
+
+
    Ralph Droms
 
    Email: rdroms.ietf@gmail.com
@@ -1117,4 +1141,36 @@ Authors' Addresses
 
 
 
-Lemon, et al.            Expires August 3, 2017                [Page 20]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Lemon, et al.            Expires August 3, 2017                [Page 21]

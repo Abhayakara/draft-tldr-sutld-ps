@@ -67,8 +67,7 @@
       This memo presents a list, intended to be comprehensive, of the problems
       that have been identified. In addition it reviews the history of Domain
       Names and summarizes current IETF publications and some publications
-      from other standards organizations relating to special-use Domain
-      Names.</t>
+      from other organizations relating to special-use Domain Names.</t>
     </abstract>
   </front>
 
@@ -87,7 +86,7 @@
       <t><xref target="RFC6761">Special-Use Domain Names</xref> created <xref
       target="SDO-IANA-SUDR">an IANA registry for special-use Domain
       Names</xref>, defined policies for adding to the registry, and made some
-      suggestions about how that policy might be implemented. Since the
+      suggestions about how those policies might be implemented. Since the
       publication of RFC 6761, the IETF has been asked to designate several
       new special-use Domain Names in this registry. During the evaluation
       process for these special-use Domain Names, the IETF encountered several
@@ -97,11 +96,11 @@
 
       <t>This document presents a list, believed to be complete, of the
       problems associated with the assignment of special-use names. In support
-      of the particular set of problems described here, the document also
-      includes documentation of existing practice as it relates to the use of
-      Domain Names, as well as a brief history of Domain Names, and finally to
-      describe the set of problems that exist as reported by various IETF
-      participants with experience in the various aspects of the problem.</t>
+      of its analysis of the particular set of issues described here, the
+      document also includes descriptions of existing practice as it relates
+      to the use of domain names, a brief history of domain names, and some
+      observations by various IETF participants who have experience with
+      various aspects of the current situation.</t>
     </section>
 
     <section title="Terminology">
@@ -155,8 +154,8 @@
 
               <t>Assigned by ICANN to the public DNS root</t>
 
-              <t>ICANN Reserved Names; names that may not be applied for as a
-              TLD (see <xref target="SDO-ICANN-DAG"/>Section 2.2.1.2.1,
+              <t>ICANN Reserved Names; names that may not be applied for as
+              TLDs (see <xref target="SDO-ICANN-DAG"/>Section 2.2.1.2.1,
               Reserved Names )</t>
 
               <t>Commandeered for use by other organizations</t>
@@ -372,9 +371,9 @@
               <t>This same problem can also occur simply because a single user
               copies a name from one context in which it has one meaning, into
               a different context in which it has a different meaning&mdash;
-              for example copying a '.onion' Domain Name out of a TOR browser,
+              for example copying a '.onion' Domain Name out of a Tor browser,
               where it has meaning, and pasting this name into an ssh client
-              that doesn't support connecting over TOR.</t>
+              that doesn't support connecting over Tor.</t>
             </list></t>
 
           <t>To boil this down even further, we can take the following advice
@@ -559,7 +558,7 @@
               <t>The IETF gained consensus to publish it</t>
 
               <t>The situation was somewhat forced, both by the fact of its
-              unilateral use by the TOR project without following the RFC 6761
+              unilateral use by The Tor Project without following the RFC 6761
               process, and <xref target="SDO-CABF-INT"> because a deadline had
               been set by the CA/Browser Forum</xref> after which all .onion
               PKI certificates would expire and no new certificates would be
@@ -894,6 +893,24 @@
     </references>
 
     <section title="Change Log.">
+      <t>-02 to -03.0 (in Github): <list>
+          <t>Address some of the simpler issues, including:</t>
+
+          <t>Issue # 13: Spelling of Tor -- Jeremy Rand
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/13) </t>
+
+          <t>Issue #16: Match number of "policies" and "that policy" --
+          Suzanne
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/16)</t>
+
+          <t>Issue #17: Clarify sentence beginning with "In support of the
+          particular set of problems described here...." -- Suzanne.
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/14)</t>
+
+          <t>Issue #23: Match number of "names" and "a TLD" -- Suzanne.
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/23)</t>
+        </list></t>
+
       <t>-01 to -02:<list>
           <t>Language cleanup from Ted.</t>
         </list></t>
