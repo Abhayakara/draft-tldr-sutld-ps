@@ -373,9 +373,10 @@
               <t>This same problem can also occur simply because a single user
               copies a name from one context in which it has one meaning, into
               a different context in which it has a different meaning&mdash;
-              for example copying a '.onion' Domain Name out of a Tor browser,
+              for example copying a '.onion' Domain Name out of a Tor
+	      Browser <xref target="TOR" />,
               where it has meaning, and pasting this name into an ssh client
-              that doesn't support connecting over Tor.</t>
+              that doesn't support connecting over the Tor network.</t>
             </list></t>
 
           <t>To boil this down even further, we can take the following advice
@@ -604,7 +605,7 @@
         <section title="SSAC Advisory on the Stability of the Domain
 			Namespace">
           <t>SSAC Advisory on the Stability of the Domain Namespace
-          <xref target="SDO-ICANN-SAC090"> reports on some issues
+          <xref target="SDO-ICANN-SAC090" /> reports on some issues
           surrounding the conflicting uses, interested parties and
           processes related to the Domain Namespace. The document
           recommends the development of collaborative processes among
@@ -896,10 +897,26 @@
           <date month="August" year="2001"/>
         </front>
       </reference>
+
+      <reference anchor="TOR"
+		 target="https://www.torproject.org">
+	<front>
+	  <title>Tor</title>
+
+	  <author>
+	    <organization>The Tor Project</organization>
+	  </author>
+
+	  <date year="2017" />
+	</front>
+      </reference>
     </references>
 
     <section title="Change Log.">
       <t>-02 to -03.0 (in Github): <list>
+
+          <t>Issue #45: Correct usages of Tor Browser and Tor -- Russ Housley
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/45)</t>
 
           <t>Issue #46: Reformat citation of RFC 2860 -- Russ Housley
           (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/46)</t>
