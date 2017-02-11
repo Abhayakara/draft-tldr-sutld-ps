@@ -900,6 +900,22 @@
 
     <section title="Change Log.">
       <t>-02 to -03.0 (in Github): <list>
+
+          <t>Issue #46: Reformat citation of RFC 2860 -- Russ Housley
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/46)</t>
+
+          <t>Issue #44: Clean up reference to SDO-ICANN-DAG in first
+	  bullet in section 3 -- Russ Housley
+	  (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/44)</t>
+
+          <t>Issue #42: Add reference to SDO-ICANN-SAC090 in section
+	  4.2.5 -- Russ Housley
+	  (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/42)</t>
+
+          <t>Issue #30: Leaked queries aren't an operational problem
+	  in practice -- Suzanne Wolf
+	  (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/30)</t>
+	  
           <t>Address some of the simpler issues, including:</t>
 
           <t>Issue # 13: Spelling of Tor -- Jeremy Rand
