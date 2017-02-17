@@ -94,6 +94,30 @@
       investigate the problem and decide if and how the RFC 6761 process can
       be improved, or whether it should be deprecated.</t>
 
+      <t>Based on current ICANN and IETF practice, including RFC 6761,
+      there are several different types of names in the root of the
+      Domain Namespace: <list style="symbols">
+      
+          <t>Reserved by the IETF for technical purposes</t>
+
+          <t>Assigned by ICANN to the public DNS root; some names
+          reserved by the IETF for technical purposes may appear in
+          the Global DNS root for reasons pertaining to the operation
+          of the DNS</t>
+
+          <t>ICANN Reserved Names; names that may not be applied for
+          as TLDs (see <xref target="SDO-ICANN-DAG"/>, Section
+          2.2.1.2.1, Reserved Names, Section 2.2.1.4.1, Treatment of
+          Country or Territory Names, et al.)</t>
+
+          <t>Used by other organizations without following established
+	  processes</t>
+
+          <t>Names that are unused and are available for assignment to one
+	  of the previous categories</t>
+	      
+          </list></t>
+
       <t>This document presents a list, believed to be complete, of the
       problems associated with the assignment of special-use names. In support
       of its analysis of the particular set of issues described here, the
@@ -104,14 +128,23 @@
     </section>
 
     <section title="Terminology">
-      <t>For the sake of brevity this document uses a number of abbreviations.
-      These are expanded here: <list style="hanging">
-          <t hangText="Domain Name">A name which serves as input to a name
-          resolution process, for example 'EXAMPLE.ORG'.</t>
+      <t>This document uses the terminology from <xref
+      target="RFC7719">RFC 7719</xref>.  Other terms used in this
+      document are defined here: <list style="hanging"> 
+      
+          <t hangText="Domain Name">This document uses the term
+	  "Domain Name" as defined in section 2 of <xref
+	  target="RFC7719">RFC 7719</xref>.</t>
 
           <t hangText="Domain Namespace">The set of all possible Domain
           Names.</t>
 
+	  <t hangText="Special-Use Domain Name">A Domain Name
+	  listed in the Special-Use Domain Names registry.</t>
+	</list></t>
+
+      <t>For the sake of brevity this document uses a number of abbreviations.
+      These are expanded here: <list style="hanging">
           <t hangText="SUDN">Special Use Domain Name</t>
 
           <t hangText="SUTLDN">Special-Use Top-Level Domain Name</t>
@@ -125,44 +158,33 @@
 
     <section title="Problems associated with Special-Use Domain Names">
       <t>This section presents a list of problems that have been identified
-      with respect to the assignment of special-use names. Solutions to these
-      problems are out of scope for this document. Because of that, problems
-      with solutions to these problems are also out of scope for this
-      document, and will be covered in a separate document.</t>
+      with respect to the assignment of special-use names. Solutions
+      to these problems, including their costs or tradeoffs, are out
+      of scope for this document. They will be covered in a separate
+      document. New problems that might be created in the process of
+      solving problems described in this document are also out of
+      scope: these problems are expected to be addressed in the
+      process of evaluating potential solutions.</t> 
 
-      <t>No assertion is made that any of these problems is more or less
-      important than any other. The point of this is simply to enumerate and
-      briefly describe the problems that have been raised during discussions
-      of the special-use name problem. The degree of detail is intended to be
-      sufficient that that participants in the discussion can agree that the
-      problems they've raised have been adequately described, and no more.
-      These problems should not appear to every reader to all be problems: we
-      intend to cover any problem that any participant considers a problem,
-      not just those problems that everyone agrees are problems.</t>
+      <t>Special-Use Domain Names exist to solve a variety of
+      problems. This document has two goals: enumerate all of the
+      problems that have been identified to which Special Use Domain
+      Names are a solution and enumerate all of the problems that have
+      been raised in the process of trying to use RFC 6761 as it was
+      intended. As some of those problems may fall into both
+      categories, this document makes no attempt to categorize the
+      problems.</t>
 
-      <t>In addition, no assertion is made that all of these problems must be
-      addressed, or that, if we think they should be addressed, the IETF is
-      the organization with competence to address them. While each problem has
-      one or more solutions, the solutions may in some cases be mutually
-      contradictory, or may come with costs that do not justify the benefit
-      that would be obtained from solving them.</t>
+      <t>There is a broad diversity of opinion about this set of
+      problems. Not every participant agrees that each of the problems
+      enumerate in this document is actually a problem. This document
+      takes no position on the relative validity of the various
+      problems that have been enumerated. Its focused purposes are to
+      enumerate those problems. provide the reader with context for
+      thinking about them and a context for future discussion of
+      solutions.</t>
 
       <t>This is the list of problems: <list style="symbols">
-          <t>There are several different types of names in the root of the
-          Domain Namespace: <list style="symbols">
-              <t>Reserved by the IETF for technical purposes</t>
-
-              <t>Assigned by ICANN to the public DNS root</t>
-
-              <t>ICANN Reserved Names; names that may not be applied for as
-              TLDs (see Section 2.2.1.2.1 of <xref
-	      target="SDO-ICANN-DAG"/>)</t> 
-
-              <t>Commandeered for use by other organizations</t>
-
-              <t>Not a member of any other category</t>
-            </list></t>
-
           <t>Both ICANN and the IETF have the authority and formal processes
           to assign names from the pool of unused names, but no formal
           coordination process exists. The lack of coordination complicates
@@ -182,9 +204,10 @@
           third party who wants to just start using a subset of the
           namespace.</t>
 
-          <t>Organizations do in fact sometimes commandeer subsets of the
-          namespace. Reasons a third party might do this include: <list
-              style="symbols">
+          <t>Organizations do in fact sometimes use subsets of the
+          Domain Namespace without following established
+	  processes. Reasons a third party might do this include:
+	  <list style="symbols">
               <t>Unaware that a process exists for assigning such names</t>
 
               <t>Intended use is covered by gTLD process, but no gTLD process
@@ -279,7 +302,7 @@
           of this is that any mitigation effect on the root name
 	  servers or on privacy considerations has been missed.</t>
 
-          <t>There are several Domain Name TLDs that have been commandeered
+          <t>There are several Domain Name TLDs that are in use
           without due process for a variety of purposes <xref
           target="SDO-ICANN-COLL"/>. The status of these names need to be
           clarified and recorded to avoid future disputes about their use. [
@@ -292,11 +315,11 @@
 
           <t>No mechanism exists for adding a name to the registry without
           claiming that the IETF is responsible for that name, nor is it
-          possible to state a precedence for the name, e.g. "if ICANN
+          possible to state a precedence for the name, e.g., "if ICANN
           delegates this name, ICANN's delegation takes precedence."</t>
 
           <t>No process exists for checking documents to make sure they don't
-          accidentally assign names (e.g. RFC 7788).</t>
+          accidentally assign names (e.g., RFC 7788).</t>
 
           <t>Use of the registry is inconsistent--some SUTLDN RFCs specify
           registry entries, some don't; some specify delegation, some
@@ -647,16 +670,18 @@
           when it might make sense to use them, and when it would not make
           sense to use them.</t>
 
-          <t>RFC 7788 <xref target="RFC7788"/> defines the Domain Name TLD
-          ".home" for use as the default name for name resolution relative to
-          a home network context. Although, as defined in RFC 7788, ".home" is
-          a special-use Domain Name, RFC 7788 did not follow the process in
-          RFC 6761 and request the addition of ".home" to the IANA Special-Use
-          Domain Name registry. Additionally, ".home" is an example of an
-          attempt to reuse a Domain Name that has already been commandeered
-          for other purposes <xref target="SDO-ICANN-COLL"/>, which further
-          complicates the situation. At the time this document was written,
-          the IETF was developing a solution to this problem.</t>
+          <t>RFC 7788 <xref target="RFC7788"/> defines the Domain Name
+          TLD ".home" for use as the default name for name resolution
+          relative to a home network context. Although, as defined in
+          RFC 7788, ".home" is a special-use Domain Name, RFC 7788 did
+          not follow the process in RFC 6761 and request the addition
+          of ".home" to the IANA Special-Use Domain Name
+          registry. Additionally, ".home" is an example of an attempt
+          to reuse a Domain Name that has already been put into use for
+          other purposes without following established processes<xref
+          target="SDO-ICANN-COLL"/>, which further complicates the
+          situation. At the time this document was written, the IETF
+          was developing a solution to this problem.</t>
         </section>
       </section>
 
@@ -799,6 +824,8 @@
 
       <?rfc include="reference.RFC.7686" ?>
 
+      <?rfc include="reference.RFC.7719" ?>
+
       <?rfc include="reference.RFC.7788" ?>
 
       <?rfc include="reference.I-D.chapin-additional-reserved-tlds" ?>
@@ -914,6 +941,30 @@
 
     <section title="Change Log.">
       <t>-02 to -03.0 (in Github): <list>
+
+          <t>Issue #24: Replacement for "commandeer" (2 issues)--
+	  Suzanne Wolff
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/24</t>
+
+          <t>Issue #22: Clarify importance of the "root of the Domain
+	  Namespace" -- Suzanne Wolff 
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/22</t>
+
+          <t>Issue #21: Section 3 - clarify paragraphs 2 and 3 --
+	  Suzanne Wolff 
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/21</t>
+
+          <t>Issue #20: Section 3: Clarify sentences beginning
+	  "Solutions to these problems..." -- Suzanne Wolff  
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/20</t>
+
+          <t>Issue #19: Define "default" or "assumed" use of domain
+	  names to be within DNS -- Suzanne Wolff 
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/19</t>
+
+          <t>Issue #18: Cite definition of RFC 7719 and domain names
+	  draft in definition of "domain name" -- Suzanne Wolff
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/18</t>
 
           <t>Issue #45: Correct usages of Tor Browser and Tor -- Russ Housley
           (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/45)</t>
