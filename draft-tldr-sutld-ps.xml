@@ -193,7 +193,11 @@
           </xref>.</t>
 
           <t>The term "technical use" in <xref target="RFC2860">RFC
-          2860</xref> is considered by some to be too inclusive.</t>
+          2860</xref> is never explained in detail. RFC 6761
+	  represents one possible interpretation. Although this
+	  interpretation represents the current IETF consensus, there
+	  are participants consider it to be too broad, and also
+	  participants who consider it to be too narrow.</t> 
 
           <t>The IETF and ICANN each have administrative authority over the
           Domain Namespace. Not all developers of protocols on the internet
@@ -221,6 +225,14 @@
 
               <t>Intended use is covered by ICANN or IETF process, but
               expected outcome is refusal or non-action</t>
+
+	      <t>Unaware that a name intended to be used only locally
+	      may nevertheless leak
+	      </t>
+
+	      <t>Unaware that a name used locally with informal
+	      allocation may subsequently be allocated formally,
+	      creating operational problems</t>
             </list></t>
 
           <t>There is demand for more than one name resolution protocol for
@@ -287,12 +299,14 @@
           through the IETF, there is a concern that protocols that require
           such names would not be able to get them.</t>
 
-          <t>In cases where the IETF has made assignments through the RFC 6761
-          process, technical mistakes have been made due either to
-          misunderstandings as to the actual process that RFC 6761 specifies
-          (e.g., treating the list of suggested considerations for assigning a
-          name as a set of requirements all of which must be met), or to a
-          failure to follow the process that was defined in RFC 6761.</t>
+          <t>In some cases where the IETF has made assignments through
+          the RFC 6761 process, technical mistakes have been made due
+          to misunderstandings as to the actual process that RFC 6761
+          specifies (e.g., treating the list of suggested
+          considerations for assigning a name as a set of requirements
+          all of which must be met).  In other cases, the IETF has
+          made de facto assignments of SUDNs without following the RFC
+          6761 process.</t>
 
           <t>In principle, the RFC 6761 process could be used to document the
           existence of Domain Names that are not safe to assign, and provide
@@ -941,6 +955,20 @@
 
     <section title="Change Log.">
       <t>-02 to -03.0 (in Github): <list>
+
+          <t>Issue #32: Have assignments through RFC 6761 really had
+	  "technical mistakes"? -- Suzanne Wolff 
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/32</t>
+	  
+          <t>Issue #29: Add a reason to bypass external process:
+	  expectation for use of new name to be restricted to local
+	  scope -- Suzanne Wolff
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/29</t>
+	  
+          <t>Issue #27: Is "technical use" really ambiguous; too
+	  inclusive for some people and too limited for others --
+	  Suzanne Wolff
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/27</t>
 
           <t>Issue #24: Replacement for "commandeer" (2 issues)--
 	  Suzanne Wolff
