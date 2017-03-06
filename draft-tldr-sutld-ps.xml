@@ -5,11 +5,11 @@
 <?rfc symrefs="yes" ?>
 <?rfc comments="yes" ?>
 <?rfc inline="yes" ?>
-<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-02" ipr="trust200902"
+<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-03" ipr="trust200902"
      obsoletes="" updates="">
   <front>
-    <title abbrev="Special-Use Names Problem">Special-Use Names Problem
-    Statement</title>
+    <title abbrev="Special-Use Domain Names Problem">Special-Use Domain Names
+    Problem Statement</title>
 
     <author fullname="Ted Lemon" initials="T" surname="Lemon">
       <organization>Nominum, Inc.</organization>
@@ -59,7 +59,7 @@
       </address>
     </author>
 
-    <date day="30" month="January" year="2017"/>
+    <date year="2017"/>
 
     <abstract>
       <t>The Special-Use Domain Names IANA registry policy defined in RFC 6761
@@ -185,12 +185,12 @@
       solutions.</t>
 
       <t>This is the list of problems: <list style="symbols">
-          <t>Both ICANN and the IETF have the authority and formal processes
-          to assign names from the pool of unused names, but no formal
-          coordination process exists. The lack of coordination complicates
-          the management of the root of the Domain Namespace and <xref
-          target="SDO-ICANN-SAC090"> may lead to conflicts in name assignments
-          </xref>.</t>
+          <t>No formal coordination process exists between the name assignment
+          processes in the IETF and ICANN (see <xref target="MoU" />).
+	  The lack of coordination complicates the management of
+	  the root of the Domain Namespace and <xref
+	  target="SDO-ICANN-SAC090"> may lead to conflicts in name
+	  assignments </xref>.</t>
 
           <t>The term "technical use" in <xref target="RFC2860">RFC
           2860</xref> is never explained in detail. RFC 6761
@@ -199,14 +199,19 @@
 	  are participants consider it to be too broad, and also
 	  participants who consider it to be too narrow.</t> 
 
-          <t>The IETF and ICANN each have administrative authority over the
-          Domain Namespace. Not all developers of protocols on the internet
-          agree that this authority should reside with the IETF and ICANN.</t>
+          <t>Not all developers of protocols on the internet agree
+	  that this authority should reside solely with the IETF and
+	  ICANN.</t>
 
-          <t>Although IETF and ICANN nominally have authority over this
-          namespace, neither organization can enforce that authority over any
-          third party who wants to just start using a subset of the
-          namespace.</t>
+          <t>Although IETF and ICANN nominally have authority over
+          this namespace, neither organization can enforce that
+          authority over any third party who wants to just start using
+          a subset of the namespace. Such parties may observe that the
+          IETF has never asserted control or authority over what
+          protocols are "allowed" on the internet, and that the
+          principle of "permissionless innovation" suggests there
+          should be a way for people to include new uses of domain
+          names in new protocols and applications.</t>
 
           <t>Organizations do in fact sometimes use subsets of the
           Domain Namespace without following established
@@ -235,9 +240,11 @@
 	      creating operational problems</t>
             </list></t>
 
-          <t>There is demand for more than one name resolution protocol for
-          Domain Names, but Domain Names contain no metadata to indicate which
-          protocol to use to resolve them.</t>
+          <t>There is demand for more than one name resolution
+          protocol for Domain Names. Domain Names contain no metadata
+          to indicate which protocol to use to resolve them. Domain
+          name resolution APIs do not provide a way to specify which
+          protocol to use.</t>
 
           <t>When a special-use Domain Name is added to the special-use Domain
           Names registry, not all software that processes such names will
@@ -251,14 +258,17 @@
 	  information through the contents of the query, which
 	  is a privacy consideration.</t>
 
-          <t>The RFC6761 process is sufficiently uncertain that some protocol
-          developers have assumed they could not get a name assigned; the
-          process of assigning the first new name ('.local') using the RFC
-          6761 process took more than ten years from beginning to end: longer
-          by a factor of ten than any other part of the protocol development
-          process. Other uses of the process have proceeded more smoothly, but
-          there is a reasonably justified perception that using this process
-          is likely to be slow and difficult, with an uncertain outcome.</t>
+          <t>The RFC6761 process is sufficiently uncertain that some
+          protocol developers have assumed they could not get a name
+          assigned; the process of assigning the first new name
+          ('.local') using the RFC 6761 process took more than ten
+          years from beginning to end: longer by a factor of ten than
+          any other part of the protocol development process (largely
+          because this ten years included time to develop the process
+          as well as use it). Other uses of the process have proceeded
+          more smoothly, but there is a reasonably justified
+          perception that using this process is likely to be slow and
+          difficult, with an uncertain outcome.</t>
 
           <t>There is strong resistance within the IETF to assigning Domain
           Names to resolution systems outside of the DNS, for a variety of
@@ -332,8 +342,11 @@
           possible to state a precedence for the name, e.g., "if ICANN
           delegates this name, ICANN's delegation takes precedence."</t>
 
-          <t>No process exists for checking documents to make sure they don't
-          accidentally assign names (e.g., RFC 7788).</t>
+          <t>There is no formal mechanism that ensures that we check
+          to make sure that a document being considered for
+          publication does not unintentionally violate the IETF
+          process for adding special use names to the registry (e.g.,
+          RFC 7788 <xref target="RFC7788"/>).</t>
 
           <t>Use of the registry is inconsistent--some SUTLDN RFCs specify
           registry entries, some don't; some specify delegation, some
@@ -342,14 +355,43 @@
           <t>There exists no safe, non-process-violating mechanism for ad-hoc
           assignment of special-use names.</t>
 
-          <t>It is generally assumed that protocols that need a special-use
-          name need a human-readable special-use name. This assumption may not
-          be warranted in all cases.</t>
+          <t>It is generally assumed that protocols that need a
+          special-use name need a mnemonic, single-label,
+          human-readable special-use name, for use in user interfaces
+          such as command lines or URL entry fields.  While this
+          assumption is correct in some cases, it is likely not
+          correct in all cases; for example, in applications where the
+          DNS name is never visible to a user.</t>
 
           <t>RFC 6761 uses the term "Domain Name" to describe the thing for
           which special uses are registered. This creates a great deal of
           confusion because some readers take "Domain Name" to imply the use
           of the DNS protocol.</t>
+
+	  <t>The use of DNSSEC with SUDNs is an open issue. There is
+	  no consensus or guidance about how to use DNSSEC with
+	  various classes of SUDNs. Considerations in the use of
+	  DNSSEC with SUDNs include: <list style="symbols">
+
+	      <t>What class of SUDN is under consideration: non-DNS,
+	      locally served zone, other?</t>
+
+	      <t>Does the SUDN require a delegation in the root zone;
+	      if so, should that delegation be signed or unsigned (if
+	      there is no delegation, then this implies that there is
+	      a secure denial of existence for that zone. This would
+	      not be appropriate for a name being resolved using the
+	      DNS protocol.)?</t>
+
+	      <t>A process would be required through which the IETF
+	      can cause a delegation in the root zone to be
+	      instantiated.</t>
+	      
+	      <t>What are the recommended practices for using DNS with
+	      the specific SUDN?</t>
+
+	  </list></t>
+	  
         </list></t>
 
       <t>The problems we have stated here represent the current understanding
@@ -518,7 +560,7 @@
           Name.</t>
         </section>
 
-        <section title="MoU Concerning the Technical Work of the IANA">
+        <section anchor="MoU" title="MoU Concerning the Technical Work of the IANA">
           <t>There exists a Memorandum of Understanding <xref
           target="RFC2860"/> between the IETF and ICANN (Internet
           Corporation for Assigned Names and Numbers) which discusses
@@ -955,6 +997,22 @@
 
     <section title="Change Log.">
       <t>-02 to -03.0 (in Github): <list>
+
+      
+          <t>Issue #35: Clarify "No process exists [...]" to include
+	  both IETF process and other process -- Suzanne Woolf
+  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/35</t>
+	  
+          <t>Issue #31: Add justification for concern about IETF's
+	  ability to assign names for technical use -- Suzanne Woolf
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/31</t>
+
+          <t>Issue #12: Add DNSSEC to text -- John Levine
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/12</t>
+
+          <t>Issue #6: Without a process, we just have chaos -- Stuart
+	  Cheshire
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/6</t>
 
           <t>Issue #32: Have assignments through RFC 6761 really had
 	  "technical mistakes"? -- Suzanne Wolff 
