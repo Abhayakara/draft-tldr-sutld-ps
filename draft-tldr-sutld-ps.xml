@@ -143,16 +143,14 @@
 	  listed in the Special-Use Domain Names registry.</t>
 	</list></t>
 
-      <t>For the sake of brevity this document uses a number of abbreviations.
-      These are expanded here: <list style="hanging">
-          <t hangText="SUDN">Special Use Domain Name</t>
-
-          <t hangText="SUTLDN">Special-Use Top-Level Domain Name</t>
+      <t>For the sake of brevity this document uses some
+      abbreviations, which are expanded here: <list style="hanging">
 
           <t hangText="IANA">Internet Assigned Numbers Authority</t>
 
           <t hangText="ICANN">Internet Corporation for Assigned Names and
           Numbers</t>
+
         </list></t>
     </section>
 
@@ -633,7 +631,30 @@
           statement in the MoU are, but rather to call the reader's attention
           to the existence of this statement.</t>
         </section>
+
+        <section title="Liaison Statement on Technical Use of Domain
+      Names">
+        <t>As a result of processing requests to add names to the
+        Special Use Domain Name registry, as documented in <xref
+        target="I-D.chapin-additional-reserved-tlds" /> and <xref
+        target="I-D.grothoff-iesg-special-use-p2p-names" />, the IAB
+        initiated a review of the process defined in RFC 6761 for
+        adding names to the registry.  This review was identified as
+        in the charter of the IETF DNSOP working group, and the review
+        has been conducted in that working group.  The Liaison
+        Statement <xref target="SDO-IAB-ICANN-LS" /> notified ICANN of
+        the review, affirmed that the discussion would be "open and
+        transparent to participation by interested parties" and
+        explicitly invited members of the ICANN community to
+        participate.</t>
+
+	<t>This document is a product of the IETF DNSOP working group
+	review of the registry process in RFC 6761.</t>
+	
+	</section>
+	
       </section>
+      
 
       <section title="Secondary documents relating to the Special Use
 		      Domain Name question">
@@ -913,6 +934,8 @@
 
       <?rfc include="reference.I-D.chapin-additional-reserved-tlds" ?>
 
+      <?rfc include="reference.I-D.grothoff-iesg-special-use-p2p-names" ?>
+      
       <?rfc include="reference.I-D.lewis-domain-names" ?>
 
       <reference anchor="SDO-CABF-INT"
@@ -983,6 +1006,20 @@
         </front>
       </reference>
 
+      <reference anchor="SDO-IAB-ICANN-LS"
+		 target="https://datatracker.ietf.org/liaison/1351">
+	<front>
+	  <title>Liaison Statement from the IAB to the ICANN Board on
+	  Technical Use of Domain Names</title>
+
+	  <author>
+	    <organization>Internet Architecture Board</organization>
+	  </author>
+
+	  <date day="15" month="September" year="2015" />
+	</front>
+      </reference>
+      
       <reference anchor="CORP-SUN-NIS">
         <front>
           <title>Large System and Network Administration</title>
