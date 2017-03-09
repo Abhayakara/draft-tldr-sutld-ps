@@ -197,8 +197,8 @@
           what this term means.</t>
 
           <t>Not all developers of protocols on the internet agree
-	  that this authority should reside solely with the IETF and
-	  ICANN.</t>
+          that authority over the entire Domain Namespace should
+          reside solely with the IETF and ICANN.</t>
 
           <t>Although IETF and ICANN nominally have authority over
           this namespace, neither organization can enforce that
@@ -256,7 +256,7 @@
 	  information through the contents of the query, which
 	  is a privacy consideration.</t>
 
-          <t>The RFC6761 process is sufficiently uncertain that some
+          <t>The RFC 6761 process is sufficiently uncertain that some
           protocol developers have assumed they could not get a name
           assigned; the process of assigning the first new name
           ('.local') using the RFC 6761 process took more than ten
@@ -635,6 +635,11 @@
           used for inverse DNS lookup. Both 'IN-ADDR.ARPA' and 'IP6.ARPA' are
           in the special-use Domain Names registry.</t>
 
+	  <t>Implicit in the MoU is the fact that the IETF and ICANN
+	  retain, between them, sole authority for assigning any names
+	  from the Domain Namespace. Both the IETF and ICANN have
+	  internal processes for making such assignments.</t>
+
           <t>The point here is not to say what the implications of this
           statement in the MoU are, but rather to call the reader's attention
           to the existence of this statement.</t>
@@ -782,8 +787,7 @@
           registry.</t>
         </section>
 
-        <section anchor="addl-tlds" title="Additional Reserved Top
-					   Level Domains">
+        <section anchor="addl-tlds" title="Additional Reserved Top Level Domains">
           <t><xref target="I-D.chapin-additional-reserved-tlds"> Additional
           Reserved Top Level Domains</xref> is an example of a document that
           attempted to reserve several TLDs identified by ICANN as
@@ -1070,6 +1074,10 @@
     <section title="Change Log.">
       <t>-02 to -03.0 (in Github): <list>
 
+          <t>Issue #39: Overlapping bullets in Section 3, with
+	  proposed restructuring -- Russ Housley
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/39</t>
+	  
           <t>Issue #55: Editorial improvement to Section 3 (4) -- John
 	  Dickinson
 	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/55</t>
@@ -1113,6 +1121,18 @@
 	  SDO-ICANN-COLL -- Russ Housley
   	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/41</t>
       
+          <t>Issue #40: Note that time to publish spec for .local
+	  included inventing SUDN registry -- Russ Housley
+  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/41</t>
+      
+          <t>Issue #37: Title should be "Special-Use Domain Names
+	  Problem Statement" -- Russ Housley
+  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/37</t>
+
+          <t>Issue #36: Expand on desire for special-use names to be
+	  human-readable -- Suzanne Woolf
+  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/36</t>
+
           <t>Issue #35: Clarify "No process exists [...]" to include
 	  both IETF process and other process -- Suzanne Woolf
   	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/35</t>
@@ -1188,6 +1208,9 @@
 
           <t>Issue #13: Spelling of Tor -- Jeremy Rand
           (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/13) </t>
+
+          <t>Issue #14: Change SDO to "organizations" -- Suzanne Woolf
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/14) </t>
 
           <t>Issue #16: Match number of "policies" and "that policy" --
           Suzanne
