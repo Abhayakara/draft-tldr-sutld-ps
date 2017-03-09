@@ -74,14 +74,15 @@
   <middle>
     <section title="Introduction">
       <t>One of the key services required to use the Internet is name
-      resolution. Name resolution is the process of translating a symbolic
-      name into some object or set of objects to which the name refers, most
-      typically one or more IP addresses. These names are often referred to as
-      Domain Names. When reading this document, care must be taken to not
-      assume that the term Domain Name implies the particular protocol for
-      resolving these names, the <xref target="RFC1034">Domain Name
-      System</xref>. An excellent presentation on this topic can be found in
-      <xref target="I-D.lewis-domain-names">Domain Names</xref>.</t>
+      resolution. Name resolution is the process of translating a
+      symbolic name into some object or set of objects to which the
+      name refers, most typically one or more IP addresses. These
+      names are often referred to as Domain Names. When reading this
+      document, care must be taken to not assume that the term Domain
+      Name implies the use of the <xref target="RFC1034">Domain Name
+      System</xref> for resolving these names. An excellent
+      presentation on this topic can be found in <xref
+      target="I-D.lewis-domain-names">Domain Names</xref>.</t>
 
       <t><xref target="RFC6761">Special-Use Domain Names</xref> created <xref
       target="SDO-IANA-SUDR">an IANA registry for special-use Domain
@@ -190,12 +191,10 @@
 	  target="SDO-ICANN-SAC090"> may lead to conflicts in name
 	  assignments </xref>.</t>
 
-          <t>The term "technical use" in <xref target="RFC2860">RFC
-          2860</xref> is never explained in detail. RFC 6761
-	  represents one possible interpretation. Although this
-	  interpretation represents the current IETF consensus, there
-	  are participants consider it to be too broad, and also
-	  participants who consider it to be too narrow.</t> 
+          <t>There is no explicit scoping as to what can constitute a
+          <xref target="RFC2860">"technical use"</xref> and what
+          cannot, and there is also no consensus within the IETF as to
+          what this term means.</t>
 
           <t>Not all developers of protocols on the internet agree
 	  that this authority should reside solely with the IETF and
@@ -215,13 +214,14 @@
           Domain Namespace without following established
 	  processes. Reasons a third party might do this include:
 	  <list style="symbols">
+ 
               <t>Unaware that a process exists for assigning such names</t>
 
               <t>Intended use is covered by gTLD process, but no gTLD process
               is ongoing</t>
 
-              <t>Intended use is covered by gTLD process, don't want to pay
-              fee</t>
+              <t>Intended use is covered by gTLD process, but the
+              third party doesn't want to pay a fee</t>
 
               <t>Intended use is covered by some IETF process, but don't want
               to follow process</t>
@@ -291,9 +291,10 @@
               protocols may not support RRtypes, or may support some entirely
               different data structuring mechanism.</t>
 
-              <t>If there is an IETF process through which a name can be
+              <t>If there is an IETF process through which a TLD can be
               assigned at zero cost other than time, this process will be used
-              as an alternative to purchasing the name through ICANN.</t>
+              as an alternative to the more costly process of getting
+	      the name registered through ICANN.</t>
 
               <t>A name might be assigned for a particular purpose when a more
               general use of the name would be more beneficial.</t>
@@ -333,10 +334,17 @@
           documentation is that any mitigation effect on the root name
           servers or on privacy considerations has been missed.</t>
 
-          <t>No mechanism exists for adding a name to the registry without
-          claiming that the IETF is responsible for that name, nor is it
-          possible to state a precedence for the name, e.g., "if ICANN
-          delegates this name, ICANN's delegation takes precedence."</t>
+          <t>A Domain Name can be identified as either a DNS name by
+          placing it in the DNS zone(s) or as a Special Use Domain
+          Name by adding it to the IANA registry. Some names are in
+          both places; for example, some locally served zone names are
+          in DNS zones and documented in the Special Use Domain Names
+          registry. At present, the only way a Domain Name can be
+          added to the Special Use Domain Name registry is for the
+          IETF to take responsibility for the name and designate it
+          for "technical use". There are other potential uses for
+          Domain Names that should be recorded in the registry, but
+          for which the IETF should not take responsibility.</t>
 
 	  <t>The IETF may in some cases see the need to document that
 	  a name is in use without claiming that the use of the name
@@ -1062,6 +1070,28 @@
     <section title="Change Log.">
       <t>-02 to -03.0 (in Github): <list>
 
+          <t>Issue #55: Editorial improvement to Section 3 (4) -- John
+	  Dickinson
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/55</t>
+	  
+          <t>Issue #34: Separate two problems in paragraph that begins
+	  "No mechanism exists for adding a name to the registry...."
+	  (2 issues) -- Suzanne Woolf
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/34</t>
+	  
+          <t>Issue #52: Editorial improvement to Section 3 (1) -- John
+	  Dickinson
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/52</t>
+	  
+          <t>Issue #51: Clarification in Introduction -- John
+	  Dickinson
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/51</t>
+
+          <t>Issue #49: Should cite
+	  https://datatracker.ietf.org/liaison/1351 -- George
+	  Michaelson
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/49</t>
+	  
           <t>Issue #50: IETF precedence in special-use names registry
 	  -- Ted Lemon
   	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/50</t>
@@ -1156,7 +1186,7 @@
 	  
           <t>Address some of the simpler issues, including:</t>
 
-          <t>Issue # 13: Spelling of Tor -- Jeremy Rand
+          <t>Issue #13: Spelling of Tor -- Jeremy Rand
           (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/13) </t>
 
           <t>Issue #16: Match number of "policies" and "that policy" --
