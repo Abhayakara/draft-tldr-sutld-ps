@@ -92,7 +92,7 @@ Table of Contents
    7.  IANA considerations . . . . . . . . . . . . . . . . . . . . .  18
    8.  Contributors  . . . . . . . . . . . . . . . . . . . . . . . .  18
    9.  Informative References  . . . . . . . . . . . . . . . . . . .  18
-   Appendix A.  Change Log.  . . . . . . . . . . . . . . . . . . . .  22
+   Appendix A.  Change Log.  . . . . . . . . . . . . . . . . . . . .  21
    Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  26
 
 1.  Introduction
@@ -1044,11 +1044,6 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
               Addresses", RFC 4193, DOI 10.17487/RFC4193, October 2005,
               <http://www.rfc-editor.org/info/rfc4193>.
 
-   [RFC5226]  Narten, T. and H. Alvestrand, "Guidelines for Writing an
-              IANA Considerations Section in RFCs", BCP 26, RFC 5226,
-              DOI 10.17487/RFC5226, May 2008,
-              <http://www.rfc-editor.org/info/rfc5226>.
-
    [RFC6303]  Andrews, M., "Locally Served DNS Zones", BCP 163,
               RFC 6303, DOI 10.17487/RFC6303, July 2011,
               <http://www.rfc-editor.org/info/rfc6303>.
@@ -1058,6 +1053,11 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
               Space", BCP 153, RFC 6598, DOI 10.17487/RFC6598, April
               2012, <http://www.rfc-editor.org/info/rfc6598>.
 
+   [RFC6760]  Cheshire, S. and M. Krochmal, "Requirements for a Protocol
+              to Replace the AppleTalk Name Binding Protocol (NBP)",
+              RFC 6760, DOI 10.17487/RFC6760, February 2013,
+              <http://www.rfc-editor.org/info/rfc6760>.
+
 
 
 
@@ -1065,11 +1065,6 @@ Lemon, et al.          Expires September 11, 2017              [Page 19]
 
 Internet-Draft      Special-Use Domain Names Problem          March 2017
 
-
-   [RFC6760]  Cheshire, S. and M. Krochmal, "Requirements for a Protocol
-              to Replace the AppleTalk Name Binding Protocol (NBP)",
-              RFC 6760, DOI 10.17487/RFC6760, February 2013,
-              <http://www.rfc-editor.org/info/rfc6760>.
 
    [RFC6761]  Cheshire, S. and M. Krochmal, "Special-Use Domain Names",
               RFC 6761, DOI 10.17487/RFC6761, February 2013,
@@ -1111,6 +1106,11 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
               Lewis, E., "Domain Names", draft-lewis-domain-names-05
               (work in progress), February 2017.
 
+   [SDO-CABF-INT]
+              CA/Browser Forum, "Guidance on the Deprecation of Internal
+              Server Names and Reserved IP Addresses", June 2012,
+              <https://www.digicert.com/internal-names.htm>.
+
 
 
 
@@ -1121,11 +1121,6 @@ Lemon, et al.          Expires September 11, 2017              [Page 20]
 
 Internet-Draft      Special-Use Domain Names Problem          March 2017
 
-
-   [SDO-CABF-INT]
-              CA/Browser Forum, "Guidance on the Deprecation of Internal
-              Server Names and Reserved IP Addresses", June 2012,
-              <https://www.digicert.com/internal-names.htm>.
 
    [SDO-ICANN-COLL]
               Interisle Consulting Group, LLC, "Name Collisions in the
@@ -1170,6 +1165,11 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
    [TOR]      The Tor Project, "Tor", 2017,
               <https://www.torproject.org>.
 
+Appendix A.  Change Log.
+
+   -02 to -03 (in Github):
+
+
 
 
 
@@ -1178,12 +1178,9 @@ Lemon, et al.          Expires September 11, 2017              [Page 21]
 Internet-Draft      Special-Use Domain Names Problem          March 2017
 
 
-Appendix A.  Change Log.
-
-   -02 to -03 (in Github):
-
-      Passes idnits except for an error because of a reference to an RFC
-      2119 keyword in quoted text at line 493.
+      Passes idnits except for errors resulting from a reference to an
+      RFC 2119 keyword and a citation of RFC 5226 with no matching
+      reference in quoted text at line 493.
 
       Issue #57: Document needs an "Security Considerations" section
       https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/57
@@ -1225,6 +1222,9 @@ Appendix A.  Change Log.
       use TLD -- George Michaelson https://github.com/Abhayakara/draft-
       tldr-sutld-ps/issues/48
 
+      Issue #47: 4.3 should be made more prominent -- George Michaelson
+      https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/47
+
 
 
 
@@ -1233,9 +1233,6 @@ Lemon, et al.          Expires September 11, 2017              [Page 22]
 
 Internet-Draft      Special-Use Domain Names Problem          March 2017
 
-
-      Issue #47: 4.3 should be made more prominent -- George Michaelson
-      https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/47
 
       Issue #43: Spell out SUDN and SUTLDN rather than use acronyms --
       Russ Housley https://github.com/Abhayakara/draft-tldr-sutld-ps/
@@ -1280,6 +1277,9 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
       for use of new name to be restricted to local scope -- Suzanne
       Wolff https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/29
 
+      Issue #27: Is "technical use" really ambiguous; too inclusive for
+      some people and too limited for others -- Suzanne Wolff
+      https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/27
 
 
 
@@ -1289,10 +1289,6 @@ Lemon, et al.          Expires September 11, 2017              [Page 23]
 
 Internet-Draft      Special-Use Domain Names Problem          March 2017
 
-
-      Issue #27: Is "technical use" really ambiguous; too inclusive for
-      some people and too limited for others -- Suzanne Wolff
-      https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/27
 
       Issue #24: Replacement for "commandeer" (2 issues)-- Suzanne Wolff
       https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/24
@@ -1339,15 +1335,16 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
       Issue #13: Spelling of Tor -- Jeremy Rand
       (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/13)
 
+      Issue #14: Change SDO to "organizations" -- Suzanne Woolf
+      (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/14)
+
+
 
 
 Lemon, et al.          Expires September 11, 2017              [Page 24]
 
 Internet-Draft      Special-Use Domain Names Problem          March 2017
 
-
-      Issue #14: Change SDO to "organizations" -- Suzanne Woolf
-      (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/14)
 
       Issue #16: Match number of "policies" and "that policy" -- Suzanne
       (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/16)
@@ -1395,14 +1392,15 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
 
    o  Readability fixes, small grammar updates.
 
+   -01 to -02:
+
+
 
 
 Lemon, et al.          Expires September 11, 2017              [Page 25]
 
 Internet-Draft      Special-Use Domain Names Problem          March 2017
 
-
-   -01 to -02:
 
    o  Cleaned up the abstract.
 
@@ -1442,6 +1440,8 @@ Authors' Addresses
    US
 
    Email: warren@kumari.net
+
+
 
 
 

@@ -524,11 +524,11 @@
           sentence (RFC 6761, section 4):</t>
 
           <t><list style="empty">
-              <t>If it is determined that special handling of a name is
-              required in order to implement some desired new functionality,
-              then an IETF "Standards Action" or "IESG Approval" specification
-              <xref target="RFC5226" /> MUST be published describing the new
-              functionality.</t>
+              <t>If it is determined that special handling of a name
+              is required in order to implement some desired new
+              functionality, then an IETF "Standards Action" or "IESG
+              Approval" specification [RFC5226] MUST be published
+              describing the new functionality.</t>
             </list></t>
 
           <t>This sentence implies that any designation of a
@@ -947,8 +947,6 @@
 
       <?rfc include="reference.RFC.4193" ?>
 
-      <?rfc include="reference.RFC.5226" ?>
-
       <?rfc include="reference.RFC.6303" ?>
 
       <?rfc include="reference.RFC.6598" ?>
@@ -1097,8 +1095,9 @@
     <section title="Change Log.">
       <t>-02 to -03 (in Github): <list>
 
-          <t>Passes idnits except for an error because of a reference
-	  to an RFC 2119 keyword in quoted text at line 493.</t>
+          <t>Passes idnits except for errors resulting from a reference
+	  to an RFC 2119 keyword and a citation of RFC 5226 with no
+	  matching reference in quoted text at line 493.</t>
 
 	  <t>Issue #57: Document needs an "Security Considerations"
 	  section
