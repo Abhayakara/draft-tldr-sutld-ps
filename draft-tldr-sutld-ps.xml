@@ -143,6 +143,7 @@
 
 	  <t hangText="Special-Use Domain Name">A Domain Name
 	  listed in the Special-Use Domain Names registry.</t>
+
 	</list></t>
 
       <t>For the sake of brevity this document uses some
@@ -152,6 +153,12 @@
 
           <t hangText="ICANN">Internet Corporation for Assigned Names and
           Numbers</t>
+
+	  <t hangText="TLD">Top-Level Domain, as defined in in section
+	  2 of <xref target="RFC7719">RFC 7719</xref></t>
+
+	  <t hangText="gTLD">Generic Top-Level Domain, as defined in
+	  in section 2 of <xref target="RFC7719">RFC 7719</xref></t>
 
         </list></t>
     </section>
@@ -219,8 +226,9 @@
  
               <t>Unaware that a process exists for assigning such names</t>
 
-              <t>Intended use is covered by gTLD process, but no gTLD process
-              is ongoing</t>
+              <t>Intended use is covered by gTLD process <xref
+              target="SDO-ICANN-DAG"/>, but no gTLD process is
+              ongoing</t>
 
               <t>Intended use is covered by gTLD process, but the
               third party doesn't want to pay a fee</t>
@@ -568,9 +576,10 @@
 
               <t>A Special-Use Domain Name may be a name that requires
               special handling in the stub resolver. An example would
-              be a Special-Use top-level name like '.local' which acts
-              as a signal to indicate that the local stub resolver
-              should use a non-DNS protocol for name resolution.</t>
+              be a Special-Use Top-Level Domain Name like '.local'
+              which acts as a signal to indicate that the local stub
+              resolver should use a non-DNS protocol for name
+              resolution.</t>
 
               <t>The current IETF consensus (from a process
               perspective, not necessarily from the perspective of
@@ -592,11 +601,10 @@
           TLDs. However, at present, all Special-Use Domain Names
           registered in the <xref target="SDO-IANA-SUDR"> IANA
           Special-Use Domain Names registry</xref> are either intended
-          to be resolved using the DNS protocol, or are top-level
-          domains, or both. That is, at present there exist no
-          Special-Use Domain Names which require special handling by
-          stub resolvers and which are not at the top level of the
-          naming hierarchy.</t>
+          to be resolved using the DNS protocol, or are TLDs, or
+          both. That is, at present there exist no Special-Use Domain
+          Names which require special handling by stub resolvers and
+          which are not at the top level of the naming hierarchy.</t>
 
           <t>One point to take from this is that there is already a
           requirement in RFC 6762 that when stub resolvers encounter the
@@ -864,15 +872,16 @@
       special meaning of the '.local' Special-Use Top Level Domain Name.</t>
 
       <t>The Sun Microsystems model of having private domains within a
-      corporate site, while supporting the global Domain Name system for
-      off-site, persisted even after the NIS protocol fell into disuse.
-      Microsoft used to recommend that site administrators use a "private"
-      top-level domain for internal use, and this practice was very much a
-      part of the zeitgeist at the time (see section 5.1 of <xref
-      target="SDO-ICANN-COLL"/> and Appendix G of <xref target="RFC6762"/>).
-      This attitude is at the root of the widespread practice of simply
-      picking an unused top-level domain and using it for experimental
-      purposes, which persists even at the time of writing of this memo.</t>
+      corporate site, while supporting the global Domain Name system
+      for off-site, persisted even after the NIS protocol fell into
+      disuse.  Microsoft used to recommend that site administrators
+      use a "private" TLD for internal use, and this practice was very
+      much a part of the zeitgeist at the time (see section 5.1 of
+      <xref target="SDO-ICANN-COLL"/> and Appendix G of <xref
+      target="RFC6762"/>).  This attitude is at the root of the
+      widespread practice of simply picking an unused TLD and using it
+      for experimental purposes, which persists even at the time of
+      writing of this memo.</t>
 
       <t>This history is being presented because discussions about
       Special-Use Domain Names in the IETF often come down to the
