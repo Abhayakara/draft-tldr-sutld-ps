@@ -208,12 +208,12 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
    categorize the problems.
 
    There is a broad diversity of opinion about this set of problems.
-   Not every participant agrees that each of the problems enumerate in
+   Not every participant agrees that each of the problems enumerated in
    this document is actually a problem.  This document takes no position
    on the relative validity of the various problems that have been
-   enumerated.  Its focused purposes are to enumerate those problems.
-   provide the reader with context for thinking about them and a context
-   for future discussion of solutions.
+   enumerated.  Its focused purposes are to enumerate those problems,
+   provide the reader with context for thinking about them and provide a
+   context for future discussion of solutions.
 
    This is the list of problems:
 
@@ -226,11 +226,11 @@ Lemon, et al.          Expires September 14, 2017               [Page 4]
 Internet-Draft      Special-Use Domain Names Problem          March 2017
 
 
-   o  No formal coordination process exists between the name assignment
-      processes in the IETF and ICANN (see Section 4.1.3).  The lack of
-      coordination complicates the management of the root of the Domain
-      Namespace and may lead to conflicts in name assignments
-      [SDO-ICANN-SAC090].
+   o  No formal coordination process exists between the IETF and ICANN
+      as they follow their respective name assignment processes (see
+      Section 4.1.3).  The lack of coordination complicates the
+      management of the root of the Domain Namespace and could lead to
+      conflicts in name assignments [SDO-ICANN-SAC090].
 
    o  There is no explicit scoping as to what can constitute a
       "technical use" [RFC2860] and what cannot, and there is also no
@@ -261,11 +261,11 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
       *  Intended use is covered by gTLD process, but the third party
          doesn't want to pay a fee
 
-      *  Intended use is covered by some IETF process, but don't want to
-         follow process
+      *  Intended use is covered by some IETF process, but the third
+         party doesn't want to follow the process
 
-      *  Intended use is covered by ICANN or IETF process, but expected
-         outcome is refusal or non-action
+      *  Intended use is covered by ICANN or IETF process, but third
+         party expects that the outcome will be refusal or non-action
 
       *  Unaware that a name intended to be used only locally may
          nevertheless leak
@@ -295,7 +295,7 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
       use will result in queries for Special-Use Domain Names being sent
       to Domain Name System authoritative servers.  These queries may
       constitute an operational problem for operators of root zone
-      authoritative name servers.  These queries also may inadvertently
+      authoritative name servers.  These queries may also inadvertently
       reveal private information through the contents of the query,
       which is a privacy consideration.
 
@@ -437,11 +437,11 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
          non-DNS, locally served zone, other?
 
       *  Does the Special-Use Domain Name require a delegation in the
-         root zone; if so, should that delegation be signed or unsigned
-         (if there is no delegation, then this implies that there is a
-         secure denial of existence for that zone.  This would not be
-         appropriate for a name being resolved using the DNS protocol.)?
-
+         root zone; if so, should that delegation be signed or not?  If
+         there is no delegation, then this will be treated by validating
+         resolvers as a secure denial of existence for that zone.  This
+         would not be appropriate for a name being resolved using the
+         DNS protocol.
 
 
 
