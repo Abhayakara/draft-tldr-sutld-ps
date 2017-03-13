@@ -1153,8 +1153,8 @@ Internet-Draft      Special-Use Domain Names Problem          March 2017
    [SDO-IANA-SUDR]
               Internet Assigned Numbers Authority, "Special-Use Domain
               Names registry", October 2015,
-              <http://www.iana.org/assignments/Special-Use-domain-names/
-              Special-Use-domain-names.xhtml>.
+              <http://www.iana.org/assignments/special-use-domain-names/
+              special-use-domain-names.xhtml>.
 
    [SDO-ICANN-DAG]
               Internet Assigned Numbers Authority, "Special-Use Domain
