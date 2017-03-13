@@ -1023,7 +1023,7 @@
       </reference>
 
       <reference anchor="SDO-IANA-SUDR"
-                 target="http://www.iana.org/assignments/Special-Use-domain-names/Special-Use-domain-names.xhtml">
+                 target="http://www.iana.org/assignments/Special-Use-domain-names/special-use-domain-names.xhtml">
         <front>
           <title>Special-Use Domain Names registry</title>
 
