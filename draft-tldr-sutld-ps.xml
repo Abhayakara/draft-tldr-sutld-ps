@@ -84,16 +84,21 @@
       presentation on this topic can be found in <xref
       target="I-D.lewis-domain-names">Domain Names</xref>.</t>
 
-      <t><xref target="RFC6761">Special-Use Domain Names</xref> created <xref
-      target="SDO-IANA-SUDR">an IANA registry for Special-Use Domain
-      Names</xref>, defined policies for adding to the registry, and made some
-      suggestions about how those policies might be implemented. Since the
-      publication of RFC 6761, the IETF has been asked to designate several
-      new Special-Use Domain Names in this registry. During the evaluation
-      process for these Special-Use Domain Names, the IETF encountered several
-      different sorts of issues. Because of this, the IETF has decided to
-      investigate the problem and decide if and how the RFC 6761 process can
-      be improved, or whether it should be deprecated.</t>
+      <t><xref target="RFC6761">Special-Use Domain Names</xref>
+      created <xref target="SDO-IANA-SUDR">an IANA registry for
+      Special-Use Domain Names</xref>, defined policies for adding to
+      the registry, and made some suggestions about how those policies
+      might be implemented. Since the publication of RFC 6761, the
+      IETF has been asked to designate several new Special-Use Domain
+      Names in this registry. During the evaluation process for these
+      Special-Use Domain Names, the IETF encountered several different
+      sorts of issues. Because of this, the IETF has decided to
+      investigate the problem and decide if and how the RFC 6761
+      process can be improved, or whether it should be deprecated.
+      The IETF DSNOP working group charter was extended to include
+      conducting a review of the process for adding names to the
+      registry that is defined in RFC 6761. This document is a product
+      of that review.</t>
 
       <t>Based on current ICANN and IETF practice, including RFC 6761,
       there are several different types of names in the root of the
@@ -664,19 +669,14 @@
         <t>As a result of processing requests to add names to the
         Special-Use Domain Name registry, as documented in <xref
         target="I-D.chapin-additional-reserved-tlds" /> and <xref
-        target="I-D.grothoff-iesg-special-use-p2p-names" />, the IAB
-        initiated a review of the process defined in RFC 6761 for
-        adding names to the registry.  This review was identified as
-        in the charter of the IETF DNSOP working group, and the review
-        has been conducted in that working group.  The Liaison
+        target="I-D.grothoff-iesg-special-use-p2p-names" />, a review
+        was chartered of the process defined in RFC 6761 for adding
+        names to the registry (as explained earlier).  The Liaison
         Statement <xref target="SDO-IAB-ICANN-LS" /> notified ICANN of
         the review, affirmed that the discussion would be "open and
         transparent to participation by interested parties" and
         explicitly invited members of the ICANN community to
         participate.</t>
-
-	<t>This document is a product of the IETF DNSOP working group
-	review of the registry process in RFC 6761.</t>
 	
 	</section>
 	
@@ -1106,6 +1106,10 @@
 	  to an RFC 2119 keyword and a citation of RFC 5226 with no
 	  matching reference in quoted text at line 493.</t>
 
+	  <t>Issue #60: Add new section "6. Summary" -- Petr Spacek
+	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/60
+	  </t>
+	  
 	  <t>Issue #57: Document needs an "Security Considerations"
 	  section
 	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/57
