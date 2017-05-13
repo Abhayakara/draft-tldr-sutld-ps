@@ -74,213 +74,191 @@
   <middle>
     <section title="Introduction">
       <t>One of the key services required to use the Internet is name
-      resolution. Name resolution is the process of translating a
-      symbolic name into some object or set of objects to which the
-      name refers, most typically one or more IP addresses. These
-      names are often referred to as Domain Names. When reading this
-      document, care must be taken to not assume that the term Domain
-      Name implies the use of the <xref target="RFC1034">Domain Name
-      System</xref> for resolving these names. An excellent
-      presentation on this topic can be found in <xref
+      resolution. Name resolution is the process of translating a symbolic
+      name into some object or set of objects to which the name refers, most
+      typically one or more IP addresses. These names are often referred to as
+      Domain Names. When reading this document, care must be taken to not
+      assume that the term Domain Name implies the use of the <xref
+      target="RFC1034">Domain Name System</xref> for resolving these names. An
+      excellent presentation on this topic can be found in <xref
       target="I-D.lewis-domain-names">Domain Names</xref>.</t>
 
-      <t><xref target="RFC6761">Special-Use Domain Names</xref>
-      created <xref target="SDO-IANA-SUDR">an IANA registry for
-      Special-Use Domain Names</xref>, defined policies for adding to
-      the registry, and made some suggestions about how those policies
-      might be implemented. Since the publication of RFC 6761, the
-      IETF has been asked to designate several new Special-Use Domain
-      Names in this registry. During the evaluation process for these
-      Special-Use Domain Names, the IETF encountered several different
-      sorts of issues. Because of this, the IETF has decided to
-      investigate the problem and decide if and how the RFC 6761
-      process can be improved, or whether it should be deprecated.
-      The IETF DSNOP working group charter was extended to include
-      conducting a review of the process for adding names to the
-      registry that is defined in RFC 6761. This document is a product
-      of that review.</t>
+      <t><xref target="RFC6761">Special-Use Domain Names</xref> created <xref
+      target="SDO-IANA-SUDR">an IANA registry for Special-Use Domain
+      Names</xref>, defined policies for adding to the registry, and made some
+      suggestions about how those policies might be implemented. Since the
+      publication of RFC 6761, the IETF has been asked to designate several
+      new Special-Use Domain Names in this registry. During the evaluation
+      process for these Special-Use Domain Names, the IETF encountered several
+      different sorts of issues. Because of this, the IETF has decided to
+      investigate the problem and decide if and how the RFC 6761 process can
+      be improved, or whether it should be deprecated. The IETF DSNOP working
+      group charter was extended to include conducting a review of the process
+      for adding names to the registry that is defined in RFC 6761. This
+      document is a product of that review.</t>
 
-      <t>Based on current ICANN and IETF practice, including RFC 6761,
-      there are several different types of names in the root of the
-      Domain Namespace: <list style="symbols">
-      
+      <t>Based on current ICANN and IETF practice, including RFC 6761, there
+      are several different types of names in the root of the Domain
+      Namespace: <list style="symbols">
           <t>Reserved by the IETF for technical purposes</t>
 
-          <t>Assigned by ICANN to the public DNS root; some names
-          reserved by the IETF for technical purposes may appear in
-          the Global DNS root for reasons pertaining to the operation
-          of the DNS</t>
+          <t>Assigned by ICANN to the public DNS root; some names reserved by
+          the IETF for technical purposes may appear in the Global DNS root
+          for reasons pertaining to the operation of the DNS</t>
 
-          <t>ICANN Reserved Names; names that may not be applied for
-          as TLDs (see <xref target="SDO-ICANN-DAG"/>, Section
-          2.2.1.2.1, Reserved Names, Section 2.2.1.4.1, Treatment of
-          Country or Territory Names, et al.)</t>
+          <t>ICANN Reserved Names; names that may not be applied for as TLDs
+          (see <xref target="SDO-ICANN-DAG"/>, Section 2.2.1.2.1, Reserved
+          Names, Section 2.2.1.4.1, Treatment of Country or Territory Names,
+          et al.)</t>
 
           <t>Used by other organizations without following established
-	  processes</t>
+          processes</t>
 
-          <t>Names that are unused and are available for assignment to one
-	  of the previous categories</t>
-	      
-          </list></t>
+          <t>Names that are unused and are available for assignment to one of
+          the previous categories</t>
+        </list></t>
 
-      <t>This document presents a list, believed to be complete, of
-      the problems associated with the assignment of Special-Use
-      Domain Names. In support of its analysis of the particular set
-      of issues described here, the document also includes
-      descriptions of existing practice as it relates to the use of
-      domain names, a brief history of domain names, and some
-      observations by various IETF participants who have experience
-      with various aspects of the current situation.</t>
+      <t>This document presents a list, believed to be complete, of the
+      problems associated with the assignment of Special-Use Domain Names. In
+      support of its analysis of the particular set of issues described here,
+      the document also includes descriptions of existing practice as it
+      relates to the use of domain names, a brief history of domain names, and
+      some observations by various IETF participants who have experience with
+      various aspects of the current situation.</t>
     </section>
 
     <section title="Terminology">
-      <t>This document uses the terminology from <xref
-      target="RFC7719">RFC 7719</xref>.  Other terms used in this
-      document are defined here: <list style="hanging"> 
-      
-          <t hangText="Domain Name">This document uses the term
-	  "Domain Name" as defined in section 2 of <xref
-	  target="RFC7719">RFC 7719</xref>.</t>
+      <t>This document uses the terminology from <xref target="RFC7719">RFC
+      7719</xref>. Other terms used in this document are defined here: <list
+          style="hanging">
+          <t hangText="Domain Name">This document uses the term "Domain Name"
+          as defined in section 2 of <xref target="RFC7719">RFC
+          7719</xref>.</t>
 
           <t hangText="Domain Namespace">The set of all possible Domain
           Names.</t>
 
-	  <t hangText="Special-Use Domain Name">A Domain Name
-	  listed in the Special-Use Domain Names registry.</t>
+          <t hangText="Special-Use Domain Name">A Domain Name listed in the
+          Special-Use Domain Names registry.</t>
+        </list></t>
 
-	</list></t>
-
-      <t>For the sake of brevity this document uses some
-      abbreviations, which are expanded here: <list style="hanging">
-
+      <t>For the sake of brevity this document uses some abbreviations, which
+      are expanded here: <list style="hanging">
           <t hangText="IANA">Internet Assigned Numbers Authority</t>
 
           <t hangText="ICANN">Internet Corporation for Assigned Names and
           Numbers</t>
 
-	  <t hangText="TLD">Top-Level Domain, as defined in in section
-	  2 of <xref target="RFC7719">RFC 7719</xref></t>
+          <t hangText="TLD">Top-Level Domain, as defined in in section 2 of
+          <xref target="RFC7719">RFC 7719</xref></t>
 
-	  <t hangText="gTLD">Generic Top-Level Domain, as defined in
-	  in section 2 of <xref target="RFC7719">RFC 7719</xref></t>
-
+          <t hangText="gTLD">Generic Top-Level Domain, as defined in in
+          section 2 of <xref target="RFC7719">RFC 7719</xref></t>
         </list></t>
     </section>
 
     <section title="Problems associated with Special-Use Domain Names">
-      <t>This section presents a list of problems that have been
-      identified with respect to the assignment of Special-Use Domain
-      Names. Solutions to these problems, including their costs or
-      tradeoffs, are out of scope for this document. They will be
-      covered in a separate document. New problems that might be
-      created in the process of solving problems described in this
-      document are also out of scope: these problems are expected to
-      be addressed in the process of evaluating potential
-      solutions.</t>
+      <t>This section presents a list of problems that have been identified
+      with respect to the assignment of Special-Use Domain Names. Solutions to
+      these problems, including their costs or tradeoffs, are out of scope for
+      this document. They will be covered in a separate document. New problems
+      that might be created in the process of solving problems described in
+      this document are also out of scope: these problems are expected to be
+      addressed in the process of evaluating potential solutions.</t>
 
-      <t>Special-Use Domain Names exist to solve a variety of
-      problems. This document has two goals: enumerate all of the
-      problems that have been identified to which Special-Use Domain
-      Names are a solution and enumerate all of the problems that have
-      been raised in the process of trying to use RFC 6761 as it was
-      intended. As some of those problems may fall into both
-      categories, this document makes no attempt to categorize the
-      problems.</t>
+      <t>Special-Use Domain Names exist to solve a variety of problems. This
+      document has two goals: enumerate all of the problems that have been
+      identified to which Special-Use Domain Names are a solution and
+      enumerate all of the problems that have been raised in the process of
+      trying to use RFC 6761 as it was intended. As some of those problems may
+      fall into both categories, this document makes no attempt to categorize
+      the problems.</t>
 
-      <t>There is a broad diversity of opinion about this set of
-      problems. Not every participant agrees that each of the problems
-      enumerated in this document is actually a problem. This document
-      takes no position on the relative validity of the various
-      problems that have been enumerated. Its focused purposes are to
-      enumerate those problems, provide the reader with context for
-      thinking about them and provide a context for future discussion of
-      solutions.</t>
+      <t>There is a broad diversity of opinion about this set of problems. Not
+      every participant agrees that each of the problems enumerated in this
+      document is actually a problem. This document takes no position on the
+      relative validity of the various problems that have been enumerated. The
+      focused purpose of the document is to enumerate those problems, provide
+      the reader with context for thinking about them and provide a context
+      for future discussion of solutions.</t>
 
       <t>This is the list of problems: <list style="symbols">
-          <t>No formal coordination process exists between the IETF and ICANN as they follow
-          their respective name assignment processes (see <xref target="MoU" />).  The lack of
-          coordination complicates the management of the root of the Domain Namespace and <xref
-          target="SDO-ICANN-SAC090"> could lead to conflicts in name assignments </xref>.</t>
+          <t>No formal coordination process exists between the IETF and ICANN
+          as they follow their respective name assignment processes (see <xref
+          target="MoU"/>). The lack of coordination complicates the management
+          of the root of the Domain Namespace and <xref
+          target="SDO-ICANN-SAC090"> could lead to conflicts in name
+          assignments </xref>.</t>
 
-          <t>There is no explicit scoping as to what can constitute a
-          <xref target="RFC2860">"technical use"</xref> and what
-          cannot, and there is also no consensus within the IETF as to
-          what this term means.</t>
+          <t>There is no explicit scoping as to what can constitute a <xref
+          target="RFC2860">"technical use"</xref> and what cannot, and there
+          is also no consensus within the IETF as to what this term means.</t>
 
-          <t>Not all developers of protocols on the internet agree
-          that authority over the entire Domain Namespace should
-          reside solely with the IETF and ICANN.</t>
+          <t>Not all developers of protocols on the internet agree that
+          authority over the entire Domain Namespace should reside solely with
+          the IETF and ICANN.</t>
 
-          <t>Although IETF and ICANN nominally have authority over
-          this namespace, neither organization can enforce that
-          authority over any third party who wants to just start using
-          a subset of the namespace. Such parties may observe that the
-          IETF has never asserted control or authority over what
-          protocols are "allowed" on the internet, and that the
-          principle of "permissionless innovation" suggests there
-          should be a way for people to include new uses of domain
-          names in new protocols and applications.</t>
+          <t>Although IETF and ICANN nominally have authority over this
+          namespace, neither organization can enforce that authority over any
+          third party who wants to just start using a subset of the namespace.
+          Such parties may observe that the IETF has never asserted control or
+          authority over what protocols are "allowed" on the internet, and
+          that the principle of "permissionless innovation" suggests there
+          should be a way for people to include new uses of domain names in
+          new protocols and applications.</t>
 
-          <t>Organizations do in fact sometimes use subsets of the
-          Domain Namespace without following established
-	  processes. Reasons a third party might do this include:
-	  <list style="symbols">
- 
+          <t>Organizations do in fact sometimes use subsets of the Domain
+          Namespace without following established processes. Reasons a third
+          party might do this include: <list style="symbols">
               <t>Unaware that a process exists for assigning such names</t>
 
               <t>Intended use is covered by gTLD process <xref
-              target="SDO-ICANN-DAG"/>, but no gTLD process is
-              ongoing</t>
+              target="SDO-ICANN-DAG"/>, but no gTLD process is ongoing</t>
 
-              <t>Intended use is covered by gTLD process, but the
-              third party doesn't want to pay a fee</t>
+              <t>Intended use is covered by gTLD process, but the third party
+              doesn't want to pay a fee</t>
 
-              <t>Intended use is covered by some IETF process, but the third party doesn't want
-              to follow the process</t>
+              <t>Intended use is covered by some IETF process, but the third
+              party doesn't want to follow the process</t>
 
-              <t>Intended use is covered by ICANN or IETF process, but
-              third party expects that the outcome will be refusal or non-action</t>
+              <t>Intended use is covered by ICANN or IETF process, but third
+              party expects that the outcome will be refusal or non-action</t>
 
-	      <t>Unaware that a name intended to be used only locally
-	      may nevertheless leak
-	      </t>
+              <t>Unaware that a name intended to be used only locally may
+              nevertheless leak</t>
 
-	      <t>Unaware that a name used locally with informal
-	      allocation may subsequently be allocated formally,
-	      creating operational problems</t>
+              <t>Unaware that a name used locally with informal allocation may
+              subsequently be allocated formally, creating operational
+              problems</t>
             </list></t>
 
-          <t>There is demand for more than one name resolution
-          protocol for Domain Names. Domain Names contain no metadata
-          to indicate which protocol to use to resolve them. Domain
-          name resolution APIs do not provide a way to specify which
-          protocol to use.</t>
+          <t>There is demand for more than one name resolution protocol for
+          Domain Names. Domain Names contain no metadata to indicate which
+          protocol to use to resolve them. Domain name resolution APIs do not
+          provide a way to specify which protocol to use.</t>
 
-          <t>When a Special-Use Domain Name is added to the
-          Special-Use Domain Names registry, not all software that
-          processes such names will understand the special use of that
-          name. In many cases, name resolution software will use the
-          Domain Name System for resolution of names not known to have
-          a special use. Consequently, any such use will result in
-          queries for Special-Use Domain Names being sent to Domain
-          Name System authoritative servers. These queries may
+          <t>When a Special-Use Domain Name is added to the Special-Use Domain
+          Names registry, not all software that processes such names will
+          understand the special use of that name. In many cases, name
+          resolution software will use the Domain Name System for resolution
+          of names not known to have a special use. Consequently, any such use
+          will result in queries for Special-Use Domain Names being sent to
+          Domain Name System authoritative servers. These queries may
           constitute an operational problem for operators of root zone
-          authoritative name servers.  These queries may also
-          inadvertently reveal private information through the
-          contents of the query, which is a privacy consideration.</t>
+          authoritative name servers. These queries may also inadvertently
+          reveal private information through the contents of the query, which
+          is a privacy consideration.</t>
 
-          <t>The RFC 6761 process is sufficiently uncertain that some
-          protocol developers have assumed they could not get a name
-          assigned; the process of assigning the first new name
-          ('.local') using the RFC 6761 process took more than ten
-          years from beginning to end: longer by a factor of ten than
-          any other part of the protocol development process (largely
-          because this ten years included time to develop the process
-          as well as use it). Other uses of the process have proceeded
-          more smoothly, but there is a reasonably justified
-          perception that using this process is likely to be slow and
-          difficult, with an uncertain outcome.</t>
+          <t>The RFC 6761 process is sufficiently uncertain that some protocol
+          developers have assumed they could not get a name assigned; the
+          process of assigning the first new name ('.local') using the RFC
+          6761 process took more than ten years from beginning to end: longer
+          by a factor of ten than any other part of the protocol development
+          process (largely because this ten years included time to develop the
+          process as well as use it). Other uses of the process have proceeded
+          more smoothly, but there is a reasonably justified perception that
+          using this process is likely to be slow and difficult, with an
+          uncertain outcome.</t>
 
           <t>There is strong resistance within the IETF to assigning Domain
           Names to resolution systems outside of the DNS, for a variety of
@@ -307,8 +285,8 @@
 
               <t>If there is an IETF process through which a TLD can be
               assigned at zero cost other than time, this process will be used
-              as an alternative to the more costly process of getting
-	      the name registered through ICANN.</t>
+              as an alternative to the more costly process of getting the name
+              registered through ICANN.</t>
 
               <t>A name might be assigned for a particular purpose when a more
               general use of the name would be more beneficial.</t>
@@ -322,100 +300,91 @@
           through the IETF, there is a concern that protocols that require
           such names would not be able to get them.</t>
 
-          <t>In some cases where the IETF has made assignments through
-          the RFC 6761 process, technical mistakes have been made due
-          to misunderstandings as to the actual process that RFC 6761
-          specifies (e.g., treating the list of suggested
-          considerations for assigning a name as a set of requirements
-          all of which must be met).  In other cases, the IETF has
-          made de facto assignments of Special-Use Domain Names
-          without following the RFC 6761 process.</t>
+          <t>In some cases where the IETF has made assignments through the RFC
+          6761 process, technical mistakes have been made due to
+          misunderstandings as to the actual process that RFC 6761 specifies
+          (e.g., treating the list of suggested considerations for assigning a
+          name as a set of requirements all of which must be met). In other
+          cases, the IETF has made de facto assignments of Special-Use Domain
+          Names without following the RFC 6761 process.</t>
 
-          <t>There are several Domain Name TLDs that are in use
-          without due process for a variety of purposes <xref
-          target="SDO-ICANN-COLL"/>. The status of these names need to be
-          clarified and recorded to avoid future disputes about their
-	  use.</t>
+          <t>There are several Domain Name TLDs that are in use without due
+          process for a variety of purposes <xref target="SDO-ICANN-COLL"/>.
+          The status of these names need to be clarified and recorded to avoid
+          future disputes about their use.</t>
 
-          <t>In principle, the RFC 6761 process could be used to
-          document the existence of Domain Names that are not safe to
-          assign, and provide information on how those names are used
-          in practice. However, attempts to use RFC 6761 to accomplish
-          this documentation have not been successful (for example,
-          see "Additional Reserved Top Level Domains <xref
-          target="I-D.chapin-additional-reserved-tlds" /> and <xref
-          target="addl-tlds" />). One side effect of the lack of
-          documentation is that any mitigation effect on the root name
-          servers or on privacy considerations has been missed.</t>
+          <t>In principle, the RFC 6761 process could be used to document the
+          existence of Domain Names that are not safe to assign, and provide
+          information on how those names are used in practice. However,
+          attempts to use RFC 6761 to accomplish this documentation have not
+          been successful (for example, see "Additional Reserved Top Level
+          Domains <xref target="I-D.chapin-additional-reserved-tlds"/> and
+          <xref target="addl-tlds"/>). One side effect of the lack of
+          documentation is that any mitigation effect on the root name servers
+          or on privacy considerations has been missed.</t>
 
-          <t>A Domain Name can be identified as either a DNS name by
-          placing it in the DNS zone(s) or as a Special-Use Domain
-          Name by adding it to the IANA registry. Some names are in
-          both places; for example, some locally served zone names are
-          in DNS zones and documented in the Special-Use Domain Names
-          registry. At present, the only way a Domain Name can be
-          added to the Special-Use Domain Name registry is for the
-          IETF to take responsibility for the name and designate it
-          for "technical use". There are other potential uses for
-          Domain Names that should be recorded in the registry, but
-          for which the IETF should not take responsibility.</t>
+          <t>A Domain Name can be identified as either a DNS name by placing
+          it in the DNS zone(s) or as a Special-Use Domain Name by adding it
+          to the IANA registry. Some names are in both places; for example,
+          some locally served zone names are in DNS zones and documented in
+          the Special-Use Domain Names registry. At present, the only way a
+          Domain Name can be added to the Special-Use Domain Name registry is
+          for the IETF to take responsibility for the name and designate it
+          for "technical use". There are other potential uses for Domain Names
+          that should be recorded in the registry, but for which the IETF
+          should not take responsibility.</t>
 
-	  <t>The IETF may in some cases see the need to document that
-	  a name is in use without claiming that the use of the name
-	  is the IETF's use of the name. No mechanism exists in the
-	  current registry to mark names in this way.</t>
-	  
-          <t>There is no formal mechanism that ensures that we check
-          to make sure that a document being considered for
-          publication does not unintentionally violate the IETF
-          process for adding Special-Use Domain Names to the registry
-          (e.g., RFC 7788 <xref target="RFC7788"/>).</t>
+          <t>The IETF may in some cases see the need to document that a name
+          is in use without claiming that the use of the name is the IETF's
+          use of the name. No mechanism exists in the current registry to mark
+          names in this way.</t>
 
-          <t>Use of the registry is inconsistent--some Special-Use
-          Domain Name RFCs specify registry entries, some don't; some
-          specify delegation, some don't.</t>
+          <t>There is no formal checkpoint for review of inadvertent domain
+          name allocation to ensure sure that a document being considered for
+          publication does not unintentionally violate the IETF process for
+          adding Special-Use Domain Names to the registry (e.g., RFC 7788
+          <xref target="RFC7788"/>).</t>
+
+          <t>Use of the registry is inconsistent--some Special-Use Domain Name
+          RFCs specify registry entries, some don't; some specify delegation,
+          some don't.</t>
 
           <t>There exists no safe, non-process-violating mechanism for ad-hoc
           assignment of Special-Use Domain Names.</t>
 
-          <t>It is generally assumed that protocols that need a
-          Special-Use Domain Name need a mnemonic, single-label,
-          human-readable Special-Use Domain Name, for use in user
-          interfaces such as command lines or URL entry fields.  While
-          this assumption is correct in some cases, it is likely not
-          correct in all cases; for example, in applications where the
-          DNS name is never visible to a user.</t>
+          <t>It is generally assumed that protocols that need a Special-Use
+          Domain Name need a mnemonic, single-label, human-readable
+          Special-Use Domain Name, for use in user interfaces such as command
+          lines or URL entry fields. While this assumption is correct in some
+          cases, it is likely not correct in all cases; for example, in
+          applications where the DNS name is never visible to a user.</t>
 
           <t>RFC 6761 uses the term "Domain Name" to describe the thing for
           which special uses are registered. This creates a great deal of
           confusion because some readers take "Domain Name" to imply the use
           of the DNS protocol.</t>
 
-	  <t>The use of DNSSEC with Special-Use Domain Names is an
-	  open issue. There is no consensus or guidance about how to
-	  use DNSSEC with various classes of Special-Use Domain
-	  Names. Considerations in the use of DNSSEC with Special-Use
-	  Domain Names include: <list style="symbols">
+          <t>The use of DNSSEC with Special-Use Domain Names is an open issue.
+          There is no consensus or guidance about how to use DNSSEC with
+          various classes of Special-Use Domain Names. Considerations in the
+          use of DNSSEC with Special-Use Domain Names include: <list
+              style="symbols">
+              <t>What class of Special-Use Domain Name is under consideration:
+              non-DNS, locally served zone, other?</t>
 
-	      <t>What class of Special-Use Domain Name is under
-	      consideration: non-DNS, locally served zone, other?</t>
+              <t>Does the Special-Use Domain Name require a delegation in the
+              root zone; if so, should that delegation be signed or not? If
+              there is no delegation, then this will be treated by validating
+              resolvers as a secure denial of existence for that zone. This
+              would not be appropriate for a name being resolved using the DNS
+              protocol.</t>
 
-	      <t>Does the Special-Use Domain Name require a delegation
-	      in the root zone; if so, should that delegation be
-	      signed or not?  If there is no delegation, then this
-	      will be treated by validating resolvers as a secure denial of existence for
-	      that zone. This would not be appropriate for a name
-	      being resolved using the DNS protocol.</t>
+              <t>A process would be required through which the IETF can cause
+              a delegation in the root zone to be instantiated.</t>
 
-	      <t>A process would be required through which the IETF
-	      can cause a delegation in the root zone to be
-	      instantiated.</t>
-	      
-	      <t>What are the recommended practices for using DNS with
-	      the specific Special-Use Domain Name?</t>
-
-	  </list></t>
-	  
+              <t>What are the recommended practices for using DNS with the
+              specific Special-Use Domain Name?</t>
+            </list></t>
         </list></t>
 
       <t>The problems we have stated here represent the current understanding
@@ -426,50 +395,46 @@
     </section>
 
     <section title="Existing Practice Regarding Special-Use Domain Names">
-      <t>There are three primary and numerous secondary documents to consider
+      <t>There are three primary (see <xref target="su_pri_docs"/>) and
+      numerous secondary (<xref target="su_sec_docs"/>) documents to consider
       when thinking about the Special-Use Domain Names process.</t>
 
-      <t>How names are resolved is ambiguous, in the sense that some
-      names are Special-Use Domain names that require special handling, and
-      some names can be resolved using the DNS protocol with no
-      special handling.</t>
+      <t>How names are resolved is ambiguous, in the sense that some names are
+      Special-Use Domain names that require special handling, and some names
+      can be resolved using the DNS protocol with no special handling.</t>
 
-      <t>The assignment of Internet Names is not under the sole
-      control of any one organization. IETF has authority in some
-      cases, but only with respect to "technical uses." ICANN at
-      present is the designated administrator of the root zone, but
-      generally not of zones other than the root zone. And neither of
-      these authorities can in any practical sense exclude the
-      practice of ad-hoc use of names. This can be done by any entity
-      that has control over one or more name servers or resolvers, in
-      the context of any hosts and services that that entity
-      operates. It can also be done by authors of software who decide
-      that a Special-Use Domain Name is the right way to indicate the
-      use of an alternate resolution mechanism.</t>
+      <t>The assignment of Internet Names is not under the sole control of any
+      one organization. IETF has authority in some cases, but only with
+      respect to "technical uses." ICANN at present is the designated
+      administrator of the root zone, but generally not of zones other than
+      the root zone. Neither of these authorities can in any practical sense
+      exclude the practice of ad-hoc use of names. Instantiation of ad-hoc
+      names can be done by any entity that has control over one or more name
+      servers or resolvers, in the context of any hosts and services that that
+      entity operates. It can also be done by authors of software deciding
+      that a Special-Use Domain Name is the right way to indicate the use of
+      an alternate resolution mechanism.</t>
 
-      <section title="Primary Special-Use Domain Name Documents">
+      <section anchor="su_pri_docs"
+               title="Primary Special-Use Domain Name Documents">
         <t>The primary documents are considered primary because they directly
         address the IETF's past thoughts on this topic in a general way, and
         also because they describe what the IETF does in practice. Only one of
         these documents is an IETF consensus document.</t>
 
         <section title="IAB Technical Comment on the Unique DNS Root">
+          <t><xref target="RFC2826">This document</xref> is not an IETF
+          consensus document, and appears to have been written to address a
+          different problem than the Special-Use Domain Name problem. However,
+          it speaks directly to several of the key issues that must be
+          considered, and, coming as it does from the IAB, it is rightly
+          treated as having significant authority despite not being an IETF
+          consensus document.</t>
 
-          <t><xref target="RFC2826">This document</xref> is not an
-          IETF consensus document, and appears to have been written to
-          address a different problem than the Special-Use Domain Name
-          problem. However, it speaks directly to several of the key
-          issues that must be considered, and of course coming as it
-          does from the IAB, it is rightly treated as having
-          significant authority despite not being an IETF consensus
-          document.</t>
-
-          <t>This document should be considered required reading for
-          IETF participants who wish to express an informed opinion on
-          the topic of Special-Use Domain Names. The main points that
-          appear relevant to the Special-Use Domain Names problem are:
-          <list style="symbols">
-
+          <t>This document should be considered required reading for IETF
+          participants who wish to express an informed opinion on the topic of
+          Special-Use Domain Names. The main points that appear relevant to
+          the Special-Use Domain Names problem are: <list style="symbols">
               <t>The Internet requires a globally unique namespace</t>
 
               <t>Private networks may operate private namespaces, but still
@@ -491,21 +456,22 @@
               <t>Such references might refer to the object the user intends to
               share within that user's context, but either refer to some other
               object any recipient's context, or might not refer to any object
-              at all in a recipient's context. The effect of this is that the
-              user's intended communication will not be able to be understood
-              by the recipients of the communication.</t>
+              at all in a recipient's context. The effect of this local
+              significance is that the user's intended communication will not
+              be able to be understood by the recipients of the communication.
+              </t>
 
-              <t>This same problem can also occur simply because a single user
-              copies a name from one context in which it has one meaning, into
-              a different context in which it has a different meaning&mdash;
-              for example copying a '.onion' Domain Name out of a Tor
-	      Browser <xref target="TOR" />,
-              where it has meaning, and pasting this name into an ssh client
-              that doesn't support connecting over the Tor network.</t>
+              <t>This same problem can also occur when a single user copies a
+              name from one context in which it has one meaning, into a
+              different context in which it has a different meaning-- for
+              example copying a '.onion' Domain Name out of a Tor Browser
+              <xref target="TOR"/>, where it has meaning, and pasting this
+              name into an ssh client that doesn't support connecting over the
+              Tor network.</t>
             </list></t>
 
-          <t>To boil this down even further, we can take the following advice
-          from this document: <list style="symbols">
+          <t>We can take the following condensed advice from this document:
+          <list style="symbols">
               <t>Domain Names with unambiguous global meaning are preferable
               to Domain Names with local meaning which will be ambiguous.
               Nevertheless both globally-meaningful and locally-special names
@@ -518,77 +484,70 @@
         </section>
 
         <section title="Special-Use Domain Names">
-
           <t>The second important document is <xref target="RFC6761">
-          "Special-Use Domain Names"</xref>. RFC 6761 represents the
-          current IETF consensus on designating and recording
-          Special-Use Domain Names. The IETF has experienced problems
-          with the designation process described in RFC 6761; these
-          concerns motivate this document. Again, familiarity with
-          RFC 6761 is a prerequisite for having an informed opinion on
-          the topic of Special-Use Domain Names.</t>
+          "Special-Use Domain Names"</xref>. RFC 6761 represents the current
+          IETF consensus on designating and recording Special-Use Domain
+          Names. The IETF has experienced problems with the designation
+          process described in RFC 6761; these concerns motivate this
+          document. Familiarity with RFC 6761 is a prerequisite for having an
+          informed opinion on the topic of Special-Use Domain Names.</t>
 
           <t>RFC 6761 defines two aspects of Special-Use Domain Names:
-          designating a Domain Name to have a special purpose and
-          registering that special use in the Special-Use Domain Names
-          registry. The designation process is defined in a single
-          sentence (RFC 6761, section 4):</t>
+          designating a Domain Name to have a special purpose and registering
+          that special use in the Special-Use Domain Names registry. The
+          designation process is defined in a single sentence (RFC 6761,
+          section 4):</t>
 
           <t><list style="empty">
-              <t>If it is determined that special handling of a name
-              is required in order to implement some desired new
-              functionality, then an IETF "Standards Action" or "IESG
-              Approval" specification [RFC5226] MUST be published
-              describing the new functionality.</t>
+              <t>If it is determined that special handling of a name is
+              required in order to implement some desired new functionality,
+              then an IETF "Standards Action" or "IESG Approval" specification
+              [RFC5226] MUST be published describing the new
+              functionality.</t>
             </list></t>
 
-          <t>This sentence implies that any designation of a
-          Special-Use Domain Name is subject to the same open review
-          and consensus process as used to produce and publish all
-          other IETF specifications.</t>
+          <t>This sentence requires that any designation of a Special-Use
+          Domain Name is subject to the same open review and consensus process
+          as used to produce and publish all other IETF specifications.</t>
 
-          <t>The registration process is a purely mechanical process,
-          in which the existence of the newly designated Special-Use
-          Domain Name is recorded, with a pointer to a section in the
-          relevant specification document that defines the ways in
-          which special handling is to be applied to the name.</t>
+          <t>The registration process is a purely mechanical process, in which
+          the existence of the newly designated Special-Use Domain Name is
+          recorded, with a pointer to a section in the relevant specification
+          document that defines the ways in which special handling is to be
+          applied to the name.</t>
 
-          <t>RFC 6761 provided the process whereby <xref
-          target="RFC6762"> Multicast DNS</xref> designated ".local"
-          as a Special-Use Domain Name and included it in the
-          Special-Use Domain Names registry. It itself also enumerated
-          a set of names that had been previously used or defined to
-          have special uses prior to the publication of RFC 6761. Since
-          there had been no registry for these names prior to the
-          publication of RFC 6761, the documents defining these names
-          could not have added them to the registry.</t>
+          <t>RFC 6761 provided the process whereby <xref target="RFC6762">
+          Multicast DNS</xref> designated ".local" as a Special-Use Domain
+          Name and included it in the Special-Use Domain Names registry. It
+          itself also enumerated a set of names that had been previously used
+          or defined to have special uses prior to the publication of RFC
+          6761. Since there had been no registry for these names prior to the
+          publication of RFC 6761, the documents defining these names could
+          not have added them to the registry.</t>
 
           <t>There are at least several important points to think of with
           respect to the RFC 6761: <list style="symbols">
-              <t>A Special-Use Domain Name may be a name that should
-              be resolved using the DNS protocol with no special
-              handling. An example of this is 'IN-ADDR.ARPA.' (which
-              is an example of a Special-Use Domain Name that is not a
-              TLD).</t>
+              <t>A Special-Use Domain Name may be a name that should be
+              resolved using the DNS protocol with no special handling. An
+              example of this is 'IN-ADDR.ARPA.' (which is an example of a
+              Special-Use Domain Name that is not a TLD).</t>
 
-              <t>A Special-Use Domain Name may be a name that is
-              resolved using the DNS protocol, requires no special
-              handling in the stub resolver, but requires special
-              handling in the recursive resolver. An example of this
-              would be "10.in-addr.arpa."</t>
+              <t>A Special-Use Domain Name may be a name that is resolved
+              using the DNS protocol, requires no special handling in the stub
+              resolver, but requires special handling in the recursive
+              resolver. An example of this would be "10.in-addr.arpa."</t>
 
-              <t>A Special-Use Domain Name may be a name that requires
-              special handling in the stub resolver. An example would
-              be a Special-Use Top-Level Domain Name like '.local'
-              which acts as a signal to indicate that the local stub
-              resolver should use a non-DNS protocol for name
-              resolution.</t>
+              <t>A Special-Use Domain Name may be a name that requires special
+              handling in the stub resolver. An example would be a Special-Use
+              Top-Level Domain Name like '.local' which acts as a signal to
+              indicate that the local stub resolver should use a non-DNS
+              protocol for name resolution.</t>
 
-              <t>The current IETF consensus (from a process
-              perspective, not necessarily from the perspective of
-              what would be consensus if the IETF were to attempt to
-              produce a new consensus document) is that all of these
-              purposes for Special-Use Domain Names are valid.</t>
+              <t>The current IETF consensus (from a process perspective, not
+              necessarily from the perspective of what would be consensus if
+              the IETF were to attempt to produce a new consensus document) is
+              that all of these purposes for Special-Use Domain Names are
+              valid.</t>
             </list></t>
 
           <t>The term "stub resolver" in this case does not mean "DNS protocol
@@ -600,14 +559,14 @@
           so which protocol, or whether to use a local database of some sort,
           is made.</t>
 
-          <t>RFC 6761 does not limit Special-Use Domain Names to
-          TLDs. However, at present, all Special-Use Domain Names
-          registered in the <xref target="SDO-IANA-SUDR"> IANA
-          Special-Use Domain Names registry</xref> are either intended
-          to be resolved using the DNS protocol, or are TLDs, or
-          both. That is, at present there exist no Special-Use Domain
-          Names which require special handling by stub resolvers and
-          which are not at the top level of the naming hierarchy.</t>
+          <t>RFC 6761 does not limit Special-Use Domain Names to TLDs.
+          However, at present, all Special-Use Domain Names registered in the
+          <xref target="SDO-IANA-SUDR"> IANA Special-Use Domain Names
+          registry</xref> are either intended to be resolved using the DNS
+          protocol, or are TLDs, or both. That is, at present there exist no
+          Special-Use Domain Names which require special handling by stub
+          resolvers and which are not at the top level of the naming
+          hierarchy.</t>
 
           <t>One point to take from this is that there is already a
           requirement in RFC 6762 that when stub resolvers encounter the
@@ -616,25 +575,22 @@
           Name.</t>
         </section>
 
-        <section anchor="MoU" title="MoU Concerning the Technical Work of the IANA">
+        <section anchor="MoU"
+                 title="MoU Concerning the Technical Work of the IANA">
           <t>There exists a Memorandum of Understanding <xref
-          target="RFC2860"/> between the IETF and ICANN (Internet
-          Corporation for Assigned Names and Numbers) which discusses
-          how names and numbers will be managed through the IANA
-          (Internet Assigned Numbers Authority). This document is
-          important to the discussion of Special-Use Domain Names
-          because, while it delegates authority for managing the
-          Domain Name System Namespace generally to ICANN, it reserves
-          to the IETF the authority that RFC 6761 formalizes:
-
-	    <list style="empty">
-
-              <t>Note that (a) assignments of Domain Names for
-              technical uses (such as Domain Names for inverse DNS
-              lookup), (b) assignments of specialised address blocks
-              (such as multicast or anycast blocks), and (c)
-              experimental assignments are not considered to be policy
-              issues, and shall remain subject to the provisions of
+          target="RFC2860"/> between the IETF and ICANN (Internet Corporation
+          for Assigned Names and Numbers) which discusses how names and
+          numbers will be managed through the IANA (Internet Assigned Numbers
+          Authority). This document is important to the discussion of
+          Special-Use Domain Names because, while it delegates authority for
+          managing the Domain Name System Namespace generally to ICANN, it
+          reserves to the IETF the authority that RFC 6761 formalizes: <list
+              style="empty">
+              <t>Note that (a) assignments of Domain Names for technical uses
+              (such as Domain Names for inverse DNS lookup), (b) assignments
+              of specialised address blocks (such as multicast or anycast
+              blocks), and (c) experimental assignments are not considered to
+              be policy issues, and shall remain subject to the provisions of
               this Section 4.</t>
             </list></t>
 
@@ -654,55 +610,48 @@
           used for inverse DNS lookup. Both 'IN-ADDR.ARPA' and 'IP6.ARPA' are
           in the Special-Use Domain Names registry.</t>
 
-	  <t>Implicit in the MoU is the fact that the IETF and ICANN
-	  retain, between them, sole authority for assigning any names
-	  from the Domain Namespace. Both the IETF and ICANN have
-	  internal processes for making such assignments.</t>
+          <t>Implicit in the MoU is the fact that the IETF and ICANN retain,
+          between them, sole authority for assigning any names from the Domain
+          Namespace. Both the IETF and ICANN have internal processes for
+          making such assignments.</t>
 
           <t>The point here is not to say what the implications of this
           statement in the MoU are, but rather to call the reader's attention
           to the existence of this statement.</t>
         </section>
 
-        <section title="Liaison Statement on Technical Use of Domain
-      Names">
-        <t>As a result of processing requests to add names to the
-        Special-Use Domain Name registry, as documented in <xref
-        target="I-D.chapin-additional-reserved-tlds" /> and <xref
-        target="I-D.grothoff-iesg-special-use-p2p-names" />, a review
-        was chartered of the process defined in RFC 6761 for adding
-        names to the registry (as explained earlier).  The Liaison
-        Statement <xref target="SDO-IAB-ICANN-LS" /> notified ICANN of
-        the review, affirmed that the discussion would be "open and
-        transparent to participation by interested parties" and
-        explicitly invited members of the ICANN community to
-        participate.</t>
-	
-	</section>
-	
+        <section title="Liaison Statement on Technical Use of Domain       Names">
+          <t>As a result of processing requests to add names to the
+          Special-Use Domain Name registry, as documented in <xref
+          target="I-D.chapin-additional-reserved-tlds"/> and <xref
+          target="I-D.grothoff-iesg-special-use-p2p-names"/>, a review was
+          chartered of the process defined in RFC 6761 for adding names to the
+          registry (as explained earlier). The Liaison Statement <xref
+          target="SDO-IAB-ICANN-LS"/> notified ICANN of the review, affirmed
+          that the discussion would be "open and transparent to participation
+          by interested parties" and explicitly invited members of the ICANN
+          community to participate.</t>
+        </section>
       </section>
-      
 
-      <section title="Secondary documents relating to the Special-Use
-		      Domain Name question">
+      <section anchor="su_sec_docs"
+               title="Secondary documents relating to the Special-Use         Domain Name question">
         <t>In addition to these documents, there are several others with which
         participants in this discussion should be familiar.</t>
 
         <section title="Multicast DNS">
-
-          <t>Multicast DNS <xref target="RFC6762"/> defines the
-          Multicast DNS protocol, which uses the '.LOCAL' Special-Use
-          Top-Level Domain Name. Section 3 describes the semantics of
-          "multicast DNS names." It is of considerable historical
-          importance to note that the -00 version of this document, an
-          individual submission, was published in July of 2001. This
-          version contains substantially the same text in section 3,
-          and was discussed in the DNSEXT working group at IETF 51 in
-          August of 2001<xref target="IETF-PRO-51"/>. The first
-          version of this document designated '.LOCAL.ARPA' as the
-          Special-Use Domain Name. This idea was strongly opposed by
-          DNSEXT working group participants, and as a result the
-          author eventually switched to using '.LOCAL'.</t>
+          <t>Multicast DNS <xref target="RFC6762"/> defines the Multicast DNS
+          protocol, which uses the '.LOCAL' Special-Use Top-Level Domain Name.
+          Section 3 describes the semantics of "multicast DNS names." It is of
+          considerable historical importance to note that the -00 version of
+          this document, an individual submission, was published in July of
+          2001. This version contains substantially the same text in section
+          3, and was discussed in the DNSEXT working group at IETF 51 in
+          August of 2001<xref target="IETF-PRO-51"/>. The first version of
+          this document designated '.LOCAL.ARPA' as the Special-Use Domain
+          Name. This idea was strongly opposed by DNSEXT working group
+          participants, and as a result the author eventually switched to
+          using '.LOCAL'.</t>
 
           <t>The history of RFC 6762 is documented in substantial detail in
           Appendix H; some notable milestones include the initial proposal to
@@ -718,25 +667,23 @@
         </section>
 
         <section title="The .onion Special-Use Top-Level Domain Name">
-
-          <t><xref target="RFC7686">The .onion Special-Use Top-Level
-          Domain Name</xref> is important because it is the most
-          recent IETF action on the topic of Special-Use Domain Names;
-          although it does not set new policy, the mere fact of its
-          publication is worth thinking about.</t>
+          <t><xref target="RFC7686">The .onion Special-Use Top-Level Domain
+          Name</xref> is important because it is the most recent IETF action
+          on the topic of Special-Use Domain Names; although it does not set
+          new policy, the mere fact of its publication is worth thinking
+          about.</t>
 
           <t>Two important points to consider about this document are that:
           <list style="symbols">
               <t>The IETF gained consensus to publish it</t>
 
-              <t>The situation was somewhat forced, both by the fact
-              of its unilateral use by The Tor Project without
-              following the RFC 6761 process, and <xref
-              target="SDO-CABF-INT"> because a deadline had been set
-              by the CA/Browser Forum</xref> after which all .onion
-              PKI certificates would expire and no new certificates
-              would be issued, unless the .onion Special-Use Top-Level
-              Domain Name were to be recognized by the IETF.</t>
+              <t>The situation was somewhat forced, both by the fact of its
+              unilateral use by The Tor Project without following the RFC 6761
+              process, and <xref target="SDO-CABF-INT"> because a deadline had
+              been set by the CA/Browser Forum</xref> after which all .onion
+              PKI certificates would expire and no new certificates would be
+              issued, unless the .onion Special-Use Top-Level Domain Name were
+              to be recognized by the IETF.</t>
             </list></t>
         </section>
 
@@ -752,15 +699,13 @@
           target="RFC6598">IANA-Reserved IPv4 Prefix for Shared Address
           Space</xref>.</t>
 
-          <t>This use case is distinct from the use-case for
-          Special-Use Domain Names like '.local' and '.onion' in that
-          the names are resolved using the DNS protocol (but do
-          require extensions or exceptions to the usual DNS resolution
-          to enforce resolution in a local context rather than the
-          global DNS context). But it shares the problem that such
-          names cannot be assumed either to be unique or to be
-          functional in all contexts for all Internet-connected
-          hosts.</t>
+          <t>This use case is distinct from the use-case for Special-Use
+          Domain Names like '.local' and '.onion' in that the names are
+          resolved using the DNS protocol (but do require extensions or
+          exceptions to the usual DNS resolution to enforce resolution in a
+          local context rather than the global DNS context). But it shares the
+          problem that such names cannot be assumed either to be unique or to
+          be functional in all contexts for all Internet-connected hosts.</t>
         </section>
 
         <section title="Name Collision in the DNS">
@@ -773,67 +718,63 @@
           DNS, or other resolution protocols altogether).</t>
         </section>
 
-        <section title="SSAC Advisory on the Stability of the Domain
-			Namespace">
-          <t>SSAC Advisory on the Stability of the Domain Namespace
-          <xref target="SDO-ICANN-SAC090" /> reports on some issues
-          surrounding the conflicting uses, interested parties and
-          processes related to the Domain Namespace. The document
-          recommends the development of collaborative processes among
-          the various interested parties to coordinate their
-          activities related to the Domain Namespace.</t>
+        <section title="SSAC Advisory on the Stability of the Domain    Namespace">
+          <t>SSAC Advisory on the Stability of the Domain Namespace <xref
+          target="SDO-ICANN-SAC090"/> reports on some issues surrounding the
+          conflicting uses, interested parties and processes related to the
+          Domain Namespace. The document recommends the development of
+          collaborative processes among the various interested parties to
+          coordinate their activities related to the Domain Namespace.</t>
         </section>
 
         <section title="Discovery of the IPv6 Prefix Used for IPv6 Address Synthesis">
-          <t><xref target="RFC7050">Discovery of the IPv6 Prefix Used
-          for IPv6 Address Synthesis</xref> is an example of a
-          document that successfully used the RFC 6761 process to
-          designate '.ipv4only.arpa' as a Special-Use Domain Name; in
-          this case the process worked smoothly and without
-          controversy.</t>
+          <t><xref target="RFC7050">Discovery of the IPv6 Prefix Used for IPv6
+          Address Synthesis</xref> is an example of a document that
+          successfully used the RFC 6761 process to designate '.ipv4only.arpa'
+          as a Special-Use Domain Name; in this case the process worked
+          smoothly and without controversy.</t>
 
           <t>Unfortunately, while the IETF process worked smoothly, in the
           sense that there was little controversy or delay in approving the
           new use, it did not work correctly: the name 'ipv4only.arpa' was
           never added to the Special-Use Domain Names registry. This appears
-          to have happened because the IAB was able to simply add the name to
-          the .ARPA zone, which the IAB administers. This is an illustration
-          of one of the problems that we have with the 6761 process: it is
+          to have happened because the IAB was able to add the name to the
+          .ARPA zone, which the IAB administers. This is an illustration of
+          one of the problems that we have with the 6761 process: it is
           apparently fairly easy to miss the step of adding the name to the
           registry.</t>
         </section>
 
-        <section anchor="addl-tlds" title="Additional Reserved Top Level Domains">
+        <section anchor="addl-tlds"
+                 title="Additional Reserved Top Level Domains">
           <t><xref target="I-D.chapin-additional-reserved-tlds"> Additional
           Reserved Top Level Domains</xref> is an example of a document that
           attempted to reserve several TLDs identified by ICANN as
           particularly at risk for collision as Special-Use Domain Names with
-          no documented use. This attempt failed.</t>
+          no documented use. This attempt did not advance in the IETF
+          process.</t>
 
           <t>Although this document failed to gain consensus to publish, the
           need it was intended to fill still exists. Unfortunately, although a
-          fair amount is known about the use of these names, no document
-          exists that documents how they are used, and why it would be a
-          problem to delegate them. Additionally, to the extent that the uses
-          being made of these names are valid, no document exists indicating
-          when it might make sense to use them, and when it would not make
-          sense to use them.</t>
+          fair amount is known about the use of these names, no RFC documents
+          how they are used, and why it would be a problem to delegate them.
+          Additionally, to the extent that the uses being made of these names
+          are valid, no document exists indicating when it might make sense to
+          use them, and when it would not make sense to use them.</t>
 
-          <t>RFC 7788 <xref target="RFC7788"/> defines the Domain Name
-          TLD ".home" for use as the default name for name resolution
-          relative to a home network context. Although, as defined in
-          RFC 7788, ".home" is a Special-Use Domain Name, RFC 7788 did
-          not follow the process in RFC 6761 and request the addition
-          of ".home" to the IANA Special-Use Domain Name
-          registry. Additionally, ".home" is an example of an attempt
-          to reuse a Domain Name that has already been put into use for
-          other purposes without following established processes<xref
-          target="SDO-ICANN-COLL"/>, which further complicates the
-          situation. At the time this document was written, the IETF
-          was developing a solution to this problem.</t>
+          <t>RFC 7788 <xref target="RFC7788"/> defines the Domain Name TLD
+          ".home" for use as the default name for name resolution relative to
+          a home network context. Although, as defined in RFC 7788, ".home" is
+          a Special-Use Domain Name, RFC 7788 did not follow the process in
+          RFC 6761 and request the addition of ".home" to the IANA Special-Use
+          Domain Name registry. Additionally, ".home" is an example of an
+          attempt to reuse a Domain Name that has already been put into use
+          for other purposes without following established processes<xref
+          target="SDO-ICANN-COLL"/>, which further complicates the situation.
+          At the time this document was written, the IETF was developing a
+          solution to this problem.</t>
         </section>
       </section>
-
     </section>
 
     <section title="History">
@@ -870,23 +811,21 @@
       special meaning of the '.local' Special-Use Top Level Domain Name.</t>
 
       <t>The Sun Microsystems model of having private domains within a
-      corporate site, while supporting the global Domain Name system
-      for off-site, persisted even after the NIS protocol fell into
-      disuse.  Microsoft used to recommend that site administrators
-      use a "private" TLD for internal use, and this practice was very
-      much a part of the zeitgeist at the time (see section 5.1 of
-      <xref target="SDO-ICANN-COLL"/> and Appendix G of <xref
-      target="RFC6762"/>).  This attitude is at the root of the
-      widespread practice of simply picking an unused TLD and using it
-      for experimental purposes, which persists even at the time of
-      writing of this memo.</t>
+      corporate site, while supporting the global Domain Name system for
+      off-site, persisted even after the NIS protocol fell into disuse.
+      Microsoft used to recommend that site administrators use a "private" TLD
+      for internal use, and this practice was very much a part of the
+      zeitgeist at the time (see section 5.1 of <xref
+      target="SDO-ICANN-COLL"/> and Appendix G of <xref target="RFC6762"/>).
+      This attitude is at the root of the widespread practice of simply
+      picking an unused TLD and using it for experimental purposes, which
+      persists even at the time of writing of this memo.</t>
 
-      <t>This history is being presented because discussions about
-      Special-Use Domain Names in the IETF often come down to the
-      question of why users of new name resolution protocols choose to
-      use Domain Names, rather than using some other naming concept
-      that doesn't overlap with the namespace that, in modern times
-      is, by default, resolved using the DNS.</t>
+      <t>This history is being presented because discussions about Special-Use
+      Domain Names in the IETF often come down to the question of why users of
+      new name resolution protocols choose to use Domain Names, rather than
+      using some other naming concept that doesn't overlap with the namespace
+      that, in modern times is, by default, resolved using the DNS.</t>
 
       <t>The answer is that as a consequence of this long history of resolving
       Domain Names using a wide variety of name resolution systems, Domain
@@ -899,9 +838,9 @@
     </section>
 
     <section title="Security Considerations">
-      <t>This document mentions various security and privacy
-      considerations in the text. However, this document creates no
-      new security or privacy concerns.</t> 
+      <t>This document mentions various security and privacy considerations in
+      the text. However, this document creates no new security or privacy
+      concerns.</t>
     </section>
 
     <section title="IANA considerations">
@@ -975,7 +914,7 @@
       <?rfc include="reference.I-D.chapin-additional-reserved-tlds" ?>
 
       <?rfc include="reference.I-D.grothoff-iesg-special-use-p2p-names" ?>
-      
+
       <?rfc include="reference.I-D.lewis-domain-names" ?>
 
       <reference anchor="SDO-CABF-INT"
@@ -1047,19 +986,19 @@
       </reference>
 
       <reference anchor="SDO-IAB-ICANN-LS"
-		 target="https://datatracker.ietf.org/liaison/1351">
-	<front>
-	  <title>Liaison Statement from the IAB to the ICANN Board on
-	  Technical Use of Domain Names</title>
+                 target="https://datatracker.ietf.org/liaison/1351">
+        <front>
+          <title>Liaison Statement from the IAB to the ICANN Board on
+          Technical Use of Domain Names</title>
 
-	  <author>
-	    <organization>Internet Architecture Board</organization>
-	  </author>
+          <author>
+            <organization>Internet Architecture Board</organization>
+          </author>
 
-	  <date day="15" month="September" year="2015" />
-	</front>
+          <date day="15" month="September" year="2015"/>
+        </front>
       </reference>
-      
+
       <reference anchor="CORP-SUN-NIS">
         <front>
           <title>Large System and Network Administration</title>
@@ -1085,155 +1024,147 @@
         </front>
       </reference>
 
-      <reference anchor="TOR"
-		 target="https://www.torproject.org">
-	<front>
-	  <title>Tor</title>
+      <reference anchor="TOR" target="https://www.torproject.org">
+        <front>
+          <title>Tor</title>
 
-	  <author>
-	    <organization>The Tor Project</organization>
-	  </author>
+          <author>
+            <organization>The Tor Project</organization>
+          </author>
 
-	  <date year="2017" />
-	</front>
+          <date year="2017"/>
+        </front>
       </reference>
     </references>
 
     <section title="Change Log.">
+      <t>-03 to -04:<list style="symbols">
+          <t>Addressed Joel / Benoit's AD comments. See GH issues</t>
+        </list></t>
+
       <t>-02 to -03 (in Github): <list>
+          <t>Passes idnits except for errors resulting from a reference to an
+          RFC 2119 keyword and a citation of RFC 5226 with no matching
+          reference in quoted text at line 493.</t>
 
-          <t>Passes idnits except for errors resulting from a reference
-	  to an RFC 2119 keyword and a citation of RFC 5226 with no
-	  matching reference in quoted text at line 493.</t>
+          <t>Issue #60: Add new section "6. Summary" -- Petr Spacek
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/60</t>
 
-	  <t>Issue #60: Add new section "6. Summary" -- Petr Spacek
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/60
-	  </t>
-	  
-	  <t>Issue #57: Document needs an "Security Considerations"
-	  section
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/57
-	  </t>
+          <t>Issue #57: Document needs an "Security Considerations" section
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/57</t>
 
-          <t>Numerous editorial changes for consistency; e.g. use
-          "Special-Use Domain Names" throughout.</t>
+          <t>Numerous editorial changes for consistency; e.g. use "Special-Use
+          Domain Names" throughout.</t>
 
-	  <t>Issue #58: Document needs an "IANA Considerations"
-	  section
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/58
-	  </t>
+          <t>Issue #58: Document needs an "IANA Considerations" section
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/58</t>
 
-          <t>Issue #39: Overlapping bullets in Section 3, with
-	  proposed restructuring -- Russ Housley
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/39</t>
-	  
+          <t>Issue #39: Overlapping bullets in Section 3, with proposed
+          restructuring -- Russ Housley
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/39</t>
+
           <t>Issue #55: Editorial improvement to Section 3 (4) -- John
-	  Dickinson
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/55</t>
-	  
-          <t>Issue #34: Separate two problems in paragraph that begins
-	  "No mechanism exists for adding a name to the registry...."
-	  (2 issues) -- Suzanne Woolf
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/34</t>
-	  
+          Dickinson
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/55</t>
+
+          <t>Issue #34: Separate two problems in paragraph that begins "No
+          mechanism exists for adding a name to the registry...." (2 issues)
+          -- Suzanne Woolf
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/34</t>
+
           <t>Issue #52: Editorial improvement to Section 3 (1) -- John
-	  Dickinson
+          Dickinson
           https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/52</t>
-	  
-          <t>Issue #51: Clarification in Introduction -- John
-	  Dickinson
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/51</t>
 
-          <t>Issue #49: Should cite
-	  https://datatracker.ietf.org/liaison/1351 -- George
-	  Michaelson
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/49</t>
-	  
-          <t>Issue #50: IETF precedence in Special-Use names registry
-	  -- Ted Lemon
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/50</t>
+          <t>Issue #51: Clarification in Introduction -- John Dickinson
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/51</t>
 
-          <t>Issue #48: 4.1.2 cites sub-domains of .ARPA arguing for
-	  special use TLD -- George Michaelson
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/48</t>
-      
-          <t>Issue #47: 4.3 should be made more prominent -- George
-	  Michaelson
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/47</t>
-      
-          <t>Issue #43: Spell out SUDN and SUTLDN rather than use
-	  acronyms -- Russ Housley 
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/43</t>
-      
-          <t>Issue #41: Reword bullet in Section 3 regarding Domain
-	  Name TLDs that have been commandeered, as reported in
-	  SDO-ICANN-COLL -- Russ Housley
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/41</t>
-      
-          <t>Issue #40: Note that time to publish spec for .local
-	  included inventing SUDN registry -- Russ Housley
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/41</t>
-      
-          <t>Issue #37: Title should be "Special-Use Domain Names
-	  Problem Statement" -- Russ Housley
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/37</t>
+          <t>Issue #49: Should cite https://datatracker.ietf.org/liaison/1351
+          -- George Michaelson
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/49</t>
+
+          <t>Issue #50: IETF precedence in Special-Use names registry -- Ted
+          Lemon
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/50</t>
+
+          <t>Issue #48: 4.1.2 cites sub-domains of .ARPA arguing for special
+          use TLD -- George Michaelson
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/48</t>
+
+          <t>Issue #47: 4.3 should be made more prominent -- George Michaelson
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/47</t>
+
+          <t>Issue #43: Spell out SUDN and SUTLDN rather than use acronyms --
+          Russ Housley
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/43</t>
+
+          <t>Issue #41: Reword bullet in Section 3 regarding Domain Name TLDs
+          that have been commandeered, as reported in SDO-ICANN-COLL -- Russ
+          Housley
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/41</t>
+
+          <t>Issue #40: Note that time to publish spec for .local included
+          inventing SUDN registry -- Russ Housley
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/41</t>
+
+          <t>Issue #37: Title should be "Special-Use Domain Names Problem
+          Statement" -- Russ Housley
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/37</t>
 
           <t>Issue #36: Expand on desire for Special-Use names to be
-	  human-readable -- Suzanne Woolf
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/36</t>
+          human-readable -- Suzanne Woolf
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/36</t>
 
-          <t>Issue #35: Clarify "No process exists [...]" to include
-	  both IETF process and other process -- Suzanne Woolf
-  	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/35</t>
-	  
-          <t>Issue #31: Add justification for concern about IETF's
-	  ability to assign names for technical use -- Suzanne Woolf
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/31</t>
+          <t>Issue #35: Clarify "No process exists [...]" to include both IETF
+          process and other process -- Suzanne Woolf
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/35</t>
+
+          <t>Issue #31: Add justification for concern about IETF's ability to
+          assign names for technical use -- Suzanne Woolf
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/31</t>
 
           <t>Issue #12: Add DNSSEC to text -- John Levine
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/12</t>
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/12</t>
 
           <t>Issue #6: Without a process, we just have chaos -- Stuart
-	  Cheshire
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/6</t>
+          Cheshire
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/6</t>
 
           <t>Issue #32: Have assignments through RFC 6761 really had
-	  "technical mistakes"? -- Suzanne Wolff 
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/32</t>
-	  
-          <t>Issue #29: Add a reason to bypass external process:
-	  expectation for use of new name to be restricted to local
-	  scope -- Suzanne Wolff
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/29</t>
-	  
-          <t>Issue #27: Is "technical use" really ambiguous; too
-	  inclusive for some people and too limited for others --
-	  Suzanne Wolff
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/27</t>
+          "technical mistakes"? -- Suzanne Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/32</t>
 
-          <t>Issue #24: Replacement for "commandeer" (2 issues)--
-	  Suzanne Wolff
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/24</t>
+          <t>Issue #29: Add a reason to bypass external process: expectation
+          for use of new name to be restricted to local scope -- Suzanne Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/29</t>
+
+          <t>Issue #27: Is "technical use" really ambiguous; too inclusive for
+          some people and too limited for others -- Suzanne Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/27</t>
+
+          <t>Issue #24: Replacement for "commandeer" (2 issues)-- Suzanne
+          Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/24</t>
 
           <t>Issue #22: Clarify importance of the "root of the Domain
-	  Namespace" -- Suzanne Wolff 
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/22</t>
+          Namespace" -- Suzanne Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/22</t>
 
-          <t>Issue #21: Section 3 - clarify paragraphs 2 and 3 --
-	  Suzanne Wolff 
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/21</t>
+          <t>Issue #21: Section 3 - clarify paragraphs 2 and 3 -- Suzanne
+          Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/21</t>
 
-          <t>Issue #20: Section 3: Clarify sentences beginning
-	  "Solutions to these problems..." -- Suzanne Wolff  
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/20</t>
+          <t>Issue #20: Section 3: Clarify sentences beginning "Solutions to
+          these problems..." -- Suzanne Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/20</t>
 
-          <t>Issue #19: Define "default" or "assumed" use of domain
-	  names to be within DNS -- Suzanne Wolff 
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/19</t>
+          <t>Issue #19: Define "default" or "assumed" use of domain names to
+          be within DNS -- Suzanne Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/19</t>
 
-          <t>Issue #18: Cite definition of RFC 7719 and domain names
-	  draft in definition of "domain name" -- Suzanne Wolff
-	  https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/18</t>
+          <t>Issue #18: Cite definition of RFC 7719 and domain names draft in
+          definition of "domain name" -- Suzanne Wolff
+          https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/18</t>
 
           <t>Issue #45: Correct usages of Tor Browser and Tor -- Russ Housley
           (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/45)</t>
@@ -1241,25 +1172,25 @@
           <t>Issue #46: Reformat citation of RFC 2860 -- Russ Housley
           (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/46)</t>
 
-          <t>Issue #44: Clean up reference to SDO-ICANN-DAG in first
-	  bullet in section 3 -- Russ Housley
-	  (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/44)</t>
+          <t>Issue #44: Clean up reference to SDO-ICANN-DAG in first bullet in
+          section 3 -- Russ Housley
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/44)</t>
 
-          <t>Issue #42: Add reference to SDO-ICANN-SAC090 in section
-	  4.2.5 -- Russ Housley
-	  (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/42)</t>
+          <t>Issue #42: Add reference to SDO-ICANN-SAC090 in section 4.2.5 --
+          Russ Housley
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/42)</t>
 
-          <t>Issue #30: Leaked queries aren't an operational problem
-	  in practice -- Suzanne Wolf
-	  (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/30)</t>
-	  
+          <t>Issue #30: Leaked queries aren't an operational problem in
+          practice -- Suzanne Wolf
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/30)</t>
+
           <t>Address some of the simpler issues, including:</t>
 
           <t>Issue #13: Spelling of Tor -- Jeremy Rand
-          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/13) </t>
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/13)</t>
 
           <t>Issue #14: Change SDO to "organizations" -- Suzanne Woolf
-          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/14) </t>
+          (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/14)</t>
 
           <t>Issue #16: Match number of "policies" and "that policy" --
           Suzanne
