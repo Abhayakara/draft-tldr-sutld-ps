@@ -5,7 +5,7 @@
 <?rfc symrefs="yes" ?>
 <?rfc comments="yes" ?>
 <?rfc inline="yes" ?>
-<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-03" ipr="trust200902"
+<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-04" ipr="trust200902"
      obsoletes="" updates="">
   <front>
     <title abbrev="Special-Use Domain Names Problem">Special-Use Domain Names
@@ -178,7 +178,7 @@
       every participant agrees that each of the problems enumerated in this
       document is actually a problem. This document takes no position on the
       relative validity of the various problems that have been enumerated. The
-      focused purpose of the document is to enumerate those problems, provide
+      sole purposes of the document are to enumerate those problems, provide
       the reader with context for thinking about them and provide a context
       for future discussion of solutions.</t>
 
@@ -339,13 +339,14 @@
           use of the name. No mechanism exists in the current registry to mark
           names in this way.</t>
 
-          <t>There is no formal checkpoint for review of inadvertent domain
-          name allocation to ensure sure that a document being considered for
-          publication does not unintentionally violate the IETF process for
-          adding Special-Use Domain Names to the registry (e.g., RFC 7788
-          <xref target="RFC7788"/>).</t>
+          <t>There is no formal process during any of the review
+          stages for a document in which a check is made to ensure
+          that the document does not unintentionally violate IETF
+          process for adding special-use domain names to the registry,
+          as was the case, for example, in RFC 7788
+	  <xref target="RFC7788"/>.</t>
 
-          <t>Use of the registry is inconsistent--some Special-Use Domain Name
+          <t>Use of the registry is inconsistent -- some Special-Use Domain Name
           RFCs specify registry entries, some don't; some specify delegation,
           some don't.</t>
 
@@ -403,16 +404,18 @@
       Special-Use Domain names that require special handling, and some names
       can be resolved using the DNS protocol with no special handling.</t>
 
-      <t>The assignment of Internet Names is not under the sole control of any
-      one organization. IETF has authority in some cases, but only with
-      respect to "technical uses." ICANN at present is the designated
-      administrator of the root zone, but generally not of zones other than
-      the root zone. Neither of these authorities can in any practical sense
-      exclude the practice of ad-hoc use of names. Instantiation of ad-hoc
-      names can be done by any entity that has control over one or more name
-      servers or resolvers, in the context of any hosts and services that that
-      entity operates. It can also be done by authors of software deciding
-      that a Special-Use Domain Name is the right way to indicate the use of
+      <t>The assignment of Internet Names is not under the sole
+      control of any one organization. IETF has authority in some
+      cases, but only with respect to "technical uses." ICANN at
+      present is the designated administrator of the root zone, but
+      generally not of zones other than the root zone. Neither of
+      these authorities can in any practical sense exclude the
+      practice of ad-hoc use of names. Unauthorized use of domain
+      names can be accomplished by any entity that has control over
+      one or more name servers or resolvers, in the context of any
+      hosts and services that that entity operates.  It can also be
+      accomplished by authors of software who decide that a
+      Special-Use Domain Name is the right way to indicate the use of
       an alternate resolution mechanism.</t>
 
       <section anchor="su_pri_docs"
@@ -453,24 +456,25 @@
               domain used privately and informally as described in <xref
               target="SDO-ICANN-COLL"/>).</t>
 
-              <t>Such references might refer to the object the user intends to
-              share within that user's context, but either refer to some other
-              object any recipient's context, or might not refer to any object
-              at all in a recipient's context. The effect of this local
-              significance is that the user's intended communication will not
-              be able to be understood by the recipients of the communication.
-              </t>
+              <t>Such references might refer to the object the user
+              intends to share within that user's context, but either
+              refer to some other object any recipient's context, or
+              might not refer to any object at all in a recipient's
+              context. The effect of this reference escaping the
+              context in which it is valid is that the user's intended
+              communication will not be able to be understood by the
+              recipients of the communication.</t>
 
               <t>This same problem can also occur when a single user copies a
               name from one context in which it has one meaning, into a
-              different context in which it has a different meaning-- for
+              different context in which it has a different meaning -- for
               example copying a '.onion' Domain Name out of a Tor Browser
               <xref target="TOR"/>, where it has meaning, and pasting this
               name into an ssh client that doesn't support connecting over the
               Tor network.</t>
             </list></t>
 
-          <t>We can take the following condensed advice from this document:
+          <t>We can summarize the advice in this document as follows:
           <list style="symbols">
               <t>Domain Names with unambiguous global meaning are preferable
               to Domain Names with local meaning which will be ambiguous.
@@ -734,15 +738,17 @@
           as a Special-Use Domain Name; in this case the process worked
           smoothly and without controversy.</t>
 
-          <t>Unfortunately, while the IETF process worked smoothly, in the
-          sense that there was little controversy or delay in approving the
-          new use, it did not work correctly: the name 'ipv4only.arpa' was
-          never added to the Special-Use Domain Names registry. This appears
-          to have happened because the IAB was able to add the name to the
-          .ARPA zone, which the IAB administers. This is an illustration of
-          one of the problems that we have with the 6761 process: it is
-          apparently fairly easy to miss the step of adding the name to the
-          registry.</t>
+          <t>Unfortunately, while the IETF process worked smoothly, in
+          the sense that there was little controversy or delay in
+          approving the new use, it did not work correctly: the name
+          "ipv4only.arpa" was never added to the Special-Use Domain
+          Names registry. This appears to have happened because the
+          document did not explicitly request the addition of an entry
+          for "ipv4only.arpa" in the SUDN registry. This is an
+          illustration of one of the problems that we have with the
+          6761 process: it is apparently fairly easy to miss the step
+          of adding the name to the registry.</t>
+	  
         </section>
 
         <section anchor="addl-tlds"
@@ -1039,6 +1045,24 @@
 
     <section title="Change Log.">
       <t>-03 to -04:<list style="symbols">
+
+          <t>Issue #72: Corrected original text to reflect that RFC
+          7050 neglected to request an SUDN registry entry for
+          "ipv4only.arpa", but any inference about the cause for the
+          oversight would be speculation.</t>
+	  
+          <t>Issue #69: Edited Joel's suggested text.</t>
+      
+          <t>Issue #67: Minor change to Joel's suggested text.</t>
+      
+          <t>Issue #66: Edited second text update suggested by Joel
+	  and reverted third change back to the original text.</t>
+	  
+          <t>Issue #64: Minor changes to text suggested by Joel.</t>
+      
+          <t>Issue #61: Minor edit based on authors' consensus in
+	  response to Joel's comment.</t>
+      
           <t>Addressed Joel / Benoit's AD comments. See GH issues</t>
         </list></t>
 
