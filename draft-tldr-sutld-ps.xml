@@ -438,11 +438,14 @@
           participants who wish to express an informed opinion on the topic of
           Special-Use Domain Names. The main points that appear relevant to
           the Special-Use Domain Names problem are: <list style="symbols">
-              <t>The Internet requires a globally unique namespace</t>
+	      <t>The Internet requires a globally unique namespace: a
+	      namespace in which any given name refers to the same information
+	      (has the same meaning) no matter who requests that information
+	      and no matter from which specific name server they request it.</t>
 
-              <t>Private networks may operate private namespaces, but still
-              require that names in the public namespace be globally
-              unique.</t>
+              <t>Private networks may operate private namespaces, with names that have meanings
+              only locally (within the private network) but still require that names in the
+              public namespace be globally unique.</t>
 
               <t>The <xref target="RFC1035">Domain Name System</xref> is not
               the only protocol that may be used for resolving domain
@@ -757,8 +760,7 @@
           Reserved Top Level Domains</xref> is an example of a document that
           attempted to reserve several TLDs identified by ICANN as
           particularly at risk for collision as Special-Use Domain Names with
-          no documented use. This attempt did not advance in the IETF
-          process.</t>
+          no documented use. This attempt failed.</t>
 
           <t>Although this document failed to gain consensus to publish, the
           need it was intended to fill still exists. Unfortunately, although a
