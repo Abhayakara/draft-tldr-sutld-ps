@@ -139,7 +139,8 @@
           Names.</t>
 
           <t hangText="Special-Use Domain Name">A Domain Name listed in the
-          Special-Use Domain Names registry.</t>
+          Special-Use Domain Names registry <xref
+          target="SDO-IANA-SUDR"/>.</t>
         </list></t>
 
       <t>For the sake of brevity this document uses some abbreviations, which
@@ -152,8 +153,8 @@
           <t hangText="TLD">Top-Level Domain, as defined in in section 2 of
           <xref target="RFC7719">RFC 7719</xref></t>
 
-          <t hangText="gTLD">Generic Top-Level Domain, as defined in in
-          section 2 of <xref target="RFC7719">RFC 7719</xref></t>
+          <t hangText="gTLD">Generic Top-Level Domain (see 'TLD' definition in
+          section 2 of <xref target="RFC7719">RFC 7719</xref>)</t>
         </list></t>
     </section>
 
@@ -177,10 +178,11 @@
       <t>There is a broad diversity of opinion about this set of problems. Not
       every participant agrees that each of the problems enumerated in this
       document is actually a problem. This document takes no position on the
-      relative validity of the various problems that have been enumerated. The
-      sole purposes of the document are to enumerate those problems, provide
-      the reader with context for thinking about them and provide a context
-      for future discussion of solutions.</t>
+      relative validity of the various problems that have been enumerated, nor
+      on the ownership (IETF, ICANN, IANA, some other group) of the problem.
+      The sole purposes of the document are to enumerate those problems,
+      provide the reader with context for thinking about them and provide a
+      context for future discussion of solutions.</t>
 
       <t>This is the list of problems: <list style="symbols">
           <t>No formal coordination process exists between the IETF and ICANN
@@ -339,16 +341,15 @@
           use of the name. No mechanism exists in the current registry to mark
           names in this way.</t>
 
-          <t>There is no formal process during any of the review
-          stages for a document in which a check is made to ensure
-          that the document does not unintentionally violate IETF
-          process for adding special-use domain names to the registry,
-          as was the case, for example, in RFC 7788
-	  <xref target="RFC7788"/>.</t>
+          <t>There is no formal process during any of the review stages for a
+          document in which a check is made to ensure that the document does
+          not unintentionally violate IETF process for adding special-use
+          domain names to the registry, as was the case, for example, in RFC
+          7788 <xref target="RFC7788"/>.</t>
 
-          <t>Use of the registry is inconsistent -- some Special-Use Domain Name
-          RFCs specify registry entries, some don't; some specify delegation,
-          some don't.</t>
+          <t>Use of the registry is inconsistent -- some Special-Use Domain
+          Name RFCs specify registry entries, some don't; some specify
+          delegation, some don't.</t>
 
           <t>There exists no safe, non-process-violating mechanism for ad-hoc
           assignment of Special-Use Domain Names.</t>
@@ -404,19 +405,17 @@
       Special-Use Domain names that require special handling, and some names
       can be resolved using the DNS protocol with no special handling.</t>
 
-      <t>The assignment of Internet Names is not under the sole
-      control of any one organization. IETF has authority in some
-      cases, but only with respect to "technical uses." ICANN at
-      present is the designated administrator of the root zone, but
-      generally not of zones other than the root zone. Neither of
-      these authorities can in any practical sense exclude the
-      practice of ad-hoc use of names. Unauthorized use of domain
-      names can be accomplished by any entity that has control over
-      one or more name servers or resolvers, in the context of any
-      hosts and services that that entity operates.  It can also be
-      accomplished by authors of software who decide that a
-      Special-Use Domain Name is the right way to indicate the use of
-      an alternate resolution mechanism.</t>
+      <t>The assignment of Internet Names is not under the sole control of any
+      one organization. IETF has authority in some cases, but only with
+      respect to "technical uses." ICANN at present is the designated
+      administrator of the root zone, but generally not of zones other than
+      the root zone. Neither of these authorities can in any practical sense
+      exclude the practice of ad-hoc use of names. Unauthorized use of domain
+      names can be accomplished by any entity that has control over one or
+      more name servers or resolvers, in the context of any hosts and services
+      that that entity operates. It can also be accomplished by authors of
+      software who decide that a Special-Use Domain Name is the right way to
+      indicate the use of an alternate resolution mechanism.</t>
 
       <section anchor="su_pri_docs"
                title="Primary Special-Use Domain Name Documents">
@@ -438,14 +437,16 @@
           participants who wish to express an informed opinion on the topic of
           Special-Use Domain Names. The main points that appear relevant to
           the Special-Use Domain Names problem are: <list style="symbols">
-	      <t>The Internet requires a globally unique namespace: a
-	      namespace in which any given name refers to the same information
-	      (has the same meaning) no matter who requests that information
-	      and no matter from which specific name server they request it.</t>
+              <t>The Internet requires a globally unique namespace: a
+              namespace in which any given name refers to the same information
+              (has the same meaning) no matter who requests that information
+              and no matter from which specific name server they request
+              it.</t>
 
-              <t>Private networks may operate private namespaces, with names that have meanings
-              only locally (within the private network) but still require that names in the
-              public namespace be globally unique.</t>
+              <t>Private networks may operate private namespaces, with names
+              that have meanings only locally (within the private network) but
+              still require that names in the public namespace be globally
+              unique.</t>
 
               <t>The <xref target="RFC1035">Domain Name System</xref> is not
               the only protocol that may be used for resolving domain
@@ -459,13 +460,12 @@
               domain used privately and informally as described in <xref
               target="SDO-ICANN-COLL"/>).</t>
 
-              <t>Such references might refer to the object the user
-              intends to share within that user's context, but either
-              refer to some other object any recipient's context, or
-              might not refer to any object at all in a recipient's
-              context. The effect of this reference escaping the
-              context in which it is valid is that the user's intended
-              communication will not be able to be understood by the
+              <t>Such references might refer to the object the user intends to
+              share within that user's context, but either refer to some other
+              object any recipient's context, or might not refer to any object
+              at all in a recipient's context. The effect of this reference
+              escaping the context in which it is valid is that the user's
+              intended communication will not be able to be understood by the
               recipients of the communication.</t>
 
               <t>This same problem can also occur when a single user copies a
@@ -477,8 +477,8 @@
               Tor network.</t>
             </list></t>
 
-          <t>We can summarize the advice in this document as follows:
-          <list style="symbols">
+          <t>We can summarize the advice in this document as follows: <list
+              style="symbols">
               <t>Domain Names with unambiguous global meaning are preferable
               to Domain Names with local meaning which will be ambiguous.
               Nevertheless both globally-meaningful and locally-special names
@@ -661,11 +661,11 @@
           using '.LOCAL'.</t>
 
           <t>The history of RFC 6762 is documented in substantial detail in
-          Appendix H; some notable milestones include the initial proposal to
-          replace Appletalk's NBP in July 1997, the chartering of the Zeroconf
-          working group in September 1999, assignment of a multicast address
-          for link-local name discovery in April of 2000. A companion
-          requirements document, eventually published as <xref
+          Appendix H of RFC 6762; some notable milestones include the initial
+          proposal to replace Appletalk's NBP in July 1997, the chartering of
+          the Zeroconf working group in September 1999, assignment of a
+          multicast address for link-local name discovery in April of 2000. A
+          companion requirements document, eventually published as <xref
           target="RFC6760"/> was first published in September of 2001.</t>
 
           <t>The point of mentioning these dates is so that discussions
@@ -726,12 +726,13 @@
         </section>
 
         <section title="SSAC Advisory on the Stability of the Domain    Namespace">
-          <t>SSAC Advisory on the Stability of the Domain Namespace <xref
-          target="SDO-ICANN-SAC090"/> reports on some issues surrounding the
-          conflicting uses, interested parties and processes related to the
-          Domain Namespace. The document recommends the development of
-          collaborative processes among the various interested parties to
-          coordinate their activities related to the Domain Namespace.</t>
+          <t>ICANN SSAC (<xref target="SDO-ICANN-SSAC"/>) Advisory on the
+          Stability of the Domain Namespace <xref target="SDO-ICANN-SAC090"/>
+          reports on some issues surrounding the conflicting uses, interested
+          parties and processes related to the Domain Namespace. The document
+          recommends the development of collaborative processes among the
+          various interested parties to coordinate their activities related to
+          the Domain Namespace.</t>
         </section>
 
         <section title="Discovery of the IPv6 Prefix Used for IPv6 Address Synthesis">
@@ -741,17 +742,15 @@
           as a Special-Use Domain Name; in this case the process worked
           smoothly and without controversy.</t>
 
-          <t>Unfortunately, while the IETF process worked smoothly, in
-          the sense that there was little controversy or delay in
-          approving the new use, it did not work correctly: the name
-          "ipv4only.arpa" was never added to the Special-Use Domain
-          Names registry. This appears to have happened because the
-          document did not explicitly request the addition of an entry
-          for "ipv4only.arpa" in the SUDN registry. This is an
-          illustration of one of the problems that we have with the
-          6761 process: it is apparently fairly easy to miss the step
-          of adding the name to the registry.</t>
-	  
+          <t>Unfortunately, while the IETF process worked smoothly, in the
+          sense that there was little controversy or delay in approving the
+          new use, it did not work correctly: the name "ipv4only.arpa" was
+          never added to the Special-Use Domain Names registry. This appears
+          to have happened because the document did not explicitly request the
+          addition of an entry for "ipv4only.arpa" in the SUDN registry. This
+          is an illustration of one of the problems that we have with the 6761
+          process: it is apparently fairly easy to miss the step of adding the
+          name to the registry.</t>
         </section>
 
         <section anchor="addl-tlds"
@@ -774,8 +773,10 @@
           ".home" for use as the default name for name resolution relative to
           a home network context. Although, as defined in RFC 7788, ".home" is
           a Special-Use Domain Name, RFC 7788 did not follow the process in
-          RFC 6761 and request the addition of ".home" to the IANA Special-Use
-          Domain Name registry. Additionally, ".home" is an example of an
+          RFC 6761 and requested the addition of ".home" to the IANA
+          Special-Use Domain Name registry. This was recognized as a mistake,
+          and resulted in the publication of an errata, <xref
+          target="ERRATA-4677"/>. Additionally, ".home" is an example of an
           attempt to reuse a Domain Name that has already been put into use
           for other purposes without following established processes<xref
           target="SDO-ICANN-COLL"/>, which further complicates the situation.
@@ -967,6 +968,21 @@
         </front>
       </reference>
 
+      <reference anchor="SDO-ICANN-SSAC"
+                 target="https://www.icann.org/groups/ssac">
+        <front>
+          <title>SSAC Advisory on the Stability of the Domain
+          Namespace</title>
+
+          <author>
+            <organization>ICANN Security and Stability Advisory
+            Committee</organization>
+          </author>
+
+          <date month="December" year="2016"/>
+        </front>
+      </reference>
+
       <reference anchor="SDO-IANA-SUDR"
                  target="http://www.iana.org/assignments/special-use-domain-names/special-use-domain-names.xhtml">
         <front>
@@ -1004,6 +1020,19 @@
           </author>
 
           <date day="15" month="September" year="2015"/>
+        </front>
+      </reference>
+
+      <reference anchor="ERRATA-4677"
+                 target="https://www.rfc-editor.org/errata/eid4677">
+        <front>
+          <title>Errata ID: 4677 (RFC7788)</title>
+
+          <author>
+            <organization>Internet Architecture Board</organization>
+          </author>
+
+          <date day="" month="April" year="2016"/>
         </front>
       </reference>
 
@@ -1047,24 +1076,23 @@
 
     <section title="Change Log.">
       <t>-03 to -04:<list style="symbols">
+          <t>Issue #72: Corrected original text to reflect that RFC 7050
+          neglected to request an SUDN registry entry for "ipv4only.arpa", but
+          any inference about the cause for the oversight would be
+          speculation.</t>
 
-          <t>Issue #72: Corrected original text to reflect that RFC
-          7050 neglected to request an SUDN registry entry for
-          "ipv4only.arpa", but any inference about the cause for the
-          oversight would be speculation.</t>
-	  
           <t>Issue #69: Edited Joel's suggested text.</t>
-      
+
           <t>Issue #67: Minor change to Joel's suggested text.</t>
-      
-          <t>Issue #66: Edited second text update suggested by Joel
-	  and reverted third change back to the original text.</t>
-	  
+
+          <t>Issue #66: Edited second text update suggested by Joel and
+          reverted third change back to the original text.</t>
+
           <t>Issue #64: Minor changes to text suggested by Joel.</t>
-      
-          <t>Issue #61: Minor edit based on authors' consensus in
-	  response to Joel's comment.</t>
-      
+
+          <t>Issue #61: Minor edit based on authors' consensus in response to
+          Joel's comment.</t>
+
           <t>Addressed Joel / Benoit's AD comments. See GH issues</t>
         </list></t>
 
