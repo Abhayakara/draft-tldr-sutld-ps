@@ -188,8 +188,7 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
    TLD  Top-Level Domain, as defined in in section 2 of RFC 7719
       [RFC7719]
 
-   gTLD  Generic Top-Level Domain (see 'TLD' definition in section 2 of
-      RFC 7719 [RFC7719])
+   gTLD  Generic Top-Level Domain (see section 2 of RFC 2352 [RFC2352])
 
 3.  Problems associated with Special-Use Domain Names
 
@@ -214,9 +213,10 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
    Not every participant agrees that each of the problems enumerated in
    this document is actually a problem.  This document takes no position
    on the relative validity of the various problems that have been
-   enumerated, nor on the ownership (IETF, ICANN, IANA, some other
-   group) of the problem.  The sole purposes of the document are to
-   enumerate those problems, provide the reader with context for
+   enumerated, nor on the organization responsible for addressing each
+   individual problem, if it is to be addressed.  The sole purposes of
+   the document are to enumerate those problems, provide the reader with
+   context for thinking about them and provide a context for future
 
 
 
@@ -226,8 +226,8 @@ Lemon, et al.           Expires December 8, 2017                [Page 4]
 Internet-Draft      Special-Use Domain Names Problem           June 2017
 
 
-   thinking about them and provide a context for future discussion of
-   solutions.
+   discussion of solutions, regardless of whether such solutions may be
+   work for IETF, ICANN, IANA or some other group.
 
    This is the list of problems:
 
@@ -888,8 +888,8 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
    RFC 7788 [RFC7788] defines the Domain Name TLD ".home" for use as the
    default name for name resolution relative to a home network context.
    Although, as defined in RFC 7788, ".home" is a Special-Use Domain
-   Name, RFC 7788 did not follow the process in RFC 6761 and requested
-   the addition of ".home" to the IANA Special-Use Domain Name registry.
+   Name, RFC 7788 did not follow the process specified in RFC 6761: it
+   did not request that ".home" be added to the IANA Special-Use Domain
 
 
 
@@ -898,10 +898,10 @@ Lemon, et al.           Expires December 8, 2017               [Page 16]
 Internet-Draft      Special-Use Domain Names Problem           June 2017
 
 
-   This was recognized as a mistake, and resulted in the publication of
-   an errata, [ERRATA-4677].  Additionally, ".home" is an example of an
-   attempt to reuse a Domain Name that has already been put into use for
-   other purposes without following established
+   Name registry.  This was recognized as a mistake, and resulted in the
+   publication of an errata, [ERRATA-4677].  Additionally, ".home" is an
+   example of an attempt to reuse a Domain Name that has already been
+   put into use for other purposes without following established
    processes[SDO-ICANN-COLL], which further complicates the situation.
    At the time this document was written, the IETF was developing a
    solution to this problem.
@@ -1026,8 +1026,8 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
               specification", RFC 883, DOI 10.17487/RFC0883, November
               1983, <http://www.rfc-editor.org/info/rfc883>.
 
-   [RFC0959]  Postel, J. and J. Reynolds, "File Transfer Protocol", STD
-              9, RFC 959, DOI 10.17487/RFC0959, October 1985,
+   [RFC0959]  Postel, J. and J. Reynolds, "File Transfer Protocol",
+              STD 9, RFC 959, DOI 10.17487/RFC0959, October 1985,
               <http://www.rfc-editor.org/info/rfc959>.
 
    [RFC1002]  NetBIOS Working Group in the Defense Advanced Research
@@ -1050,13 +1050,13 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
               BCP 5, RFC 1918, DOI 10.17487/RFC1918, February 1996,
               <http://www.rfc-editor.org/info/rfc1918>.
 
+   [RFC2352]  Vaughan, O., "A Convention For Using Legal Names as Domain
+              Names", RFC 2352, DOI 10.17487/RFC2352, May 1998,
+              <http://www.rfc-editor.org/info/rfc2352>.
+
    [RFC2826]  Internet Architecture Board, "IAB Technical Comment on the
               Unique DNS Root", RFC 2826, DOI 10.17487/RFC2826, May
               2000, <http://www.rfc-editor.org/info/rfc2826>.
-
-
-
-
 
 
 
@@ -1068,16 +1068,16 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
 
    [RFC2860]  Carpenter, B., Baker, F., and M. Roberts, "Memorandum of
               Understanding Concerning the Technical Work of the
-              Internet Assigned Numbers Authority", RFC 2860, DOI
-              10.17487/RFC2860, June 2000,
+              Internet Assigned Numbers Authority", RFC 2860,
+              DOI 10.17487/RFC2860, June 2000,
               <http://www.rfc-editor.org/info/rfc2860>.
 
    [RFC4193]  Hinden, R. and B. Haberman, "Unique Local IPv6 Unicast
               Addresses", RFC 4193, DOI 10.17487/RFC4193, October 2005,
               <http://www.rfc-editor.org/info/rfc4193>.
 
-   [RFC6303]  Andrews, M., "Locally Served DNS Zones", BCP 163, RFC
-              6303, DOI 10.17487/RFC6303, July 2011,
+   [RFC6303]  Andrews, M., "Locally Served DNS Zones", BCP 163,
+              RFC 6303, DOI 10.17487/RFC6303, July 2011,
               <http://www.rfc-editor.org/info/rfc6303>.
 
    [RFC6598]  Weil, J., Kuarsingh, V., Donley, C., Liljenstolpe, C., and
@@ -1086,8 +1086,8 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
               2012, <http://www.rfc-editor.org/info/rfc6598>.
 
    [RFC6760]  Cheshire, S. and M. Krochmal, "Requirements for a Protocol
-              to Replace the AppleTalk Name Binding Protocol (NBP)", RFC
-              6760, DOI 10.17487/RFC6760, February 2013,
+              to Replace the AppleTalk Name Binding Protocol (NBP)",
+              RFC 6760, DOI 10.17487/RFC6760, February 2013,
               <http://www.rfc-editor.org/info/rfc6760>.
 
    [RFC6761]  Cheshire, S. and M. Krochmal, "Special-Use Domain Names",
@@ -1099,8 +1099,8 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
               <http://www.rfc-editor.org/info/rfc6762>.
 
    [RFC7050]  Savolainen, T., Korhonen, J., and D. Wing, "Discovery of
-              the IPv6 Prefix Used for IPv6 Address Synthesis", RFC
-              7050, DOI 10.17487/RFC7050, November 2013,
+              the IPv6 Prefix Used for IPv6 Address Synthesis",
+              RFC 7050, DOI 10.17487/RFC7050, November 2013,
               <http://www.rfc-editor.org/info/rfc7050>.
 
    [RFC7686]  Appelbaum, J. and A. Muffett, "The ".onion" Special-Use

@@ -154,7 +154,7 @@
           <xref target="RFC7719">RFC 7719</xref></t>
 
           <t hangText="gTLD">Generic Top-Level Domain (see section 2 of 
-	  <xref target="RFC7719">RFC 2240</xref>)</t>
+	  <xref target="RFC2352">RFC 2352</xref>)</t>
         </list></t>
     </section>
 
@@ -895,6 +895,8 @@
       <?rfc include="reference.RFC.1035" ?>
 
       <?rfc include="reference.RFC.1918" ?>
+
+      <?rfc include="reference.RFC.2352" ?>
 
       <?rfc include="reference.RFC.2826" ?>
 
