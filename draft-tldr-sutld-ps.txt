@@ -185,11 +185,9 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
 
    ICANN  Internet Corporation for Assigned Names and Numbers
 
-   TLD  Top-Level Domain, as defined in in section 2 of RFC 7719
-      [RFC7719]
+   TLD  Top-Level Domain, as defined in section 2 of RFC 7719 [RFC7719]
 
-   gTLD  Generic Top-Level Domain (see 'TLD' definition in section 2 of
-      RFC 7719 [RFC7719])
+   gTLD  Generic Top-Level Domain (see section 2 of RFC 2240 [RFC7719])
 
 3.  Problems associated with Special-Use Domain Names
 
@@ -214,10 +212,12 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
    Not every participant agrees that each of the problems enumerated in
    this document is actually a problem.  This document takes no position
    on the relative validity of the various problems that have been
-   enumerated, nor on the ownership (IETF, ICANN, IANA, some other
-   group) of the problem.  The sole purposes of the document are to
-   enumerate those problems, provide the reader with context for
-
+   enumerated, nor on the organization responsible for addressing each
+   individual problem, if it is to be addressed.  The sole purposes of
+   the document are to enumerate those problems, provide the reader with
+   context for thinking about them and provide a context for future
+   discussion of solutions, regardless of whether such solutions may be
+   work for IETF, ICANN, IANA or some other group.
 
 
 
@@ -225,9 +225,6 @@ Lemon, et al.           Expires December 8, 2017                [Page 4]
 
 Internet-Draft      Special-Use Domain Names Problem           June 2017
 
-
-   thinking about them and provide a context for future discussion of
-   solutions.
 
    This is the list of problems:
 
@@ -274,6 +271,9 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
 
       *  Unaware that a name intended to be used only locally may
          nevertheless leak
+
+
+
 
 
 
@@ -372,9 +372,9 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
       Domain Names without following the RFC 6761 process.
 
    o  There are several Domain Name TLDs that are in use without due
-      process for a variety of purposes [SDO-ICANN-COLL].  The status of
-      these names need to be clarified and recorded to avoid future
-      disputes about their use.
+      process for a variety of purposes.  The status of these names need
+      to be clarified and recorded to avoid future disputes about their
+      use [SDO-ICANN-COLL].
 
    o  In principle, the RFC 6761 process could be used to document the
       existence of Domain Names that are not safe to assign, and provide
@@ -888,8 +888,8 @@ Internet-Draft      Special-Use Domain Names Problem           June 2017
    RFC 7788 [RFC7788] defines the Domain Name TLD ".home" for use as the
    default name for name resolution relative to a home network context.
    Although, as defined in RFC 7788, ".home" is a Special-Use Domain
-   Name, RFC 7788 did not follow the process in RFC 6761 and requested
-   the addition of ".home" to the IANA Special-Use Domain Name registry.
+   Name, RFC 7788 did not follow the process specified in RFC 6761: it
+   did not request that ".home" be added to the IANA Special-Use Domain
 
 
 
@@ -898,10 +898,10 @@ Lemon, et al.           Expires December 8, 2017               [Page 16]
 Internet-Draft      Special-Use Domain Names Problem           June 2017
 
 
-   This was recognized as a mistake, and resulted in the publication of
-   an errata, [ERRATA-4677].  Additionally, ".home" is an example of an
-   attempt to reuse a Domain Name that has already been put into use for
-   other purposes without following established
+   Name registry.  This was recognized as a mistake, and resulted in the
+   publication of an errata, [ERRATA-4677].  Additionally, ".home" is an
+   example of an attempt to reuse a Domain Name that has already been
+   put into use for other purposes without following established
    processes[SDO-ICANN-COLL], which further complicates the situation.
    At the time this document was written, the IETF was developing a
    solution to this problem.

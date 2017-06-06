@@ -150,11 +150,11 @@
           <t hangText="ICANN">Internet Corporation for Assigned Names and
           Numbers</t>
 
-          <t hangText="TLD">Top-Level Domain, as defined in in section 2 of
-          <xref target="RFC7719">RFC 7719</xref></t>
+          <t hangText="TLD">Top-Level Domain, as defined in section 2 of <xref
+          target="RFC7719">RFC 7719</xref></t>
 
-          <t hangText="gTLD">Generic Top-Level Domain (see section 2 of 
-	  <xref target="RFC7719">RFC 2240</xref>)</t>
+          <t hangText="gTLD">Generic Top-Level Domain (see section 2 of <xref
+          target="RFC7719">RFC 2240</xref>)</t>
         </list></t>
     </section>
 
@@ -175,14 +175,16 @@
       fall into both categories, this document makes no attempt to categorize
       the problems.</t>
 
-      <t>There is a broad diversity of opinion about this set of problems. Not every participant
-      agrees that each of the problems enumerated in this document is actually a problem. This
-      document takes no position on the relative validity of the various problems that have been
-      enumerated, nor on the organization responsible for addressing each individual problem, if
-      it is to be addressed.  The sole purposes of the document are to enumerate those problems,
-      provide the reader with context for thinking about them and provide a context for future
-      discussion of solutions, regardless of whether such solutions may be work for IETF, ICANN,
-      IANA or some other group.</t>
+      <t>There is a broad diversity of opinion about this set of problems. Not
+      every participant agrees that each of the problems enumerated in this
+      document is actually a problem. This document takes no position on the
+      relative validity of the various problems that have been enumerated, nor
+      on the organization responsible for addressing each individual problem,
+      if it is to be addressed. The sole purposes of the document are to
+      enumerate those problems, provide the reader with context for thinking
+      about them and provide a context for future discussion of solutions,
+      regardless of whether such solutions may be work for IETF, ICANN, IANA
+      or some other group.</t>
 
       <t>This is the list of problems: <list style="symbols">
           <t>No formal coordination process exists between the IETF and ICANN
@@ -311,9 +313,9 @@
           Names without following the RFC 6761 process.</t>
 
           <t>There are several Domain Name TLDs that are in use without due
-          process for a variety of purposes <xref target="SDO-ICANN-COLL"/>.
-          The status of these names need to be clarified and recorded to avoid
-          future disputes about their use.</t>
+          process for a variety of purposes. The status of these names need to
+          be clarified and recorded to avoid future disputes about their use
+          <xref target="SDO-ICANN-COLL"/>.</t>
 
           <t>In principle, the RFC 6761 process could be used to document the
           existence of Domain Names that are not safe to assign, and provide
@@ -772,10 +774,10 @@
           <t>RFC 7788 <xref target="RFC7788"/> defines the Domain Name TLD
           ".home" for use as the default name for name resolution relative to
           a home network context. Although, as defined in RFC 7788, ".home" is
-          a Special-Use Domain Name, RFC 7788 did not follow the process specified in
-          RFC 6761: it did not request that ".home" be added to the IANA
-          Special-Use Domain Name registry. This was recognized as a mistake,
-          and resulted in the publication of an errata, <xref
+          a Special-Use Domain Name, RFC 7788 did not follow the process
+          specified in RFC 6761: it did not request that ".home" be added to
+          the IANA Special-Use Domain Name registry. This was recognized as a
+          mistake, and resulted in the publication of an errata, <xref
           target="ERRATA-4677"/>. Additionally, ".home" is an example of an
           attempt to reuse a Domain Name that has already been put into use
           for other purposes without following established processes<xref
