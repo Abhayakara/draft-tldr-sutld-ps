@@ -578,9 +578,9 @@
           hierarchy.</t>
 
           <t>One point to take from this is that there is already a
-          requirement in RFC 6762 that when stub resolvers encounter the
-          special label, '.LOCAL' at the top level of a domain name, they can
-          only use the mDNS protocol be used for resolving that Domain
+          requirement in RFC 6762 that when a stub resolver encounters the
+          special label, '.LOCAL' at the top level of a domain name, it can
+          only use the mDNS protocol to resolve that Domain
           Name.</t>
         </section>
 
