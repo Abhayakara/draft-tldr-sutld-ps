@@ -187,8 +187,10 @@
       or some other group.</t>
 
       <t>This is the list of problems: <list style="symbols">
-          <t>No formal coordination process exists between the IETF and ICANN
-          as they follow their respective name assignment processes (see <xref
+          <t>Although the IETF and ICANN have a liaison
+	  relationship through which special-use allocations can be
+	  discussed, there exists no formal process for coordinating
+	  these allocations (see <xref 
           target="MoU"/>). The lack of coordination complicates the management
           of the root of the Domain Namespace and <xref
           target="SDO-ICANN-SAC090"> could lead to conflicts in name
@@ -349,9 +351,10 @@
           domain names to the registry, as was the case, for example, in RFC
           7788 <xref target="RFC7788"/>.</t>
 
-          <t>Use of the registry is inconsistent -- some Special-Use Domain
-          Name RFCs specify registry entries, some don't; some specify
-          delegation, some don't.</t>
+          <t>Use of the registry is inconsistent -- some Special-Use
+          Domain Name RFCs specifically add registry entries, some
+          don't; some specify how and whether special-use name
+          delegations should be done, some don't.</t>
 
           <t>There exists no safe, non-process-violating mechanism for ad-hoc
           assignment of Special-Use Domain Names.</t>
