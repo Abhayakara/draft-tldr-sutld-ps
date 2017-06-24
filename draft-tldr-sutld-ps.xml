@@ -709,11 +709,11 @@
 	      problematic, since no formal process for testing the
 	      validity of such names existed. Consequently, CA/Browser
 	      Forum decided to phase out the use of such names in
-	      certificates, and set a deadline after which no new
-	      certs for such names would be issued <xref
-	      target="SDO-CABF-DEADLINE" />. Because the .onion name
-	      had been allocated unilaterally, it was affected by this
-	      policy.
+	      certificates <xref target="SDO-CABF-INT">, and set a
+	      deadline after which no new certs for such names would
+	      be issued <xref target="SDO-CABF-DEADLINE" />. Because
+	      the .onion name had been allocated unilaterally, it
+	      was affected by this policy.
 
 	      <vspace blankLines="1" />
 
