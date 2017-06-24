@@ -12,7 +12,7 @@ Expires: December 26, 2017
 
 
                Special-Use Domain Names Problem Statement
-                      draft-ietf-dnsop-sutld-ps-05
+                      draft-ietf-dnsop-sutld-ps-06
 
 Abstract
 
