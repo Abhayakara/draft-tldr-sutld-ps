@@ -689,13 +689,40 @@
           <list style="symbols">
               <t>The IETF gained consensus to publish it</t>
 
-              <t>The situation was somewhat forced, both by the fact of its
-              unilateral use by The Tor Project without following the RFC 6761
-              process, and <xref target="SDO-CABF-INT"> because a deadline had
-              been set by the CA/Browser Forum</xref> after which all .onion
-              PKI certificates would expire and no new certificates would be
-              issued, unless the .onion Special-Use Top-Level Domain Name were
-              to be recognized by the IETF.</t>
+	      <t>Devising a resolution to the situation was
+	      constrained by at least two factors.  First, there was
+	      no process for allocating special-use domain names at
+	      the time that the .onion project started using the name,
+	      and since at the time the scope of use of the name was
+	      expected to be very constrained, the developers chose to
+	      allocate it unilaterally rather than asking the IETF or
+	      some other SDO to create a new process.
+
+	      <vspace blankLines="1" />
+
+		Second, for some time, the <xref
+	      target="SDO-CABF">CA/Browser Forum</xref> had been
+	      issuing certificates for what they referred to as
+	      "internal names." Internal names are names allocated
+	      unilaterally for use in site-specific contexts. Issuing
+	      certificates for such names came to be considered
+	      problematic, since no formal process for testing the
+	      validity of such names existed. Consequently, CA/Browser
+	      Forum decided to phase out the use of such names in
+	      certificates, and set a deadline after which no new
+	      certs for such names would be issued <xref
+	      target="SDO-CABF-DEADLINE" />. Because the .onion name
+	      had been allocated unilaterally, it was affected by this
+	      policy.
+
+	      <vspace blankLines="1" />
+
+	      The IETF's designation of .onion as a Special-Use
+	      Top-Level Domain Name was needed to facilitate the
+	      development of a certificate issuance process specific
+	      to .onion domain names
+	      <xref target="SDO-CABF-BALLOT144" />.</t>
+	      
             </list></t>
         </section>
 
@@ -945,6 +972,39 @@
 
           <date month="June" year="2012"/>
         </front>
+      </reference>
+
+      <reference anchor="SDO-CABF-DEADLINE"
+		 target="https://www.digicert.com/internal-names.htm">
+	<front>
+	  <title>SSL Certificates for Internal Server Names</title>
+	  <author>
+	    <organization>CA/Browser Forum</organization>
+	  </author>
+          <date month="June" year="2017"/>
+	</front>
+      </reference>
+
+      <reference anchor="SDO-CABF"
+		 target="https://cabforum.org">
+	<front>
+	  <title>CA/Browser Forum</title>
+	  <author>
+	    <organization>CA/Browser Forum</organization>
+	  </author>
+          <date month="June" year="2017"/>
+	</front>
+      </reference>
+		   
+      <reference anchor="SDO-CABF-BALLOT144"
+		 target="https://cabforum.org/2015/02/18/ballot-144-validation-rules-dot-onion-names">
+	<front>
+	  <title>Ballot 144 - Validation Rules for .onion Names</title>
+	  <author>
+	    <organization>CA/Browser Forum</organization>
+	  </author>
+          <date month="February" year="2015"/>
+	</front>
       </reference>
 
       <reference anchor="SDO-ICANN-COLL"
