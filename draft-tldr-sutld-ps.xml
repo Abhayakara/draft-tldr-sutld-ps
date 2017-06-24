@@ -5,7 +5,7 @@
 <?rfc symrefs="yes" ?>
 <?rfc comments="yes" ?>
 <?rfc inline="yes" ?>
-<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-05" ipr="trust200902"
+<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-06" ipr="trust200902"
      obsoletes="" updates="">
   <front>
     <title abbrev="Special-Use Domain Names Problem">Special-Use Domain Names
