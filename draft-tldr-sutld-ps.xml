@@ -709,7 +709,7 @@
 	      problematic, since no formal process for testing the
 	      validity of such names existed. Consequently, CA/Browser
 	      Forum decided to phase out the use of such names in
-	      certificates <xref target="SDO-CABF-INT">, and set a
+	      certificates <xref target="SDO-CABF-INT" />, and set a
 	      deadline after which no new certs for such names would
 	      be issued <xref target="SDO-CABF-DEADLINE" />. Because
 	      the .onion name had been allocated unilaterally, it
@@ -910,6 +910,15 @@
       <xref target="I-D.lewis-domain-names">what a "Domain Name"
       is</xref>.</t>
     </section>
+
+    <section title="RFC Editor Considerations">
+      <t>The authors were unable to find dates for references
+      <xref target="SDO-CABF-DEADLINE" /> and
+      <xref target="SDO-CABF" />.  Please fix up those references as
+      appropriate (and remove this section before publication).
+      </t>
+    </section>
+    
   </middle>
 
   <back>
@@ -981,7 +990,7 @@
 	  <author>
 	    <organization>CA/Browser Forum</organization>
 	  </author>
-          <date month="June" year="2017"/>
+          <date month="???" year="????"/>
 	</front>
       </reference>
 
@@ -992,7 +1001,7 @@
 	  <author>
 	    <organization>CA/Browser Forum</organization>
 	  </author>
-          <date month="June" year="2017"/>
+          <date month="???" year="????"/>
 	</front>
       </reference>
 		   
