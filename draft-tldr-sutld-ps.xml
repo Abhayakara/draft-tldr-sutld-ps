@@ -701,19 +701,20 @@
 	      <vspace blankLines="1" />
 
 		Second, for some time, the <xref
-	      target="SDO-CABF">CA/Browser Forum</xref> had been
-	      issuing certificates for what they referred to as
-	      "internal names." Internal names are names allocated
-	      unilaterally for use in site-specific contexts. Issuing
-	      certificates for such names came to be considered
-	      problematic, since no formal process for testing the
-	      validity of such names existed. Consequently, CA/Browser
-	      Forum decided to phase out the use of such names in
-	      certificates <xref target="SDO-CABF-INT" />, and set a
-	      deadline after which no new certs for such names would
-	      be issued <xref target="SDO-CABF-DEADLINE" />. Because
-	      the .onion name had been allocated unilaterally, it
-	      was affected by this policy.
+		target="SDO-CABF">CA/Browser Forum</xref> had been
+		issuing certificates for what they referred to as
+		"internal names." Internal names are names allocated
+		unilaterally for use in site-specific
+		contexts. Issuing certificates for such names came to
+		be considered problematic, since no formal process for
+		testing the validity of such names
+		existed. Consequently, CA/Browser Forum decided to
+		phase out the use of such names in certificates <xref
+		target="SDO-CABF-INT" />, and set a deadline after
+		which no new certificates for such names would be
+		issued <xref target="SDO-CABF-DEADLINE" />. Because
+		the .onion name had been allocated unilaterally, it
+		was affected by this policy.
 
 	      <vspace blankLines="1" />
 
