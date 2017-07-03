@@ -5,7 +5,7 @@
 <?rfc symrefs="yes" ?>
 <?rfc comments="yes" ?>
 <?rfc inline="yes" ?>
-<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-06" ipr="trust200902"
+<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-07" ipr="trust200902"
      obsoletes="" updates="">
   <front>
     <title abbrev="Special-Use Domain Names Problem">Special-Use Domain Names
@@ -59,7 +59,7 @@
       </address>
     </author>
 
-    <date month="June" year="2017"/>
+    <date month="July" year="2017"/>
 
     <abstract>
       <t>The Special-Use Domain Names IANA registry policy defined in RFC 6761
@@ -153,8 +153,8 @@
           <t hangText="TLD">Top-Level Domain, as defined in section 2 of <xref
           target="RFC7719">RFC 7719</xref></t>
 
-          <t hangText="gTLD">Generic Top-Level Domain (see section 2 of 
-	  <xref target="RFC2352">RFC 2352</xref>)</t>
+          <t hangText="gTLD">Generic Top-Level Domain (see section 2 of <xref
+          target="RFC2352">RFC 2352</xref>)</t>
         </list></t>
     </section>
 
@@ -186,11 +186,12 @@
       regardless of whether such solutions may be work for IETF, ICANN, IANA
       or some other group.</t>
 
-      <t>This is the list of problems: <list style="symbols">
-          <t>Although the IETF and ICANN have a liaison
-	  relationship through which special-use allocations can be
-	  discussed, there exists no formal process for coordinating
-	  these allocations (see <xref 
+      <t>This is the list of problems. This is not an ordered list, it is
+      numbered merely to facilitate referencing specific problems: <list
+          style="numbers">
+          <t>Although the IETF and ICANN have a liaison relationship through
+          which special-use allocations can be discussed, there exists no
+          formal process for coordinating these allocations (see <xref
           target="MoU"/>). The lack of coordination complicates the management
           of the root of the Domain Namespace and <xref
           target="SDO-ICANN-SAC090"> could lead to conflicts in name
@@ -215,7 +216,7 @@
 
           <t>Organizations do in fact sometimes use subsets of the Domain
           Namespace without following established processes. Reasons a third
-          party might do this include: <list style="symbols">
+          party might do this include: <list style="numbers">
               <t>Unaware that a process exists for assigning such names</t>
 
               <t>Intended use is covered by gTLD process <xref
@@ -268,7 +269,7 @@
 
           <t>There is strong resistance within the IETF to assigning Domain
           Names to resolution systems outside of the DNS, for a variety of
-          reasons: <list style="symbols">
+          reasons: <list style="numbers">
               <t>Requires a mechanism for identifying which of a set of
               resolution processes is required in order to resolve a
               particular name.</t>
@@ -351,10 +352,10 @@
           domain names to the registry, as was the case, for example, in RFC
           7788 <xref target="RFC7788"/>.</t>
 
-          <t>Use of the registry is inconsistent -- some Special-Use
-          Domain Name RFCs specifically add registry entries, some
-          don't; some specify how and whether special-use name
-          delegations should be done, some don't.</t>
+          <t>Use of the registry is inconsistent -- some Special-Use Domain
+          Name RFCs specifically add registry entries, some don't; some
+          specify how and whether special-use name delegations should be done,
+          some don't.</t>
 
           <t>There exists no safe, non-process-violating mechanism for ad-hoc
           assignment of Special-Use Domain Names.</t>
@@ -375,7 +376,7 @@
           There is no consensus or guidance about how to use DNSSEC with
           various classes of Special-Use Domain Names. Considerations in the
           use of DNSSEC with Special-Use Domain Names include: <list
-              style="symbols">
+              style="numbers">
               <t>What class of Special-Use Domain Name is under consideration:
               non-DNS, locally served zone, other?</t>
 
@@ -418,9 +419,9 @@
       exclude the practice of ad-hoc use of names. Unauthorized use of domain
       names can be accomplished by any entity that has control over one or
       more name servers or resolvers, in the context of any hosts and services
-      that that entity operates. It can also be accomplished by authors of
-      software who decide that a Special-Use Domain Name is the right way to
-      indicate the use of an alternate resolution mechanism.</t>
+      that entity operates. It can also be accomplished by authors of software
+      who decide that a Special-Use Domain Name is the right way to indicate
+      the use of an alternate resolution mechanism.</t>
 
       <section anchor="su_pri_docs"
                title="Primary Special-Use Domain Name Documents">
@@ -583,8 +584,7 @@
           <t>One point to take from this is that there is already a
           requirement in RFC 6762 that when a stub resolver encounters the
           special label, '.LOCAL' at the top level of a domain name, it can
-          only use the mDNS protocol to resolve that Domain
-          Name.</t>
+          only use the mDNS protocol to resolve that Domain Name.</t>
         </section>
 
         <section anchor="MoU"
@@ -689,41 +689,29 @@
           <list style="symbols">
               <t>The IETF gained consensus to publish it</t>
 
-	      <t>Devising a resolution to the situation was
-	      constrained by at least two factors.  First, there was
-	      no process for allocating special-use domain names at
-	      the time that the .onion project started using the name,
-	      and since at the time the scope of use of the name was
-	      expected to be very constrained, the developers chose to
-	      allocate it unilaterally rather than asking the IETF or
-	      some other SDO to create a new process.
-
-	      <vspace blankLines="1" />
-
-		Second, for some time, the <xref
-		target="SDO-CABF">CA/Browser Forum</xref> had been
-		issuing certificates for what they referred to as
-		"internal names." Internal names are names allocated
-		unilaterally for use in site-specific
-		contexts. Issuing certificates for such names came to
-		be considered problematic, since no formal process for
-		testing the validity of such names
-		existed. Consequently, CA/Browser Forum decided to
-		phase out the use of such names in certificates <xref
-		target="SDO-CABF-INT" />, and set a deadline after
-		which no new certificates for such names would be
-		issued <xref target="SDO-CABF-DEADLINE" />. Because
-		the .onion name had been allocated unilaterally, it
-		was affected by this policy.
-
-	      <vspace blankLines="1" />
-
-	      The IETF's designation of .onion as a Special-Use
-	      Top-Level Domain Name was needed to facilitate the
-	      development of a certificate issuance process specific
-	      to .onion domain names
-	      <xref target="SDO-CABF-BALLOT144" />.</t>
-	      
+              <t>Devising a resolution to the situation was constrained by at
+              least two factors. First, there was no process for allocating
+              special-use domain names at the time that the .onion project
+              started using the name, and since at the time the scope of use
+              of the name was expected to be very constrained, the developers
+              chose to allocate it unilaterally rather than asking the IETF or
+              some other SDO to create a new process. <vspace blankLines="1"/>
+              Second, for some time, the <xref target="SDO-CABF">CA/Browser
+              Forum</xref> had been issuing certificates for what they
+              referred to as "internal names." Internal names are names
+              allocated unilaterally for use in site-specific contexts.
+              Issuing certificates for such names came to be considered
+              problematic, since no formal process for testing the validity of
+              such names existed. Consequently, CA/Browser Forum decided to
+              phase out the use of such names in certificates <xref
+              target="SDO-CABF-INT"/>, and set a deadline after which no new
+              certificates for such names would be issued <xref
+              target="SDO-CABF-DEADLINE"/>. Because the .onion name had been
+              allocated unilaterally, it was affected by this policy. <vspace
+              blankLines="1"/> The IETF's designation of .onion as a
+              Special-Use Top-Level Domain Name was needed to facilitate the
+              development of a certificate issuance process specific to .onion
+              domain names <xref target="SDO-CABF-BALLOT144"/>.</t>
             </list></t>
         </section>
 
@@ -913,13 +901,11 @@
     </section>
 
     <section title="RFC Editor Considerations">
-      <t>The authors were unable to find dates for references
-      <xref target="SDO-CABF-DEADLINE" /> and
-      <xref target="SDO-CABF" />.  Please fix up those references as
-      appropriate (and remove this section before publication).
-      </t>
+      <t>The authors were unable to find dates for references <xref
+      target="SDO-CABF-DEADLINE"/> and <xref target="SDO-CABF"/>. Please fix
+      up those references as appropriate (and remove this section before
+      publication).</t>
     </section>
-    
   </middle>
 
   <back>
@@ -985,36 +971,41 @@
       </reference>
 
       <reference anchor="SDO-CABF-DEADLINE"
-		 target="https://www.digicert.com/internal-names.htm">
-	<front>
-	  <title>SSL Certificates for Internal Server Names</title>
-	  <author>
-	    <organization>CA/Browser Forum</organization>
-	  </author>
+                 target="https://www.digicert.com/internal-names.htm">
+        <front>
+          <title>SSL Certificates for Internal Server Names</title>
+
+          <author>
+            <organization>CA/Browser Forum</organization>
+          </author>
+
           <date month="???" year="????"/>
-	</front>
+        </front>
       </reference>
 
-      <reference anchor="SDO-CABF"
-		 target="https://cabforum.org">
-	<front>
-	  <title>CA/Browser Forum</title>
-	  <author>
-	    <organization>CA/Browser Forum</organization>
-	  </author>
+      <reference anchor="SDO-CABF" target="https://cabforum.org">
+        <front>
+          <title>CA/Browser Forum</title>
+
+          <author>
+            <organization>CA/Browser Forum</organization>
+          </author>
+
           <date month="???" year="????"/>
-	</front>
+        </front>
       </reference>
-		   
+
       <reference anchor="SDO-CABF-BALLOT144"
-		 target="https://cabforum.org/2015/02/18/ballot-144-validation-rules-dot-onion-names">
-	<front>
-	  <title>Ballot 144 - Validation Rules for .onion Names</title>
-	  <author>
-	    <organization>CA/Browser Forum</organization>
-	  </author>
+                 target="https://cabforum.org/2015/02/18/ballot-144-validation-rules-dot-onion-names">
+        <front>
+          <title>Ballot 144 - Validation Rules for .onion Names</title>
+
+          <author>
+            <organization>CA/Browser Forum</organization>
+          </author>
+
           <date month="February" year="2015"/>
-	</front>
+        </front>
       </reference>
 
       <reference anchor="SDO-ICANN-COLL"
@@ -1152,6 +1143,53 @@
     </references>
 
     <section title="Change Log.">
+      <t>-06 to -07:<list style="symbols">
+          <t>Issue #88: Bulleted list should be numbered, not unordered -
+          Updated the list of problems to be numbered, instead of unordered.
+          This is to allow future documents to refer to specific issues.</t>
+
+          <t>Misc: Removed duplicate word ("that that" -&gt; "that")</t>
+
+          <t>Backfilled the "Change Log" to reflect the issues addressed
+          between Version -05 and -06.</t>
+        </list></t>
+
+      <t>-05 to -06:<list style="symbols">
+          <t>Issue #87: Section 4.2.2: expand "certs" to "certificates"</t>
+
+          <t>Issue #86: Stephane Bortzmeyer: lying DNS resolvers</t>
+
+          <t>Issue #85: Stephane Bortzmeyer: unilateral use</t>
+
+          <t>Issue #84: Stephane Bortzmeyer: Use of the registry is
+          inconsistent </t>
+
+          <t>Issue #83: Stephane Bortzmeyer: IETF-ICANN have a liaison
+          relationship </t>
+
+          <t>Issue #82: Bob Harold: extra "be used" </t>
+
+          <t>Issue #81: Editorial changes from Benoit Claise AD review</t>
+
+          <t>Issue #80: Section 3 - Clarify citation of SDO-ICANN-COLL </t>
+
+          <t>Issue #79: Update reference to "Special-Use Domain Names
+          registry" (?) </t>
+
+          <t>Issue #78: Section 4.2.7 - add citation of Errata correcting use
+          of ".home" in RFC 7788</t>
+
+          <t>Issue #77: Section 2 - correct citation of definition of gTLD</t>
+
+          <t>Issue #76: Section 3 - clarify that problems are listed
+          regardless of validity or ownership, </t>
+
+          <t>Issue #74, #75: Meaning versus binding (Andrew McConachie),
+          global/local (Andrew McConachie)</t>
+
+          <t>Issue #73: Editorial improvements, Section 4.2.7</t>
+        </list></t>
+
       <t>-03 to -04:<list style="symbols">
           <t>Issue #72: Corrected original text to reflect that RFC 7050
           neglected to request an SUDN registry entry for "ipv4only.arpa", but
@@ -1173,7 +1211,7 @@
           <t>Addressed Joel / Benoit's AD comments. See GH issues</t>
         </list></t>
 
-      <t>-02 to -03 (in Github): <list>
+      <t>-02 to -03 (in Github): <list style="symbols">
           <t>Passes idnits except for errors resulting from a reference to an
           RFC 2119 keyword and a citation of RFC 5226 with no matching
           reference in quoted text at line 493.</t>
@@ -1335,11 +1373,11 @@
           (https://github.com/Abhayakara/draft-tldr-sutld-ps/issues/23)</t>
         </list></t>
 
-      <t>-01 to -02:<list>
+      <t>-01 to -02:<list style="symbols">
           <t>Language cleanup from Ted.</t>
         </list></t>
 
-      <t>-00 to -01:<list>
+      <t>-00 to -01:<list style="symbols">
           <t>Improved the terminology.</t>
 
           <t>Included reference to SAC090.</t>
@@ -1356,7 +1394,7 @@
           <t>Readability fixes.</t>
         </list></t>
 
-      <t>-04 to ietf-00<list>
+      <t>-04 to ietf-00<list style="symbols">
           <t>Document adopted by WG.</t>
 
           <t>Significant changes from CfA integrated, please refer to
