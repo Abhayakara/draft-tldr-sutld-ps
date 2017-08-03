@@ -80,7 +80,7 @@ Table of Contents
            Domain Name question  . . . . . . . . . . . . . . . . . .  14
        4.2.1.  Multicast DNS . . . . . . . . . . . . . . . . . . . .  14
        4.2.2.  The .onion Special-Use Top-Level Domain Name  . . . .  15
-       4.2.3.  Locally Served DNS Zones  . . . . . . . . . . . . . .  15
+       4.2.3.  Locally Served DNS Zones  . . . . . . . . . . . . . .  16
        4.2.4.  Name Collision in the DNS . . . . . . . . . . . . . .  16
        4.2.5.  SSAC Advisory on the Stability of the Domain
                Namespace . . . . . . . . . . . . . . . . . . . . . .  16
@@ -821,19 +821,19 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
       Browser Forum decided to phase out the use of such names in
       certificates [SDO-CABF-INT], and set a deadline after which no new
       certificates for such names would be issued [SDO-CABF-DEADLINE].
-      Because the .onion name had been allocated unilaterally, it was
-      affected by this policy.
+      Because the .onion domain was allocated unilaterally, this would
+      mean that certificates for subdomains of .onion could no longer be
+      issued.
 
       The IETF's designation of .onion as a Special-Use Top-Level Domain
       Name was needed to facilitate the development of a certificate
       issuance process specific to .onion domain names
       [SDO-CABF-BALLOT144].
 
-4.2.3.  Locally Served DNS Zones
 
-   Locally Served DNS Zones [RFC6303] describes a particular use case
-   for zones that exist by definition, and that are resolved using the
-   DNS protocol, but that cannot have a global meaning, because the host
+
+
+
 
 
 
@@ -842,6 +842,11 @@ Lemon, et al.            Expires January 2, 2018               [Page 15]
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
+4.2.3.  Locally Served DNS Zones
+
+   Locally Served DNS Zones [RFC6303] describes a particular use case
+   for zones that exist by definition, and that are resolved using the
+   DNS protocol, but that cannot have a global meaning, because the host
    IP addresses they reference are not unique.  This applies to a
    variety of addresses, including Private IPv4 addresses [RFC1918],
    Unique Local IPv6 Unicast Addresses [RFC4193] (in which this practice
@@ -885,11 +890,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
    Unfortunately, while the IETF process worked smoothly, in the sense
    that there was little controversy or delay in approving the new use,
-   it did not work correctly: the name "ipv4only.arpa" was never added
-   to the Special-Use Domain Names registry.  This appears to have
-   happened because the document did not explicitly request the addition
-   of an entry for "ipv4only.arpa" in the SUDN registry.  This is an
-   illustration of one of the problems that we have with the 6761
 
 
 
@@ -898,6 +898,11 @@ Lemon, et al.            Expires January 2, 2018               [Page 16]
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
+   it did not work correctly: the name "ipv4only.arpa" was never added
+   to the Special-Use Domain Names registry.  This appears to have
+   happened because the document did not explicitly request the addition
+   of an entry for "ipv4only.arpa" in the SUDN registry.  This is an
+   illustration of one of the problems that we have with the 6761
    process: it is apparently fairly easy to miss the step of adding the
    name to the registry.
 
@@ -941,11 +946,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
    In fact, in the early days of the Internet, hostnames were resolved
    using a text file, HOSTS.TXT, which was maintained by a central
-   authority, the Network Information Center, and distributed to all
-   hosts on the Internet using the File Transfer Protocol (FTP)
-   [RFC0959].  The inefficiency of this process is cited as a reason for
-   the development of the DNS [RFC0882] [RFC0883] in 1983.
-
 
 
 
@@ -953,6 +953,11 @@ Lemon, et al.            Expires January 2, 2018               [Page 17]
 
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
+
+   authority, the Network Information Center, and distributed to all
+   hosts on the Internet using the File Transfer Protocol (FTP)
+   [RFC0959].  The inefficiency of this process is cited as a reason for
+   the development of the DNS [RFC0882] [RFC0883] in 1983.
 
    However, the transition from HOSTS.TXT to the DNS was not smooth.
    For example, Sun Microsystems's Network Information System
@@ -996,11 +1001,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
    and applications programming interfaces.  Any name that appears in
    such a context is a Domain Name.  So developers of new name
    resolution systems that must work in existing contexts actually have
-   no choice: they must use a Special-Use Domain Name to segregate a
-   portion of the namespace for use with their system.
-
-
-
 
 
 
@@ -1009,6 +1009,9 @@ Lemon, et al.            Expires January 2, 2018               [Page 18]
 
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
+
+   no choice: they must use a Special-Use Domain Name to segregate a
+   portion of the namespace for use with their system.
 
 6.  Security Considerations
 
@@ -1053,9 +1056,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
               specification", RFC 883, DOI 10.17487/RFC0883, November
               1983, <http://www.rfc-editor.org/info/rfc883>.
 
-   [RFC0959]  Postel, J. and J. Reynolds, "File Transfer Protocol", STD
-              9, RFC 959, DOI 10.17487/RFC0959, October 1985,
-              <http://www.rfc-editor.org/info/rfc959>.
 
 
 
@@ -1065,6 +1065,10 @@ Lemon, et al.            Expires January 2, 2018               [Page 19]
 
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
+
+   [RFC0959]  Postel, J. and J. Reynolds, "File Transfer Protocol", STD
+              9, RFC 959, DOI 10.17487/RFC0959, October 1985,
+              <http://www.rfc-editor.org/info/rfc959>.
 
    [RFC1002]  NetBIOS Working Group in the Defense Advanced Research
               Projects Agency, Internet Activities Board, and End-to-End
@@ -1108,10 +1112,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
               6303, DOI 10.17487/RFC6303, July 2011,
               <http://www.rfc-editor.org/info/rfc6303>.
 
-   [RFC6598]  Weil, J., Kuarsingh, V., Donley, C., Liljenstolpe, C., and
-              M. Azinger, "IANA-Reserved IPv4 Prefix for Shared Address
-              Space", BCP 153, RFC 6598, DOI 10.17487/RFC6598, April
-              2012, <http://www.rfc-editor.org/info/rfc6598>.
 
 
 
@@ -1121,6 +1121,11 @@ Lemon, et al.            Expires January 2, 2018               [Page 20]
 
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
+
+   [RFC6598]  Weil, J., Kuarsingh, V., Donley, C., Liljenstolpe, C., and
+              M. Azinger, "IANA-Reserved IPv4 Prefix for Shared Address
+              Space", BCP 153, RFC 6598, DOI 10.17487/RFC6598, April
+              2012, <http://www.rfc-editor.org/info/rfc6598>.
 
    [RFC6760]  Cheshire, S. and M. Krochmal, "Requirements for a Protocol
               to Replace the AppleTalk Name Binding Protocol (NBP)", RFC
@@ -1163,11 +1168,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
               Systems", draft-grothoff-iesg-special-use-p2p-names-04
               (work in progress), January 2015.
 
-   [I-D.lewis-domain-names]
-              Lewis, E., "Domain Names, A Case for Clarifying", draft-
-              lewis-domain-names-09 (work in progress), August 2017.
-
-
 
 
 
@@ -1177,6 +1177,10 @@ Lemon, et al.            Expires January 2, 2018               [Page 21]
 
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
+
+   [I-D.lewis-domain-names]
+              Lewis, E., "Domain Names, A Case for Clarifying", draft-
+              lewis-domain-names-09 (work in progress), August 2017.
 
    [SDO-CABF-INT]
               CA/Browser Forum, "Guidance on the Deprecation of Internal
@@ -1221,10 +1225,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
               Names registry", October 2015,
               <http://www.iana.org/assignments/special-use-domain-names/
               special-use-domain-names.xhtml>.
-
-
-
-
 
 
 

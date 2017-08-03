@@ -707,8 +707,9 @@
               phase out the use of such names in certificates <xref
               target="SDO-CABF-INT"/>, and set a deadline after which no new
               certificates for such names would be issued <xref
-              target="SDO-CABF-DEADLINE"/>. Because the .onion name had been
-              allocated unilaterally, it was affected by this policy. <vspace
+              target="SDO-CABF-DEADLINE"/>. Because the .onion domain was
+              allocated unilaterally, this would mean that certificates for
+              subdomains of .onion could no longer be issued.<vspace
               blankLines="1"/> The IETF's designation of .onion as a
               Special-Use Top-Level Domain Name was needed to facilitate the
               development of a certificate issuance process specific to .onion
