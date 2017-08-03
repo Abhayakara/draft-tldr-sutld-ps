@@ -118,13 +118,15 @@
           the previous categories</t>
         </list></t>
 
-      <t>This document presents a list, believed to be complete, of the
-      problems associated with the assignment of Special-Use Domain Names. In
-      support of its analysis of the particular set of issues described here,
-      the document also includes descriptions of existing practice as it
-      relates to the use of domain names, a brief history of domain names, and
-      some observations by various IETF participants who have experience with
-      various aspects of the current situation.</t>
+      <t>This document presents a list, derived from a variety of sources
+      including discussion in the IETF dnsop WG, of the problems associated
+      with the assignment of Special-Use Domain Names. The list is intended to
+      be an unfiltered compilation of issues. In support of its analysis of
+      the particular set of issues described here, the document also includes
+      descriptions of existing practice as it relates to the use of domain
+      names, a brief history of domain names, and some observations by various
+      IETF participants who have experience with various aspects of the
+      current situation.</t>
     </section>
 
     <section title="Terminology">
@@ -632,16 +634,16 @@
         </section>
 
         <section title="Liaison Statement on Technical Use of Domain       Names">
-          <t>As a result of processing requests to add names to the
+          <t>When the IETF received processing requests to add names to the
           Special-Use Domain Name registry, as documented in <xref
           target="I-D.chapin-additional-reserved-tlds"/> and <xref
-          target="I-D.grothoff-iesg-special-use-p2p-names"/>, a review was
-          chartered of the process defined in RFC 6761 for adding names to the
-          registry (as explained earlier). The Liaison Statement <xref
-          target="SDO-IAB-ICANN-LS"/> notified ICANN of the review, affirmed
-          that the discussion would be "open and transparent to participation
-          by interested parties" and explicitly invited members of the ICANN
-          community to participate.</t>
+          target="I-D.grothoff-iesg-special-use-p2p-names"/>, the IETF
+          chartered a review of the process defined in RFC 6761 for adding
+          names to the registry (as explained earlier). The IETF sent a
+          Liaison Statement <xref target="SDO-IAB-ICANN-LS"/> to ICANN to
+          notify ICANN of the review, affirm that the discussion would be
+          "open and transparent to participation by interested parties" and
+          explicitly invite members of the ICANN community to participate.</t>
         </section>
       </section>
 
