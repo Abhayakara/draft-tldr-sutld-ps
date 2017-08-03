@@ -940,12 +940,12 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
    Newcomers to the problem of resolving Domain Names may be under the
    mistaken impression that the DNS sprang, as in the Greek legend of
    Athena, directly from Paul Mockapetris' forehead.  This is not the
-   case.  At the time of the writing of the IAB technical document,
-   memories would have been fresh of the evolutionary process that led
-   to the DNS' dominance as a protocol for Domain Name resolution.
+   case.  At the time of the writing of the IAB technical document
+   ([RFC2826]), memories would have been fresh of the evolutionary
+   process that led to the DNS' dominance as a protocol for Domain Name
+   resolution.
 
-   In fact, in the early days of the Internet, hostnames were resolved
-   using a text file, HOSTS.TXT, which was maintained by a central
+
 
 
 
@@ -954,6 +954,8 @@ Lemon, et al.            Expires January 2, 2018               [Page 17]
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
+   In fact, in the early days of the Internet, hostnames were resolved
+   using a text file, HOSTS.TXT, which was maintained by a central
    authority, the Network Information Center, and distributed to all
    hosts on the Internet using the File Transfer Protocol (FTP)
    [RFC0959].  The inefficiency of this process is cited as a reason for
@@ -1000,8 +1002,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
    Names are required in a large variety of contexts in user interfaces
    and applications programming interfaces.  Any name that appears in
    such a context is a Domain Name.  So developers of new name
-   resolution systems that must work in existing contexts actually have
-
 
 
 
@@ -1010,6 +1010,7 @@ Lemon, et al.            Expires January 2, 2018               [Page 18]
 Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
+   resolution systems that must work in existing contexts actually have
    no choice: they must use a Special-Use Domain Name to segregate a
    portion of the namespace for use with their system.
 
@@ -1055,7 +1056,6 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
    [RFC0883]  Mockapetris, P., "Domain names: Implementation
               specification", RFC 883, DOI 10.17487/RFC0883, November
               1983, <http://www.rfc-editor.org/info/rfc883>.
-
 
 
 

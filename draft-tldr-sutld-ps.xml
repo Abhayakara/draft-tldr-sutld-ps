@@ -813,9 +813,10 @@
       <t>Newcomers to the problem of resolving Domain Names may be under the
       mistaken impression that the DNS sprang, as in the Greek legend of
       Athena, directly from Paul Mockapetris' forehead. This is not the case.
-      At the time of the writing of the IAB technical document, memories would
-      have been fresh of the evolutionary process that led to the DNS'
-      dominance as a protocol for Domain Name resolution.</t>
+      At the time of the writing of the IAB technical document (<xref
+      target="RFC2826"/>), memories would have been fresh of the evolutionary
+      process that led to the DNS' dominance as a protocol for Domain Name
+      resolution.</t>
 
       <t>In fact, in the early days of the Internet, hostnames were resolved
       using a text file, HOSTS.TXT, which was maintained by a central
