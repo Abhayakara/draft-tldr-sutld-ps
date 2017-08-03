@@ -427,8 +427,7 @@
                title="Primary Special-Use Domain Name Documents">
         <t>The primary documents are considered primary because they directly
         address the IETF's past thoughts on this topic in a general way, and
-        also because they describe what the IETF does in practice. Only one of
-        these documents is an IETF consensus document.</t>
+        also because they describe what the IETF does in practice.</t>
 
         <section title="IAB Technical Comment on the Unique DNS Root">
           <t><xref target="RFC2826">This document</xref> is not an IETF
@@ -589,7 +588,7 @@
 
         <section anchor="MoU"
                  title="MoU Concerning the Technical Work of the IANA">
-          <t>There exists a Memorandum of Understanding <xref
+          <t>There exists a Memorandum of Understanding (MOU) <xref
           target="RFC2860"/> between the IETF and ICANN (Internet Corporation
           for Assigned Names and Numbers) which discusses how names and
           numbers will be managed through the IANA (Internet Assigned Numbers
@@ -848,8 +847,8 @@
       zeitgeist at the time (see section 5.1 of <xref
       target="SDO-ICANN-COLL"/> and Appendix G of <xref target="RFC6762"/>).
       This attitude is at the root of the widespread practice of simply
-      picking an unused TLD and using it for experimental purposes, which
-      persists even at the time of writing of this memo.</t>
+      picking an apparently-unused TLD and using it for experimental purposes,
+      which persists even at the time of writing of this memo.</t>
 
       <t>This history is being presented because discussions about Special-Use
       Domain Names in the IETF often come down to the question of why users of
@@ -878,22 +877,15 @@
     </section>
 
     <section title="Contributors">
-      <t>This document came about as a result of conversations that occurred
-      in the conference hotel lobby, the weekend before IETF 95, when the
-      original author, Ted Lemon, was trying to come up with a better problem
-      statement. Stuart Cheshire, Mark Andrews, David Conrad, Paul Ebersman
-      and Aaron Falk all made helpful and insightful observations or patiently
-      answered questions. This should not be taken as an indication that any
-      of these folks actually agree with what the document says, but their
-      generosity with time and thought are appreciated in any case.</t>
+      <t>Mark Andrews, Stuart Cheshire, David Conrad, Paul Ebersman, Aaron
+      Falk and Suzanne Woolf all made helpful and insightful observations or
+      patiently answered questions. This should not be taken as an indication
+      that any of these folks actually agree with what the document says, but
+      their generosity with time and thought are appreciated in any case.</t>
 
-      <t>Ralph started out as an innocent bystander, but discussion with him
-      was the key motivating factor in the writing of this document, and he
-      agreed to co-author it without too much arm-twisting. Warren spent a lot
-      of time working with us on this document after it was first published,
-      and joined as an author in order to make sure that the work got
-      finished; without him the -01 and -02 versions might not have
-      happened.</t>
+      <t>Stephane Bortzmeyer, John Dickinson, Bob Harold, Paul Hoffman, Russ
+      Housley, Joel Jaeggli, Andrew McConachie, George Michaelson, Petr Spacek
+      and others provided significant review and / or useful comments.</t>
 
       <t>This document also owes a great deal to Ed Lewis' excellent work on
       <xref target="I-D.lewis-domain-names">what a "Domain Name"
@@ -1162,19 +1154,19 @@
           <t>Issue #85: Stephane Bortzmeyer: unilateral use</t>
 
           <t>Issue #84: Stephane Bortzmeyer: Use of the registry is
-          inconsistent </t>
+          inconsistent</t>
 
           <t>Issue #83: Stephane Bortzmeyer: IETF-ICANN have a liaison
-          relationship </t>
+          relationship</t>
 
-          <t>Issue #82: Bob Harold: extra "be used" </t>
+          <t>Issue #82: Bob Harold: extra "be used"</t>
 
           <t>Issue #81: Editorial changes from Benoit Claise AD review</t>
 
-          <t>Issue #80: Section 3 - Clarify citation of SDO-ICANN-COLL </t>
+          <t>Issue #80: Section 3 - Clarify citation of SDO-ICANN-COLL</t>
 
           <t>Issue #79: Update reference to "Special-Use Domain Names
-          registry" (?) </t>
+          registry" (?)</t>
 
           <t>Issue #78: Section 4.2.7 - add citation of Errata correcting use
           of ".home" in RFC 7788</t>
@@ -1182,7 +1174,7 @@
           <t>Issue #77: Section 2 - correct citation of definition of gTLD</t>
 
           <t>Issue #76: Section 3 - clarify that problems are listed
-          regardless of validity or ownership, </t>
+          regardless of validity or ownership,</t>
 
           <t>Issue #74, #75: Meaning versus binding (Andrew McConachie),
           global/local (Andrew McConachie)</t>
