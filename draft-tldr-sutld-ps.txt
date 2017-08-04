@@ -377,7 +377,7 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
         for assigning a name as a set of requirements all of which must
         be met).  In other cases, the IETF has made de facto assignments
         of Special-Use Domain Names without following the RFC 6761
-        process.
+        process (see [RFC7050], [RFC7788]).
 
    12.  There are several Domain Name TLDs that are in use without due
         process for a variety of purposes.  The status of these names
