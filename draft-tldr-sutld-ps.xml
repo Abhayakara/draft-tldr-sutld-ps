@@ -771,10 +771,10 @@
           new use, it did not work correctly: the name "ipv4only.arpa" was
           never added to the Special-Use Domain Names registry. This appears
           to have happened because the document did not explicitly request the
-          addition of an entry for "ipv4only.arpa" in the SUDN registry. This
-          is an illustration of one of the problems that we have with the 6761
-          process: it is apparently fairly easy to miss the step of adding the
-          name to the registry.</t>
+          addition of an entry for "ipv4only.arpa" in the Special-Use Domain
+          Name registry. This is an illustration of one of the problems that
+          we have with the 6761 process: it is apparently fairly easy to miss
+          the step of adding the name to the registry.</t>
         </section>
 
         <section anchor="addl-tlds"
