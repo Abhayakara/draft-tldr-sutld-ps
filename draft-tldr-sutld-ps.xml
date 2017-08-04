@@ -5,7 +5,7 @@
 <?rfc symrefs="yes" ?>
 <?rfc comments="yes" ?>
 <?rfc inline="yes" ?>
-<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-07" ipr="trust200902"
+<rfc category="info" docName="draft-ietf-dnsop-sutld-ps-08" ipr="trust200902"
      obsoletes="" updates="">
   <front>
     <title abbrev="Special-Use Domain Names Problem">Special-Use Domain Names
@@ -59,7 +59,7 @@
       </address>
     </author>
 
-    <date month="July" year="2017"/>
+    <date month="August" year="2017"/>
 
     <abstract>
       <t>The Special-Use Domain Names IANA registry policy defined in RFC 6761

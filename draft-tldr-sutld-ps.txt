@@ -5,14 +5,14 @@
 Network Working Group                                           T. Lemon
 Internet-Draft                                             Nominum, Inc.
 Intended status: Informational                                  R. Droms
-Expires: January 2, 2018
+Expires: February 5, 2018
                                                                W. Kumari
                                                                   Google
-                                                               July 2017
+                                                          August 4, 2017
 
 
                Special-Use Domain Names Problem Statement
-                      draft-ietf-dnsop-sutld-ps-07
+                      draft-ietf-dnsop-sutld-ps-08
 
 Abstract
 
@@ -39,7 +39,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on January 2, 2018.
+   This Internet-Draft will expire on February 5, 2018.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 1]
+Lemon, et al.           Expires February 5, 2018                [Page 1]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    carefully, as they describe your rights and restrictions with respect
@@ -109,9 +109,9 @@ Table of Contents
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 2]
+Lemon, et al.           Expires February 5, 2018                [Page 2]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    excellent presentation on this topic can be found in Domain Names
@@ -165,9 +165,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 3]
+Lemon, et al.           Expires February 5, 2018                [Page 3]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
 2.  Terminology
@@ -221,9 +221,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 4]
+Lemon, et al.           Expires February 5, 2018                [Page 4]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    individual problem, if it is to be addressed.  The sole purposes of
@@ -277,9 +277,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 5]
+Lemon, et al.           Expires February 5, 2018                [Page 5]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
         5.  Intended use is covered by ICANN or IETF process, but third
@@ -333,9 +333,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 6]
+Lemon, et al.           Expires February 5, 2018                [Page 6]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
         2.  Assertion of authority: there is a sense that the Domain
@@ -389,9 +389,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 7]
+Lemon, et al.           Expires February 5, 2018                [Page 7]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
         provide information on how those names are used in practice.
@@ -445,9 +445,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 8]
+Lemon, et al.           Expires February 5, 2018                [Page 8]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    20.  RFC 6761 uses the term "Domain Name" to describe the thing for
@@ -501,9 +501,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018                [Page 9]
+Lemon, et al.           Expires February 5, 2018                [Page 9]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    the root zone.  Neither of these authorities can in any practical
@@ -557,9 +557,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 10]
+Lemon, et al.           Expires February 5, 2018               [Page 10]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    o  Such references might refer to the object the user intends to
@@ -613,9 +613,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 11]
+Lemon, et al.           Expires February 5, 2018               [Page 11]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    This sentence requires that any designation of a Special-Use Domain
@@ -669,9 +669,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 12]
+Lemon, et al.           Expires February 5, 2018               [Page 12]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    term here, that the decision as to whether to use a protocol, and if
@@ -725,9 +725,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 13]
+Lemon, et al.           Expires February 5, 2018               [Page 13]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    Implicit in the MoU is the fact that the IETF and ICANN retain,
@@ -781,9 +781,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 14]
+Lemon, et al.           Expires February 5, 2018               [Page 14]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    companion requirements document, eventually published as [RFC6760]
@@ -837,9 +837,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 15]
+Lemon, et al.           Expires February 5, 2018               [Page 15]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
 4.2.3.  Locally Served DNS Zones
@@ -893,9 +893,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 16]
+Lemon, et al.           Expires February 5, 2018               [Page 16]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    it did not work correctly: the name "ipv4only.arpa" was never added
@@ -949,9 +949,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 17]
+Lemon, et al.           Expires February 5, 2018               [Page 17]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    In fact, in the early days of the Internet, hostnames were resolved
@@ -1005,9 +1005,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 18]
+Lemon, et al.           Expires February 5, 2018               [Page 18]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    resolution systems that must work in existing contexts actually have
@@ -1061,9 +1061,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 19]
+Lemon, et al.           Expires February 5, 2018               [Page 19]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    [RFC0959]  Postel, J. and J. Reynolds, "File Transfer Protocol", STD
@@ -1117,9 +1117,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 20]
+Lemon, et al.           Expires February 5, 2018               [Page 20]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    [RFC6598]  Weil, J., Kuarsingh, V., Donley, C., Liljenstolpe, C., and
@@ -1173,9 +1173,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 21]
+Lemon, et al.           Expires February 5, 2018               [Page 21]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    [I-D.lewis-domain-names]
@@ -1229,9 +1229,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 22]
+Lemon, et al.           Expires February 5, 2018               [Page 22]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    [SDO-ICANN-DAG]
@@ -1285,9 +1285,9 @@ Appendix A.  Change Log.
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 23]
+Lemon, et al.           Expires February 5, 2018               [Page 23]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    o  Issue #84: Stephane Bortzmeyer: Use of the registry is
@@ -1341,9 +1341,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 24]
+Lemon, et al.           Expires February 5, 2018               [Page 24]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    -02 to -03 (in Github):
@@ -1397,9 +1397,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 25]
+Lemon, et al.           Expires February 5, 2018               [Page 25]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    o  Issue #47: 4.3 should be made more prominent -- George Michaelson
@@ -1453,9 +1453,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 26]
+Lemon, et al.           Expires February 5, 2018               [Page 26]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    o  Issue #27: Is "technical use" really ambiguous; too inclusive for
@@ -1509,9 +1509,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 27]
+Lemon, et al.           Expires February 5, 2018               [Page 27]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    o  Issue #14: Change SDO to "organizations" -- Suzanne Woolf
@@ -1565,9 +1565,9 @@ Internet-Draft      Special-Use Domain Names Problem           July 2017
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 28]
+Lemon, et al.           Expires February 5, 2018               [Page 28]
 
-Internet-Draft      Special-Use Domain Names Problem           July 2017
+Internet-Draft      Special-Use Domain Names Problem         August 2017
 
 
    -01 to -02:
@@ -1621,4 +1621,4 @@ Authors' Addresses
 
 
 
-Lemon, et al.            Expires January 2, 2018               [Page 29]
+Lemon, et al.           Expires February 5, 2018               [Page 29]
